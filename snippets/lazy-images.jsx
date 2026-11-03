@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 /**
  * LazyImages — 给当前页面所有正文 <img> 加浏览器原生懒加载。
  *

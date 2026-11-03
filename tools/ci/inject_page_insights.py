@@ -11,11 +11,19 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 
+DATA_IMPORT_LINE = 'import { insights } from "/snippets/page-insights-data.jsx";'
 IMPORT_LINE = 'import { PageInsights } from "/snippets/page-insights.jsx";'
-MOUNT_LINE = "<PageInsights />"
 FRONTMATTER_RE = re.compile(r"^(---\n[\s\S]*?\n---\n)", re.MULTILINE)
+DATA_IMPORT_RE = re.compile(
+    r'^import\s+\{\s*insights\s*\}\s+from\s+"/(?:generated/page-insights|snippets/page-insights-data)\.(?:js|jsx)";\n?',
+    re.MULTILINE,
+)
 SNIPPET_IMPORT_RE = re.compile(
     r'^import\s+\{\s*PageInsights\s*\}\s+from\s+"/snippets/page-insights\.jsx";\n?',
+    re.MULTILINE,
+)
+PAGE_INSIGHTS_MOUNT_RE = re.compile(
+    r"^\s*<PageInsights(?:\s+[^>]*)?\s*/>\s*$",
     re.MULTILINE,
 )
 
@@ -35,23 +43,28 @@ def sync_page_insights_mounts(docs_root: Path, insights_path: Path) -> None:
         updated = text
 
         if wants_mount:
-            if IMPORT_LINE not in updated:
-                match = FRONTMATTER_RE.match(updated)
-                if match:
-                    updated = (
-                        updated[:match.end()]
-                        + "\n"
-                        + IMPORT_LINE
-                        + "\n\n"
-                        + MOUNT_LINE
-                        + "\n\n"
-                        + updated[match.end():].lstrip("\n")
-                    )
-            if MOUNT_LINE not in updated:
-                updated = updated.replace(IMPORT_LINE + "\n\n", IMPORT_LINE + "\n\n" + MOUNT_LINE + "\n\n", 1)
-        else:
+            match = FRONTMATTER_RE.match(updated)
+            if not match:
+                raise ValueError(f"Article is missing frontmatter: {rel_path}")
+            mount_line = f'<PageInsights slug="{rel_path[:-4]}" insights={{insights}} />'
+            updated = DATA_IMPORT_RE.sub("", updated)
             updated = SNIPPET_IMPORT_RE.sub("", updated)
-            updated = updated.replace(MOUNT_LINE + "\n\n", "").replace(MOUNT_LINE + "\n", "")
+            updated = PAGE_INSIGHTS_MOUNT_RE.sub("", updated)
+            updated = (
+                updated[:match.end()]
+                + "\n"
+                + DATA_IMPORT_LINE
+                + "\n"
+                + IMPORT_LINE
+                + "\n\n"
+                + mount_line
+                + "\n\n"
+                + updated[match.end():].lstrip("\n")
+            )
+        else:
+            updated = DATA_IMPORT_RE.sub("", updated)
+            updated = SNIPPET_IMPORT_RE.sub("", updated)
+            updated = PAGE_INSIGHTS_MOUNT_RE.sub("", updated)
 
         if updated != text:
             path.write_text(updated, encoding="utf-8")

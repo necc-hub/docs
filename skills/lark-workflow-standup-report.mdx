@@ -3,19 +3,20 @@ title: "lark-workflow-standup-report"
 description: "日程待办摘要：编排 calendar +agenda 和 task +get-my-tasks，生成指定日期的日程与未完成任务摘要。适用于了解今天/明天/本周的安排。"
 ---
 
+import { insights } from "/snippets/page-insights-data.jsx";
 import { PageInsights } from "/snippets/page-insights.jsx";
 
-<PageInsights />
+<PageInsights slug="skills/lark-workflow-standup-report" insights={insights} />
 
 | 项目 | 内容 |
 |---|---|
-| 来源 | [skills/lark-workflow-standup-report/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/lark-workflow-standup-report/SKILL.md) |
+| 来源 | [skills/lark-workflow-standup-report/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/lark-workflow-standup-report/SKILL.md) |
 | 分类 | 飞书/Lark 办公套件 |
 | 安装 | 克隆 [Skill 分支](https://github.com/necc-hub/new_energy_coder_club/tree/Skill) 后，将 `skills/lark-workflow-standup-report/` 目录复制到 `~/.claude/skills/`（Claude Code）、`~/.trae/skills/`（Trae IDE）或 `~/.qclaw/skills/`（QClaw/OpenClaw），详见 [Skill 安装方式](/community/skill-branch) |
 
 # 日程待办摘要工作流
 
-**CRITICAL — 开始前 MUST 先用 Read 工具读取 [`../lark-shared/SKILL.md`](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/lark-shared/SKILL.md)，其中包含认证、权限处理**
+**CRITICAL — 开始前 MUST 先用 Read 工具读取 [`../lark-shared/SKILL.md`](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/lark-shared/SKILL.md)，其中包含认证、权限处理**
 
 ## 适用场景
 
@@ -121,6 +122,6 @@ lark-cli task +get-my-tasks --page-all
 
 ## 参考
 
-- [lark-shared](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/lark-shared/SKILL.md) — 认证、权限（必读）
-- [lark-calendar](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/lark-calendar/SKILL.md) — `+agenda` 详细用法
-- [lark-task](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/lark-task/SKILL.md) — `+get-my-tasks` 详细用法
+- [lark-shared](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/lark-shared/SKILL.md) — 认证、权限（必读）
+- [lark-calendar](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/lark-calendar/SKILL.md) — `+agenda` 详细用法
+- [lark-task](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/lark-task/SKILL.md) — `+get-my-tasks` 详细用法

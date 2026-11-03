@@ -3,13 +3,14 @@ title: "ai-data-analysis"
 description: "腾讯音乐人智能数据分析助手。当用户提到\"分析数据\"、\"看看播放趋势\"、\"歌曲表现\"、\"听众画像\"、\"数据洞察\"、\"粉丝构成\"、\"我的数据怎么样\"、\"分析这首歌\"、\"最近播放量\"、\"用户画像\"、\"收益分析\"、\"歌曲表现如何\"、\"粉丝分布\"、\"年龄分布\"、\"地域分布\"等数据分析相关请求时触发。本 Sk…"
 ---
 
+import { insights } from "/snippets/page-insights-data.jsx";
 import { PageInsights } from "/snippets/page-insights.jsx";
 
-<PageInsights />
+<PageInsights slug="skills/ai-data-analysis" insights={insights} />
 
 | 项目 | 内容 |
 |---|---|
-| 来源 | [skills/ai-data-analysis/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/ai-data-analysis/SKILL.md) |
+| 来源 | [skills/ai-data-analysis/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/ai-data-analysis/SKILL.md) |
 | 分类 | 效率 & 头脑风暴 |
 | 安装 | 克隆 [Skill 分支](https://github.com/necc-hub/new_energy_coder_club/tree/Skill) 后，将 `skills/ai-data-analysis/` 目录复制到 `~/.claude/skills/`（Claude Code）、`~/.trae/skills/`（Trae IDE）或 `~/.qclaw/skills/`（QClaw/OpenClaw），详见 [Skill 安装方式](/community/skill-branch) |
 

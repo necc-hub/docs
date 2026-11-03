@@ -17,6 +17,9 @@
 13. 主题色为合法 #RRGGBB 且主色对比度达标（WCAG 相对亮度）
 14. 首页 index.mdx 存在、frontmatter 完整且注册在导航第一个 Tab
 15. docs.json styles 引用的 CSS 文件均存在
+16. PageInsights 的 JSON、JS 数据模块、报告与覆盖配置生成物存在
+17. llms.txt 中反引号标注的站内路径可解析
+18. 核心文档不含旧主代码仓链接，技能页使用正确的 SKill 分支大小写
 """
 
 from __future__ import annotations
@@ -203,11 +206,73 @@ def check_page_insights_artifacts(root: Path) -> list[str]:
     errors: list[str] = []
     for rel_path in (
         "generated/page-insights.json",
+        "snippets/page-insights-data.jsx",
         "generated/page-insights-report.md",
         "generated/page-insights.overrides.json",
     ):
         if not (root / rel_path).is_file():
             errors.append(f"缺少生成文件: {rel_path}")
+    return errors
+
+
+LLMS_PATH_RE = re.compile(r"`(/[^`\s]+)`")
+CANONICAL_FILES = (
+    "README.md",
+    "ROADMAP.mdx",
+    "docs.json",
+    "llms.txt",
+    "start-here/index.mdx",
+    "community/about.mdx",
+    "community/discord.mdx",
+    "community/join-collection.mdx",
+    "community/projects.mdx",
+    "community/recommended-groups.mdx",
+    "community/skill-branch.mdx",
+    "contributing/guidelines.mdx",
+)
+LEGACY_REPOSITORY_LINKS = (
+    "github.com/Darrenpig/new_energy_coder_club",
+    "gitee.com/darrenpig/new_energy_coder_club",
+)
+
+
+def check_llms_txt_paths(root: Path) -> list[str]:
+    llms_path = root / "llms.txt"
+    if not llms_path.is_file():
+        return ["缺少 llms.txt"]
+
+    errors: list[str] = []
+    for raw_path in sorted(set(LLMS_PATH_RE.findall(llms_path.read_text(encoding="utf-8")))):
+        path = raw_path.split("#", 1)[0].split("?", 1)[0]
+        target = path.lstrip("/")
+        if not target:
+            candidates = ["index"]
+        elif target.endswith("/"):
+            candidates = [target + "index"]
+        elif (root / target).is_dir():
+            candidates = [target, target + "/index"]
+        else:
+            candidates = [target]
+        if not any(target_exists(candidate) for candidate in candidates):
+            errors.append(f"llms.txt 站内路径无法解析: {raw_path}")
+    return errors
+
+
+def check_canonical_repository_links(root: Path) -> list[str]:
+    errors: list[str] = []
+    for rel_path in CANONICAL_FILES:
+        path = root / rel_path
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for legacy_link in LEGACY_REPOSITORY_LINKS:
+            if legacy_link in text:
+                errors.append(f"{rel_path}: 仍引用旧主代码仓链接 {legacy_link}")
+
+    for path in (root / "skills").glob("*.mdx"):
+        if "/blob/Skill/" in path.read_text(encoding="utf-8"):
+            rel_path = path.relative_to(root).as_posix()
+            errors.append(f"{rel_path}: 技能分支应使用 /blob/SKill/，而非 /blob/Skill/")
     return errors
 
 
@@ -457,6 +522,8 @@ def main() -> int:
     warnings.extend(check_docs_json_fields(data))
     warnings.extend(check_robots_txt())
     errors.extend(check_page_insights_artifacts(ROOT))
+    errors.extend(check_llms_txt_paths(ROOT))
+    errors.extend(check_canonical_repository_links(ROOT))
 
     # 1. 导航页面存在性
     for page in sorted(nav_pages):

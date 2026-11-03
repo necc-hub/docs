@@ -11,6 +11,14 @@
 - `curc26/finflow`
 - `curc26/proposal`
 - `embedded-software/hxc-motor-control`
+- `handbook/handbook-01-mechanical`
+- `handbook/handbook-02-electrical`
+- `handbook/handbook-04-vision`
+- `handbook/handbook-05-ai-embedded`
+- `handbook/handbook-06-operations`
+- `handbook/handbook-07-field`
+- `handbook/handbook-09-management`
+- `handbook/handbook-10-projects`
 - `mechanical/ek-team-25-mechanical-training`
 - `mechanical/falcon2-user-manual`
 - `mechanical/lumenpnp/doc-10`
@@ -118,6 +126,7 @@
 - `community/maintainers`
 - `community/mentors`
 - `community/nec-plus`
+- `handbook/index`
 - `mechanical/dm-s3519-motor`
 - `mechanical/lumenpnp/doc-19`
 - `mechanical/lumenpnp/doc-6`
@@ -144,6 +153,7 @@
 - `curc26/finflow`: index
 - `curc27/index`: index
 - `embedded-software/introduction`: index
+- `handbook/index`: index
 - `index`: landing
 - `mechanical/dm-s3519-motor`: stub
 - `mechanical/falcon2-user-manual`: index

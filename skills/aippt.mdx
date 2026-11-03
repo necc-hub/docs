@@ -3,13 +3,14 @@ title: "aippt"
 description: "当用户明确要求使用 AI 智能设计生成 PPT 演示文稿时使用本技能（智绘高迪/AIPPT）。本技能调用远程 Design Agent API，根据文字描述自动生成专业 PPT 演示文稿，支持指定模板和自定义模型。当用户说'AI生成PPT'、'智绘PPT'、'自动生成演示文稿'、'帮我做个PPT'…"
 ---
 
+import { insights } from "/snippets/page-insights-data.jsx";
 import { PageInsights } from "/snippets/page-insights.jsx";
 
-<PageInsights />
+<PageInsights slug="skills/aippt" insights={insights} />
 
 | 项目 | 内容 |
 |---|---|
-| 来源 | [skills/aippt/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/aippt/SKILL.md) |
+| 来源 | [skills/aippt/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/aippt/SKILL.md) |
 | 分类 | TRAE 内置 & 独立工具 |
 | 安装 | 克隆 [Skill 分支](https://github.com/necc-hub/new_energy_coder_club/tree/Skill) 后，将 `skills/aippt/` 目录复制到 `~/.claude/skills/`（Claude Code）、`~/.trae/skills/`（Trae IDE）或 `~/.qclaw/skills/`（QClaw/OpenClaw），详见 [Skill 安装方式](/community/skill-branch) |
 

@@ -3,13 +3,14 @@ title: "pptx"
 description: "Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or present…"
 ---
 
+import { insights } from "/snippets/page-insights-data.jsx";
 import { PageInsights } from "/snippets/page-insights.jsx";
 
-<PageInsights />
+<PageInsights slug="skills/pptx" insights={insights} />
 
 | 项目 | 内容 |
 |---|---|
-| 来源 | [skills/pptx/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/pptx/SKILL.md) |
+| 来源 | [skills/pptx/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/pptx/SKILL.md) |
 | 分类 | 文档 & 办公文件 |
 | 安装 | 克隆 [Skill 分支](https://github.com/necc-hub/new_energy_coder_club/tree/Skill) 后，将 `skills/pptx/` 目录复制到 `~/.claude/skills/`（Claude Code）、`~/.trae/skills/`（Trae IDE）或 `~/.qclaw/skills/`（QClaw/OpenClaw），详见 [Skill 安装方式](/community/skill-branch) |
 
@@ -20,8 +21,8 @@ import { PageInsights } from "/snippets/page-insights.jsx";
 | Task | Guide |
 |------|-------|
 | Read/analyze content | `python -m markitdown presentation.pptx` |
-| Edit or create from template | Read [editing.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/pptx/editing.md) |
-| Create from scratch | Read [pptxgenjs.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/pptx/pptxgenjs.md) |
+| Edit or create from template | Read [editing.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/pptx/editing.md) |
+| Create from scratch | Read [pptxgenjs.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/pptx/pptxgenjs.md) |
 
 ---
 
@@ -42,7 +43,7 @@ python scripts/office/unpack.py presentation.pptx unpacked/
 
 ## Editing Workflow
 
-**Read [editing.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/pptx/editing.md) for full details.**
+**Read [editing.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/pptx/editing.md) for full details.**
 
 1. Analyze template with `thumbnail.py`
 2. Unpack → manipulate slides → edit content → clean → pack
@@ -51,7 +52,7 @@ python scripts/office/unpack.py presentation.pptx unpacked/
 
 ## Creating from Scratch
 
-**Read [pptxgenjs.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/pptx/pptxgenjs.md) for full details.**
+**Read [pptxgenjs.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/pptx/pptxgenjs.md) for full details.**
 
 Use when no template or reference presentation is available.
 

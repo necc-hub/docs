@@ -3,9 +3,10 @@ title: "贡献指南"
 description: "如何为 NEC 新能源开发者社区做出贡献"
 ---
 
+import { insights } from "/snippets/page-insights-data.jsx";
 import { PageInsights } from "/snippets/page-insights.jsx";
 
-<PageInsights />
+<PageInsights slug="contributing/guidelines" insights={insights} />
 
 ## 欢迎贡献
 
@@ -23,7 +24,7 @@ import { PageInsights } from "/snippets/page-insights.jsx";
 
 | | 文档仓 | 主代码仓（资料仓） |
 |---|---|---|
-| 地址 | [github.com/necc-hub/docs](https://github.com/necc-hub/docs) → [docs.newenergycoder.club](https://docs.newenergycoder.club) | [gitee.com/darrenpig/new_energy_coder_club](https://gitee.com/darrenpig/new_energy_coder_club) |
+| 地址 | [github.com/necc-hub/docs](https://github.com/necc-hub/docs) → [docs.newenergycoder.club](https://docs.newenergycoder.club) | [github.com/necc-hub/new_energy_coder_club](https://github.com/necc-hub/new_energy_coder_club) |
 | 定位 | 发布态：面向读者的 Mintlify 文档站 | 工作态：原始资料与项目代码的存档仓 |
 | 适合提交 | 教程、指南、规范、整理后的竞赛/项目文档（`.mdx` + frontmatter，需注册导航） | 历年赛事档案、项目代码、CAD 模型、原始 PDF/压缩包等素材 |
 | 大二进制 | 不入 git，统一传社区 CDN 后在页面中给链接 | 直接入库 |
@@ -32,7 +33,7 @@ import { PageInsights } from "/snippets/page-insights.jsx";
 
 1. 内容单向提炼：原始材料先沉淀到主代码仓，整理成发布页时再到文档仓提交 `.mdx`
 2. 同名治理文件（GOVERNANCE、ROADMAP、SECURITY 等）以文档仓版本为准对外发布
-3. 文档页引用主代码仓内容时，直接链接 Gitee 对应路径，不把大二进制复制进文档仓
+3. 文档页引用主代码仓内容时，直接链接 GitHub 对应路径，不把大二进制复制进文档仓
 
 ## 行为准则
 
@@ -67,7 +68,7 @@ import { PageInsights } from "/snippets/page-insights.jsx";
 
 ### 报告 Bug
 
-如果你发现了 Bug，请通过 [Issue](https://gitee.com/darrenpig/new_energy_coder_club/issues) 报告，并包含以下信息：
+如果你发现了 Bug，请通过 [Issue](https://github.com/necc-hub/new_energy_coder_club/issues) 报告，并包含以下信息：
 
 - **标题**：清晰描述问题的简短标题
 - **描述**：详细描述问题

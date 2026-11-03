@@ -1,17 +1,5 @@
-import insights from "/generated/page-insights.json";
-
-export const PageInsights = () => {
-  // Mintlify 代码片段运行时不支持 JSON 导入，insights 可能为未绑定标识符，
-  // 必须先判空再使用，否则整页 hydration 崩溃。
-  const data = typeof insights === "undefined" ? null : insights;
-  if (!data) return null;
-
-  const path =
-    typeof window === "undefined"
-      ? ""
-      : window.location.pathname.replace(/^\/+|\/+$/g, "");
-  const slug = path || "index";
-  const entry = data[slug];
+export const PageInsights = ({ slug = "index", insights }) => {
+  const entry = insights?.[slug];
 
   if (!entry || entry.pageKind !== "article") return null;
 
@@ -35,5 +23,3 @@ export const PageInsights = () => {
     </section>
   );
 };
-
-export default PageInsights;

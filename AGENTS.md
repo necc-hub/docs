@@ -10,8 +10,11 @@
 
 ```bash
 cd docs
-mint dev
+npm ci
+npm run dev
 ```
+
+本地使用 `package-lock.json` 固定的 Mintlify 与 PostCSS 版本，Node.js 需满足 `package.json` 的 `engines` 要求。
 
 ## 部署
 
@@ -46,7 +49,7 @@ mint dev
 3. **竞赛**
    - 竞赛概览：总览 → 子分组「ROBOCON备赛」（赛事介绍 → 2026 指南 → 新人指南 → 资料存档 → 资料包）→ 节能减排 → 智能汽车
    - CURC 2026：提案 `proposal` 置顶 → 机构 SIG（about/机械/电控/能力）→ 视觉 SIG → 运营 SIG
-   - CURC 2027：总览 `index` 置顶 → 新人学习区 `onboarding` → 机构 SIG（机械+电控）→ 视觉 SIG（视觉+硬件）→ 运营 SIG；内容同步自 Gitee `feat/curc2027-onboarding` 分支 `competitions/CURC2027ROBOCON`
+   - CURC 2027：总览 `index` 置顶 → 新人学习区 `onboarding` → 机构 SIG（机械+电控）→ 视觉 SIG（视觉+硬件）→ 运营 SIG；内容同步自主代码仓 `feat/curc2027-onboarding` 分支 `competitions/CURC2027ROBOCON`
 4. **社区**
    - 关于我们：关于 → 报名流程 → 加入合集 → NEC+ → Skill 分支 → 赞助
    - 社区与活动：社区 → A416 实验室 → 项目 → 导师 → Discord → 推荐群聊 → 故事
@@ -56,7 +59,7 @@ mint dev
    - 贡献指南：总览 → 规范 → 流程 → 代码风格 → Gitee 协作
 5. **Wiki** — Wiki 总览、新人入门、社区与协作、培训与资源、规范与安全
 6. **关于** — 路线图（`ROADMAP`）、资源汇总（`resource-index`）
-7. **技能库** — Skill 分支 150 个 AI Coding Skills 的详情页（`skills/*.mdx`，由脚本从 `github/Skill` 分支批量生成）
+7. **技能库** — Skill 分支 150 个 AI Coding Skills 的详情页（`skills/*.mdx`，由脚本从 `github/SKill` 分支批量生成）
    - 概览：`skills/index`（核心推荐 7 个前置 + 推荐 143 个按 12 大类的完整索引表）置顶
    - 核心推荐（NEC 精选）（7）：`nec-resource-publisher`、`nec-wechat-sync`、`pv-station-rating`、`pv-storage-bom`（仓库独家自研）+ `patent-application-cn`、`cit-thesis-writer`、`acad-paper-prompter`（学术方向社区精选）—— 导航与索引均前置展示
    - 12 个推荐分组（收录自 6 大平台）：飞书/Lark 办公套件（25）→ AI CLI 调用器（6）→ 前端 & 设计开发（14）→ 开发工程 & 工作流（17）→ 搜索 & 资讯聚合（8）→ 文档 & 办公文件（8）→ 集成 & 平台连接（14）→ 学术 & 论文（3）→ QClaw/OpenClaw 平台（15）→ 效率 & 头脑风暴（9）→ 社交 & 微信生态（7）→ TRAE 内置 & 独立工具（17）
@@ -75,7 +78,7 @@ mint dev
 
 | | 文档仓（本仓） | 主代码仓（资料仓） |
 |---|---|---|
-| 地址 | `github.com/necc-hub/docs` → https://docs.newenergycoder.club | `gitee.com/darrenpig/new_energy_coder_club` |
+| 地址 | `github.com/necc-hub/docs` → https://docs.newenergycoder.club | `github.com/necc-hub/new_energy_coder_club`（原 Gitee 仓已迁移至此，`gitee.com/darrenpig/new_energy_coder_club` 仅保留重定向） |
 | 定位 | 发布态：面向读者的 Mintlify 文档站 | 工作态：原始资料与项目代码的存档仓 |
 | 内容 | `.mdx` 页面 + frontmatter + `docs.json` 导航 | 历年赛事档案（`competitions/`）、项目代码与模型（`projects/`）、共享素材（`shared/`）、原始文档（`docs/`） |
 | 大二进制 | **不入 git**，统一传 R2 CDN（`cdn.newenergycoder.club/files/...`）后链接 | 直接入库（PDF / STEP / zip / docx / 代码均可） |
@@ -86,16 +89,21 @@ mint dev
 1. **不做仓间合并或整仓同步**——两仓结构与定位不同，允许各自独立演化
 2. 内容流向是单向提炼：主代码仓沉淀原始材料 → 文档仓整理为带导航的发布页，大文件传 R2 后在页面中给 CDN 链接
 3. 同名治理文件（GOVERNANCE / ROADMAP / SECURITY / SUPPORT / CODE_OF_CONDUCT 等）以**文档仓版本为准**对外发布，不回写主代码仓
-4. 文档页引用主代码仓内容时，直接链接 Gitee 对应路径，不把其中的大二进制复制进本仓
+4. 文档页引用主代码仓内容时，直接链接主代码仓对应路径，不把其中的大二进制复制进本仓
 
 ## 持续集成
 
 - `.github/workflows/docs-check.yml` 会在 `push` / `pull_request` 时自动运行
 - 检查项包括：
+  - 重新生成并同步 PageInsights，确保 JSON、`snippets/page-insights-data.jsx`、报告和 MDX 挂载均无未提交差异
+  - 使用 PostCSS 解析 `docs.json` `styles` 引用的本地 CSS，并检查文件存在性
+  - 使用 `mint validate` 校验 Mintlify 配置与页面
   - `docs.json` JSON 合法性与推荐字段（`metadata`、`search`、`seo`）
   - 导航中的页面文件存在性
   - `.mdx` 文件包含非空 `title` 与 `description` 的 YAML frontmatter
   - Markdown / MDX 内部链接可解析，不含 `localhost` 与非 ASCII 路径
+  - `llms.txt` 中反引号标注的站内路径可解析
+  - 核心 canonical 文件不含旧主代码仓链接，技能页使用 `SKill` 分支的正确大小写
   - `robots.txt` 存在
   - 外部链接抽样健康检查（警告级别）
   - 未重新引入已删除的归档目录（`legacy/`、`api-reference/`、`essentials/`）
@@ -103,9 +111,13 @@ mint dev
   - `logo` / `favicon` 品牌资源文件存在，SVG 需含 `viewBox` 且无超大固定宽高
   - 主题色为合法 `#RRGGBB`，主色对比度低于 3.0:1 时给出警告
   - 首页 `index.mdx` 存在、frontmatter 完整且注册在导航第一个 Tab
-  - `docs.json` `styles` 引用的 CSS 文件均存在
 - 本地可手动执行：
   ```bash
+  npm ci
+  npm run insights:generate
+  npm run insights:sync
+  npm run check:css
+  npm run validate
   python tools/ci/check_docs.py
   ```
 

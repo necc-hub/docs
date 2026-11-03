@@ -14,9 +14,8 @@ WORD_RE = re.compile(r"[A-Za-z]{4,}")
 CODE_BLOCK_RE = re.compile(r"```[\s\S]*?```", re.MULTILINE)
 TABLE_LINE_RE = re.compile(r"^\|.*\|$", re.MULTILINE)
 ENGLISH_WORD_RE = re.compile(r"\b[A-Za-z][A-Za-z0-9_-]*\b")
-H2_RE = re.compile(r"^##\s+(.+)$", re.MULTILINE)
 IMPORT_LINE_RE = re.compile(r'^\s*import\s+.*?from\s+["\'][^"\']+["\'];?\s*$', re.MULTILINE)
-PAGE_INSIGHTS_MOUNT_RE = re.compile(r"^\s*<PageInsights\s*/>\s*$", re.MULTILINE)
+PAGE_INSIGHTS_MOUNT_RE = re.compile(r"^\s*<PageInsights(?:\s+[^>]*)?\s*/>\s*$", re.MULTILINE)
 
 
 @dataclass
@@ -89,25 +88,8 @@ def compute_length_band(text_chars: int, reading_minutes: int) -> str:
     return "normal"
 
 
-def build_summary(title: str, body: str, max_sentences: int = 3) -> str:
-    _ = title
-    cleaned_body = _clean_body_for_analysis(body)
-    body_without_code = CODE_BLOCK_RE.sub(" ", cleaned_body)
-    intro_candidates = [
-        line.strip()
-        for line in body_without_code.splitlines()
-        if line.strip() and not line.strip().startswith("#") and not line.strip().startswith("<")
-    ]
-    heading_candidates = [f"涵盖：{heading.strip()}" for heading in H2_RE.findall(body_without_code)[:2]]
-    closing_candidates = intro_candidates[-1:] if len(intro_candidates) > 1 else []
-
-    selected: list[str] = []
-    for part in intro_candidates[:2] + heading_candidates + closing_candidates:
-        if part and part not in selected:
-            selected.append(part)
-        if len(selected) >= max_sentences:
-            break
-    return " ".join(selected[:max_sentences]).strip()
+def build_summary(frontmatter: dict[str, str]) -> str:
+    return frontmatter.get("description", "").strip()
 
 
 def iter_mdx_files(docs_root: Path) -> list[Path]:
@@ -140,7 +122,7 @@ def build_record(rel_path: str, text: str) -> dict:
         "pageKind": page_kind,
         "readingMinutes": reading_minutes,
         "lengthBand": compute_length_band(features.text_chars, reading_minutes),
-        "summary": build_summary(frontmatter.get("title", ""), body, max_sentences=3) if page_kind == "article" else "",
+        "summary": build_summary(frontmatter) if page_kind == "article" else "",
         "stats": {
             "textChars": features.text_chars,
             "englishWords": english_words,

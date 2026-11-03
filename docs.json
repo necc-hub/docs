@@ -663,12 +663,12 @@
         "href": "https://www.newenergycoder.club/"
       },
       {
-        "label": "Gitee",
-        "href": "https://gitee.com/darrenpig/new_energy_coder_club"
+        "label": "主代码仓",
+        "href": "https://github.com/necc-hub/new_energy_coder_club"
       },
       {
-        "label": "GitHub",
-        "href": "https://github.com/Darrenpig/new_energy_coder_club"
+        "label": "文档仓",
+        "href": "https://github.com/necc-hub/docs"
       },
       {
         "label": "ROBOCON",
@@ -693,7 +693,7 @@
   },
   "footer": {
     "socials": {
-      "github": "https://github.com/Darrenpig",
+      "github": "https://github.com/necc-hub",
       "linkedin": "https://www.linkedin.com/company/new-energy-coder"
     },
     "bottom": "<a href=\"https://beian.miit.gov.cn/\" target=\"_blank\">苏ICP备2025187096号-1X</a>"

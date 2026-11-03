@@ -13,16 +13,34 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Generate page insights
-        run: python tools/ci/generate_page_insights.py
+        run: npm run insights:generate
 
       - name: Sync page insights mounts
-        run: python tools/ci/inject_page_insights.py
+        run: npm run insights:sync
+
+      - name: Check generated files are up to date
+        run: git diff --exit-code
+
+      - name: Check CSS syntax
+        run: npm run check:css
+
+      - name: Validate Mintlify configuration
+        run: npm run validate
 
       - name: Run docs health check
         run: python tools/ci/check_docs.py

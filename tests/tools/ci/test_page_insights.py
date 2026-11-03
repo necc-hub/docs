@@ -123,52 +123,21 @@ def test_compute_length_band_marks_short_and_long():
     assert compute_length_band(text_chars=900, reading_minutes=3) == "normal"
 
 
-def test_build_summary_uses_intro_headings_and_conclusion():
-    body = """
-NEC 社区面向机器人竞赛与真实工程项目，沉淀机械、视觉与嵌入式经验。
-
-## 学习路径
-
-从新人入门到项目实战逐步展开。
-
-## 社区支持
-
-社区提供文档、导师和答疑。
-
-总结来看，本文帮助新人快速了解站点重点内容。
-"""
-
+def test_build_summary_uses_frontmatter_description():
     summary = build_summary(
-        title="关于 NEC 社区",
-        body=body,
-        max_sentences=3,
+        {
+            "title": "Claude Code",
+            "description": "在 NEC 文档站点中使用 Claude Code 进行 AI 辅助写作与维护",
+        }
     )
 
-    assert "NEC 社区面向机器人竞赛与真实工程项目" in summary
-    assert "学习路径" in summary or "社区支持" in summary
+    assert summary == "在 NEC 文档站点中使用 Claude Code 进行 AI 辅助写作与维护"
 
 
-def test_build_summary_ignores_injected_import_and_mount_lines():
-    body = """
-import { PageInsights } from "/snippets/page-insights.jsx";
+def test_build_summary_trims_frontmatter_description():
+    summary = build_summary({"description": "  NEC 社区文档摘要。\n"})
 
-<PageInsights />
-
-NEC 社区面向机器人竞赛与真实工程项目，沉淀机械、视觉与嵌入式经验。
-
-## 学习路径
-
-从新人入门到项目实战逐步展开。
-"""
-
-    summary = build_summary(
-        title="关于 NEC 社区",
-        body=body,
-        max_sentences=2,
-    )
-
-    assert "PageInsights" not in summary
-    assert "NEC 社区面向机器人竞赛与真实工程项目" in summary
+    assert summary == "NEC 社区文档摘要。"
 
 
 def test_resolve_slug_from_rel_path_removes_mdx_suffix():
@@ -205,8 +174,11 @@ NEC 社区面向机器人竞赛与真实工程项目。
     generate_outputs(docs_root=docs_root, output_dir=output_dir, overrides_path=overrides_path)
 
     data = json.loads((output_dir / "page-insights.json").read_text(encoding="utf-8"))
+    data_module = (docs_root / "snippets" / "page-insights-data.jsx").read_text(encoding="utf-8")
     report = (output_dir / "page-insights-report.md").read_text(encoding="utf-8")
 
+    assert data_module.startswith("export const insights = {")
+    assert "export default" not in data_module
     assert data["community/about"]["pageKind"] == "article"
     assert data["community/about"]["readingMinutes"] >= 1
     assert "## 超长页" in report
@@ -288,8 +260,12 @@ description: "desc"
     article_text = (community / "about.mdx").read_text(encoding="utf-8")
     index_text = (training / "index.mdx").read_text(encoding="utf-8")
 
+    assert 'import { insights } from "/snippets/page-insights-data.jsx";' in article_text
     assert 'import { PageInsights } from "/snippets/page-insights.jsx";' in article_text
-    assert "<PageInsights />" in article_text
+    assert '<PageInsights slug="community/about" insights={insights} />' in article_text
+    assert '---\n\nimport { insights }' in article_text
+    assert ' />\n\n## Intro' in article_text
+    assert "page-insights.js" not in index_text
     assert "page-insights.jsx" not in index_text
 
 
@@ -297,5 +273,6 @@ def test_check_page_insights_artifacts_requires_generated_files(tmp_path: Path):
     errors = check_page_insights_artifacts(tmp_path)
 
     assert "缺少生成文件: generated/page-insights.json" in errors
+    assert "缺少生成文件: snippets/page-insights-data.jsx" in errors
     assert "缺少生成文件: generated/page-insights-report.md" in errors
     assert "缺少生成文件: generated/page-insights.overrides.json" in errors

@@ -5,37 +5,39 @@
 
 ## 站点概述
 
-NEC（New Energy Coder，新能源开发者社区）是一支立足常州工学院、面向全国的以学生与青年工程师为主体的开源技术社区。社区围绕全国大学生机器人大赛 ROBOCON、RoboMaster、智能车竞赛、节能减排等赛事，沉淀机械设计、嵌入式开发、机器视觉、运动控制、软件工程等领域的实战经验与开源代码，并通过 Mintlify 文档站、Gitee/GitHub 仓库与飞书知识库持续对外共享。
+NEC（New Energy Coder，新能源开发者社区）是一支立足常州工学院、面向全国的以学生与青年工程师为主体的开源技术社区。社区围绕全国大学生机器人大赛 ROBOCON、RoboMaster、智能车竞赛、节能减排等赛事，沉淀机械设计、嵌入式开发、机器视觉、运动控制、软件工程等领域的实战经验与开源代码，并通过 Mintlify 文档站、GitHub 仓库与飞书知识库持续对外共享。
 
 - 文档站点：https://docs.newenergycoder.club/
 - 官方网站：https://www.newenergycoder.club/
-- Gitee 主仓库：https://gitee.com/darrenpig/new_energy_coder_club
-- GitHub 镜像：https://github.com/Darrenpig/new_energy_coder_club
+- 文档仓库：https://github.com/necc-hub/docs
+- 主代码仓：https://github.com/necc-hub/new_energy_coder_club
 
 ## 核心关键词
 
-NEC, 常州工 NEC, New Energy Coder, 新能源开发者社区, 新能源机器人, ROBOCON, 全国大学生机器人大赛, 机器人竞赛, 开源社区, 常州工学院, A416 实验室, 机器人控制, 嵌入式开发, 机器视觉, SLAM, ROS2, STM32, ESP32, YOLO, OpenCV, 机械设计, 3D 打印, 开源项目, Gitee, GitHub, 飞书知识库
+NEC, 常州工 NEC, New Energy Coder, 新能源开发者社区, 新能源机器人, ROBOCON, 全国大学生机器人大赛, 机器人竞赛, 开源社区, 常州工学院, A416 实验室, 机器人控制, 嵌入式开发, 机器视觉, SLAM, ROS2, STM32, ESP32, YOLO, OpenCV, 机械设计, 3D 打印, 开源项目, GitHub, 飞书知识库
 
 ## 主要内容
 
 ### 新人入门
 
 - **快速开始** (`/start-here/index`)：官方文档入口，按顺序了解 NEC 与 CURC 2027 新人路线。
+- **通用新人指南** (`/start-here/newcomer-guide`)：社区环境、学习资料与第一次实践。
 - **CURC 2027 新人 onboarding** (`/start-here/curc2027-onboarding`)：角色、路线与第一周任务。
 - **第一个 Good Issue** (`/start-here/first-good-issue`)：从文档贡献开始完成第一次 Pull Request。
 
 ### 竞赛与赛季
 
-- **26RC 备赛总览** (`/competition/robocon`)：全国大学生机器人大赛 ROBOCON 的备赛时间线、技术方案架构与常见问题 FAQ，含 2026 年比赛日程。
 - **竞赛概览** (`/competition/introduction`)：ROBOCON、节能减排、AIC 等赛事经验汇总。
-- **CURC 2026** (`/curc26/`)：2026 赛季机械、视觉、运营等 SIG 的赛季文档。
+- **ROBOCON 备赛** (`/competition/robocon`)：备赛时间线、技术方案架构与常见问题。
+- **CURC 2026 提案** (`/curc26/proposal`)：2026 赛季方案与 SIG 文档入口。
+- **CURC 2027 总览** (`/curc27/index`)：新赛季规划与新人学习入口。
 
 ### 技术专题
 
 - **机械设计** (`/mechanical/introduction`, `/mechanical/chassis`)：底盘、执行机构、传动方案。
 - **嵌入式软件** (`/embedded-software/introduction`, `/embedded-software/control`)：运动控制、任务调度、通信协议。
-- **机器视觉** (`/vision/introduction`, `/vision/detection`, `/vision/localization`)：目标检测、AprilTag、定位导航。
-- **项目模块** (`/modules/overview`, `/modules/robotics`, `/modules/embedded`, `/modules/algorithms`)：机器人控制、嵌入式、算法库总览。
+- **机器视觉** (`/vision/odin1-update`, `/vision/ms200-lidar`)：视觉设备与激光雷达的使用和调试。
+- **项目与实践** (`/handbook/handbook-10-projects`, `/community/projects`)：真实工程项目、实践经验与社区项目索引。
 
 ### 社区与贡献
 
@@ -50,11 +52,12 @@ NEC, 常州工 NEC, New Energy Coder, 新能源开发者社区, 新能源机器�
 - **Wiki 首页** (`/wiki/nec-wiki-home`)：飞书 Wiki 导出快照的入口。
 - **学习路径** (`/wiki/learning-path`)：从入门到精通的机器人学习路线。
 - **培训资源** (`/wiki/training-resources`)：会议记录、培训视频、群聊入口与资料库索引。
-- **资源索引** (`/resources`)：友链、开源框架与参考文献汇总。
+- **资源索引** (`/resource-index`)：友链、开源框架与参考文献汇总。
+- **技能库** (`/skills/index`)：AI Coding Skills 的分类索引与使用文档。
 
 ## 开源项目示例
 
-社区主仓库采用 [木兰宽松许可证第 2 版（Mulan PSL v2）](https://gitee.com/darrenpig/new_energy_coder_club/blob/master/LICENSE.md) 开源，主要项目包括：
+社区主代码仓采用 [木兰宽松许可证第 2 版（Mulan PSL v2）](https://github.com/necc-hub/new_energy_coder_club/blob/master/LICENSE.md) 开源，主要项目包括：
 
 - **Duma 人形机器人**：1W 以内小型人形机器人开源项目。
 - **MechDog 轮腿机器狗**：基于 K230/KFS 的轮腿机器狗工程。
@@ -66,11 +69,11 @@ NEC, 常州工 NEC, New Energy Coder, 新能源开发者社区, 新能源机器�
 ## 联系方式
 
 - 官方网站：https://www.newenergycoder.club/
-- Gitee 仓库：https://gitee.com/darrenpig/new_energy_coder_club
-- GitHub 镜像：https://github.com/Darrenpig/new_energy_coder_club
+- 文档仓库：https://github.com/necc-hub/docs
+- 主代码仓：https://github.com/necc-hub/new_energy_coder_club
 - 飞书知识库：https://scn0bdoc8zxg.feishu.cn/wiki/S10LwzVZdiWLwxkEnEqcTcmEn6e
-- 问题反馈：https://gitee.com/darrenpig/new_energy_coder_club/issues
+- 问题反馈：https://github.com/necc-hub/docs/issues
 
 ---
 
-最后更新：2026-06-26
+最后更新：2026-11-02

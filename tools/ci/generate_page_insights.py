@@ -35,8 +35,12 @@ def generate_outputs(docs_root: Path, output_dir: Path, overrides_path: Path) ->
         records[slug] = record
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    (output_dir / "page-insights.json").write_text(
-        json.dumps(records, ensure_ascii=False, indent=2) + "\n",
+    data_module_path = docs_root / "snippets" / "page-insights-data.jsx"
+    data_module_path.parent.mkdir(parents=True, exist_ok=True)
+    serialized = json.dumps(records, ensure_ascii=False, indent=2)
+    (output_dir / "page-insights.json").write_text(serialized + "\n", encoding="utf-8")
+    data_module_path.write_text(
+        f"export const insights = {serialized};\n",
         encoding="utf-8",
     )
     (output_dir / "page-insights-report.md").write_text(

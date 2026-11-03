@@ -4,9 +4,10 @@ description: "字节跳动飞书一站式 AI 工作平台能力介绍：AI 引�
 icon: "feather"
 ---
 
+import { insights } from "/snippets/page-insights-data.jsx";
 import { PageInsights } from "/snippets/page-insights.jsx";
 
-<PageInsights />
+<PageInsights slug="solutions/feishu/index" insights={insights} />
 
 import { LazyImages } from "/snippets/lazy-images.jsx";
 
@@ -492,18 +493,19 @@ import { LazyImages } from "/snippets/lazy-images.jsx";
 模块五：来料质检&amp;品质AI模块
 模块六：供应商绩效AI考评模块
 模块七：供应链全域AI风险预警模块
-模块八：AI数据驾驶舱&amp;智能问答模块</code></pre>
+模块八：AI数据驾驶舱&amp;智能问答模块</code>
 1. 等待AI生成方案
 2. 确认或调整功能模块
 <Note>
-<p>**Step 2：配置权限**
+
+**Step 2：配置权限**
 
 </Note>
 
 **权限设置：**
 
 1. 点击「权限管理」
-2. 配置角色：<ul><li>采购总监：查看全部内容
+2. 配置角色：采购总监：查看全部内容
 3. 采购经理：查看自己负责的内容
 4. 外部供应商：查看自己可查看的询价订单，上传订单信息
 <Note>
@@ -723,7 +725,7 @@ import { LazyImages } from "/snippets/lazy-images.jsx";
 
 **After**
 
-**流程管理缺失**<p>
+**流程管理缺失**
 
 1. **衔接不畅、导致大量重复工作：**
 
@@ -738,8 +740,6 @@ eg：因没有过程阶段管控、“跟进不留痕”，导致销售管理无
 1. **铁三角架构漏洞**
 
 有经验AR可独自完成方案，SR、FR在现存制度下**有躺赢情况，****导致公司无法有效识别人才；**
-
-</p>
 
 **客户跟进/过程管理方式**
 

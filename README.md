@@ -2,8 +2,8 @@
 
 [![在线文档](https://img.shields.io/badge/docs-docs.newenergycoder.club-blue)](https://docs.newenergycoder.club/)
 [![官网](https://img.shields.io/badge/官网-newenergycoder.club-green)](https://www.newenergycoder.club/)
-[![Gitee](https://img.shields.io/badge/Gitee-new_energy_coder_club-red)](https://gitee.com/darrenpig/new_energy_coder_club)
-[![GitHub](https://img.shields.io/badge/GitHub-new--energy--coder--club-black)](https://github.com/necc-hub/docs)
+[![主代码仓](https://img.shields.io/badge/GitHub-new__energy__coder__club-black)](https://github.com/necc-hub/new_energy_coder_club)
+[![文档仓](https://img.shields.io/badge/GitHub-docs-blue)](https://github.com/necc-hub/docs)
 
 > 面向机器人竞赛与真实工程项目的开源工程社区文档站。沉淀 ROBOCON、RoboMaster、智能车等赛事的机械、嵌入式、机器视觉与运营经验。
 
@@ -23,22 +23,24 @@
 
 ### 环境要求
 
-- Node.js 18+
+- Node.js 20.17–24
 - Python 3.10+
 - Git
 
 ### 安装依赖
 
 ```bash
-npm install -g mintlify
+npm ci
 ```
+
+项目通过 `package-lock.json` 固定 Mintlify 与 CSS 检查工具的版本，无需全局安装 CLI。
 
 ### 启动预览
 
 在项目根目录运行：
 
 ```bash
-mint dev
+npm run dev
 ```
 
 本地服务器默认在 http://localhost:3000 启动，保存文件后自动热更新。
@@ -46,10 +48,14 @@ mint dev
 ## 提交前检查
 
 ```bash
+npm run insights:generate
+npm run insights:sync
+npm run check:css
+npm run validate
 python tools/ci/check_docs.py
 ```
 
-检查项包括 `docs.json` 合法性、导航页面存在性、MDX frontmatter 完整性、内部链接可解析性等。
+检查项包括 PageInsights 产物与挂载同步、`docs.json` 合法性、CSS 解析、Mintlify 配置、导航页面存在性、MDX frontmatter 完整性和内部链接可解析性等。
 
 ## 项目结构
 
@@ -103,7 +109,7 @@ python tools/ci/check_docs.py
 ## 社区
 
 - 官网：https://www.newenergycoder.club/
-- Gitee 主仓库：https://gitee.com/darrenpig/new_energy_coder_club
+- GitHub 主代码仓：https://github.com/necc-hub/new_energy_coder_club
 - GitHub 文档仓库：https://github.com/necc-hub/docs
 - ROBOCON 官网：https://www.cnrobocon.net/
 

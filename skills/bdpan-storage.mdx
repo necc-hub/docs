@@ -3,13 +3,14 @@ title: "bdpan-storage"
 description: "百度网盘文件管理 Skill。支持上传、下载、转存、分享、列表查询、搜索、移动、复制、重命名、创建文件夹。当用户提及\"百度网盘\"/\"bdpan\"/\"网盘\"并涉及文件操作（上传/下载/转存/分享/查看/搜索/移动/复制/重命名/新建文件夹/登录/注销）时触发。用户说\"上传到网盘\"、\"从百度网盘下载\"…"
 ---
 
+import { insights } from "/snippets/page-insights-data.jsx";
 import { PageInsights } from "/snippets/page-insights.jsx";
 
-<PageInsights />
+<PageInsights slug="skills/bdpan-storage" insights={insights} />
 
 | 项目 | 内容 |
 |---|---|
-| 来源 | [skills/bdpan-storage/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/bdpan-storage/SKILL.md) |
+| 来源 | [skills/bdpan-storage/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/bdpan-storage/SKILL.md) |
 | 分类 | TRAE 内置 & 独立工具 |
 | 安装 | 克隆 [Skill 分支](https://github.com/necc-hub/new_energy_coder_club/tree/Skill) 后，将 `skills/bdpan-storage/` 目录复制到 `~/.claude/skills/`（Claude Code）、`~/.trae/skills/`（Trae IDE）或 `~/.qclaw/skills/`（QClaw/OpenClaw），详见 [Skill 安装方式](/community/skill-branch) |
 
@@ -19,7 +20,7 @@ import { PageInsights } from "/snippets/page-insights.jsx";
 
 适配产品: OpenClaw, Claude Code, DuClaw, KimiClaw, Manus 等。
 
-> 内测阶段，使用注意事项详见 [reference/notes.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/bdpan-storage/reference/notes.md)
+> 内测阶段，使用注意事项详见 [reference/notes.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/bdpan-storage/reference/notes.md)
 
 ---
 
@@ -377,7 +378,7 @@ bash @skills/bdpan-storage/scripts/update.sh --check            # 仅检查更�
 
 | 文档 | 何时查阅 |
 |------|---------|
-| [bdpan-commands.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/bdpan-storage/reference/bdpan-commands.md) | 需要完整命令参数、选项、JSON 输出格式时 |
-| [authentication.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/bdpan-storage/reference/authentication.md) | 登录认证流程细节、配置文件位置、Token 管理时 |
-| [examples.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/bdpan-storage/reference/examples.md) | 需要更多使用示例（批量上传、自动备份脚本等）时 |
-| [troubleshooting.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/bdpan-storage/reference/troubleshooting.md) | 遇到错误需要排查时 |
+| [bdpan-commands.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/bdpan-storage/reference/bdpan-commands.md) | 需要完整命令参数、选项、JSON 输出格式时 |
+| [authentication.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/bdpan-storage/reference/authentication.md) | 登录认证流程细节、配置文件位置、Token 管理时 |
+| [examples.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/bdpan-storage/reference/examples.md) | 需要更多使用示例（批量上传、自动备份脚本等）时 |
+| [troubleshooting.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/bdpan-storage/reference/troubleshooting.md) | 遇到错误需要排查时 |

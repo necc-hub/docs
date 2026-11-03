@@ -205,11 +205,6 @@ span),
 span),
 [role="complementary"] [class*="current"]:is(a,
 span),
-span),
-span),
-span),
-span),
-span),
 span){
   color: var(--text-primary) !important;
   border-left-color: var(--mck-primary) !important;

@@ -4,9 +4,10 @@ description: "了解 NEC 新能源开发者社区的起源、愿景、核心价�
 toc: false
 ---
 
+import { insights } from "/snippets/page-insights-data.jsx";
 import { PageInsights } from "/snippets/page-insights.jsx";
 
-<PageInsights />
+<PageInsights slug="community/about" insights={insights} />
 
 NEC（New Energy Coder）新能源开发者社区诞生于对机器人技术的热爱与开源精神的追求，是一支立足常州工学院、面向全国的学生与青年工程师开源技术社区。我们围绕 **ROBOCON 全国大学生机器人大赛**、RoboMaster、智能车竞赛、节能减排等赛事，沉淀机械设计、嵌入式开发、机器视觉、运动控制、软件工程等领域的实战经验与开源代码。
 
@@ -33,7 +34,7 @@ NEC 新能源开发者社区成立于常州工学院，最初是一群热爱 ROB
 
 <AccordionGroup>
   <Accordion title="开源生态">
-    我们坚信开源是推动技术进步的重要力量。NEC 主仓库采用 [木兰宽松许可证第 2 版（Mulan PSL v2）](https://gitee.com/darrenpig/new_energy_coder_club/blob/master/LICENSE.md) 开源，任何人都可以自由使用、修改和贡献；各子项目如有特殊协议，以其仓库内 LICENSE 文件为准。
+    我们坚信开源是推动技术进步的重要力量。NEC 主仓库采用 [木兰宽松许可证第 2 版（Mulan PSL v2）](https://github.com/necc-hub/new_energy_coder_club/blob/master/LICENSE.md) 开源，任何人都可以自由使用、修改和贡献；各子项目如有特殊协议，以其仓库内 LICENSE 文件为准。
   </Accordion>
   <Accordion title="新手友好">
     我们深知入门的不易。NEC 提供从入门到精通的渐进式学习路径、完善的文档和活跃的社区支持，帮助新手快速成长。
@@ -80,13 +81,13 @@ NEC 新能源开发者社区
 
 ## 学习与交流
 
-NEC 主仓库在 Gitee 上维护了一个 Skill 分支（仓库内分支名为 `SKill`），沉淀技能教程、学习笔记、工具链说明等非代码资产：
+NEC 主代码仓在 GitHub 上维护了一个 Skill 分支（仓库内分支名为 `SKill`），沉淀技能教程、学习笔记、工具链说明等非代码资产：
 
 - **机械设计**：SolidWorks / Fusion 360、3D 打印、CNC 加工工艺
 - **嵌入式开发**：STM32 / ESP32、电机驱动、传感器、RTOS
 - **算法**：OpenCV / YOLO、路径规划、运动控制、SLAM
 - **软件工程**：Git 工作流、ROS2、Python 工程化、CI/CD
-- **工具链**：飞书、Gitee、Markdown、开发环境配置
+- **工具链**：飞书、GitHub、Markdown、开发环境配置
 - **竞赛经验**：ROBOCON / RM / 节能赛复盘、规则解读、备赛时间线
 
 <Card
@@ -118,18 +119,18 @@ NEC 主仓库在 Gitee 上维护了一个 Skill 分支（仓库内分支名为 `
     访问官网了解最新动态
   </Card>
   <Card
-    title="Gitee 仓库"
+    title="主代码仓"
     icon="code"
-    href="https://gitee.com/darrenpig/new_energy_coder_club"
+    href="https://github.com/necc-hub/new_energy_coder_club"
   >
-    查看项目代码，提交 Issue 和 PR
+    查看项目代码与原始资料
   </Card>
   <Card
-    title="GitHub 镜像"
+    title="文档仓"
     icon="github"
-    href="https://github.com/Darrenpig/new_energy_coder_club"
+    href="https://github.com/necc-hub/docs"
   >
-    GitHub 同步仓库，适合国际访问
+    改进文档，提交 Issue 和 PR
   </Card>
   <Card
     title="加入社区"

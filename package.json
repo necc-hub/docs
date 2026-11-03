@@ -1,0 +1,18 @@
+{
+  "name": "nec-docs",
+  "private": true,
+  "engines": {
+    "node": ">=20.17.0 <25"
+  },
+  "scripts": {
+    "dev": "mint dev",
+    "validate": "mint validate",
+    "check:css": "node tools/ci/check_css.mjs",
+    "insights:generate": "python tools/ci/generate_page_insights.py",
+    "insights:sync": "python tools/ci/inject_page_insights.py"
+  },
+  "devDependencies": {
+    "mint": "4.2.1184",
+    "postcss": "8.5.32"
+  }
+}

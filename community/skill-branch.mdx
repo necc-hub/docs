@@ -1,26 +1,27 @@
 ---
 title: "Skill 分支文档"
-description: "NEC Gitee 仓库 Skill 分支的入口、目录结构与贡献指南"
+description: "NEC GitHub 仓库 Skill 分支的入口、目录结构与贡献指南"
 ---
 
+import { insights } from "/snippets/page-insights-data.jsx";
 import { PageInsights } from "/snippets/page-insights.jsx";
 
-<PageInsights />
+<PageInsights slug="community/skill-branch" insights={insights} />
 
-NEC 主仓库在 Gitee 上维护了一个 **`SKill` 分支**，用于沉淀与整理技能学习、知识分享、教程资料等内容。本页面作为该分支的文档入口，方便新人快速定位学习资源，也方便贡献者了解如何向分支提交资料。
+NEC 主仓库在 GitHub 上维护了一个 **`SKill` 分支**，用于沉淀与整理技能学习、知识分享、教程资料等内容。本页面作为该分支的文档入口，方便新人快速定位学习资源，也方便贡献者了解如何向分支提交资料。
 
 <Card
   title="打开 Skill 分支"
   icon="code"
-  href="https://gitee.com/darrenpig/new_energy_coder_club/tree/SKill/"
+  href="https://github.com/necc-hub/new_energy_coder_club/tree/SKill/"
   horizontal
 >
-  在 Gitee 上浏览该分支下的全部文档与资料
+  在 GitHub 上浏览该分支下的全部文档与资料
 </Card>
 
 ## 分支定位
 
-`SKill` 分支是 NEC 主仓库在 Gitee 上维护的**技能资料与 AI Coding 资产分支**。当前它主要承担两个角色：
+`SKill` 分支是 NEC 主仓库在 GitHub 上维护的**技能资料与 AI Coding 资产分支**。当前它主要承担两个角色：
 
 1. **HXC ESP A Board 核心设备维护仓库**：包含 ESP32-S3 主控板的固件、文档与调试工具。
 2. **AI Coding Skills 集中托管分支**：收录了 **149 个**跨平台 AI Skills，覆盖 Claude Code、Trae、QClaw/OpenClaw、Kimi 等工具链。
@@ -28,10 +29,10 @@ NEC 主仓库在 Gitee 上维护了一个 **`SKill` 分支**，用于沉淀与�
 <Card
   title="打开 Skill 分支 README"
   icon="code"
-  href="https://gitee.com/darrenpig/new_energy_coder_club/tree/SKill/"
+  href="https://github.com/necc-hub/new_energy_coder_club/tree/SKill/"
   horizontal
 >
-  在 Gitee 上浏览该分支下的全部文档、Skills 与项目源码
+  在 GitHub 上浏览该分支下的全部文档、Skills 与项目源码
 </Card>
 
 ### 为什么单独一个分支？
@@ -77,14 +78,14 @@ SKill/
 └── .trae/                                   # Trae IDE 项目配置
 ```
 
-> 实际目录以 Gitee 分支上的最新文件为准。如果你发现某个领域资料缺失，欢迎补充。
+> 实际目录以 GitHub 分支上的最新文件为准。如果你发现某个领域资料缺失，欢迎补充。
 
 ## 快速开始
 
 ### 1. 克隆仓库
 
 ```bash
-git clone -b SKill https://gitee.com/darrenpig/new_energy_coder_club.git
+git clone -b SKill https://github.com/necc-hub/new_energy_coder_club.git
 cd new_energy_coder_club
 git submodule update --init --recursive
 ```
@@ -153,13 +154,13 @@ python send_cmd.py "s"        # 停止
 | 第一次搭建环境 | [HXC 开发环境搭建](/embedded-software/development-setup) | 前置依赖、安装步骤、验证清单 |
 | 快速调试电机 | [HXC 跨工作区 Vibe Coding 调试](/embedded-software/vibe-coding-debug) | 调试工作流、命令速查、故障处理 |
 | HXC 电机控制项目 | [HXC 电机控制项目](/embedded-software/hxc-motor-control) | C620 / N630 / AM32 三套模板与 BoardA 模块库 |
-| 理解板级设计 | [Gitee] `projects/embedded/HXC_A_Usage_Guide.md` | 硬件参数、CAN/串口约定、三类工程用法 |
-| 浏览全部技能 | [Gitee] `skills/` | 149 个 AI Coding Skills |
+| 理解板级设计 | [GitHub] `projects/embedded/HXC_A_Usage_Guide.md` | 硬件参数、CAN/串口约定、三类工程用法 |
+| 浏览全部技能 | [GitHub] `skills/` | 149 个 AI Coding Skills |
 
 ## 如何查找资料
 
 1. **按技术领域浏览**：进入对应目录，查找 `README.md` 或专题文档。
-2. **按关键词搜索**：在 Gitee 仓库内使用搜索功能，限定 `SKill` 分支。
+2. **按关键词搜索**：在 GitHub 仓库内使用搜索功能，限定 `SKill` 分支。
 3. **从本页跳转**：下方会持续更新已有资料的索引卡片。
 
 ## 建议贡献内容
@@ -188,7 +189,7 @@ python send_cmd.py "s"        # 停止
 - Git 工作流与提交规范
 - Python 工程化实践
 - ROS2 节点开发与调试
-- 飞书、Gitee、Markdown 使用技巧
+- 飞书、GitHub、Markdown 使用技巧
 
 ### 竞赛与项目方向
 - 赛季复盘（做了什么、为什么失败、下次怎么改）
@@ -200,10 +201,10 @@ python send_cmd.py "s"        # 停止
 
 <Steps>
   <Step title="Fork 或拉取仓库">
-    在 Gitee 上 Fork NEC 主仓库，或本地克隆后切换到 `SKill` 分支。
+    在 GitHub 上 Fork NEC 主仓库，或本地克隆后切换到 `SKill` 分支。
 
     ```bash
-    git clone https://gitee.com/darrenpig/new_energy_coder_club.git
+    git clone https://github.com/necc-hub/new_energy_coder_club.git
     cd new_energy_coder_club
     git checkout SKill
     git pull origin SKill
@@ -416,9 +417,9 @@ skill-name/
 
 <CardGroup cols={2}>
   <Card
-    title="Gitee SKill 分支"
+    title="GitHub SKill 分支"
     icon="code"
-    href="https://gitee.com/darrenpig/new_energy_coder_club/tree/SKill/"
+    href="https://github.com/necc-hub/new_energy_coder_club/tree/SKill/"
   >
     浏览全部现有资料
   </Card>

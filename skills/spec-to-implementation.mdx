@@ -3,13 +3,14 @@ title: "spec-to-implementation"
 description: "Turns product or tech specs into concrete Notion tasks that Claude code can implement. Breaks down spec pages into detailed implementation plans with…"
 ---
 
+import { insights } from "/snippets/page-insights-data.jsx";
 import { PageInsights } from "/snippets/page-insights.jsx";
 
-<PageInsights />
+<PageInsights slug="skills/spec-to-implementation" insights={insights} />
 
 | 项目 | 内容 |
 |---|---|
-| 来源 | [skills/spec-to-implementation/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/spec-to-implementation/SKILL.md) |
+| 来源 | [skills/spec-to-implementation/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/spec-to-implementation/SKILL.md) |
 | 分类 | 开发工程 & 工作流 |
 | 安装 | 克隆 [Skill 分支](https://github.com/necc-hub/new_energy_coder_club/tree/Skill) 后，将 `skills/spec-to-implementation/` 目录复制到 `~/.claude/skills/`（Claude Code）、`~/.trae/skills/`（Trae IDE）或 `~/.qclaw/skills/`（QClaw/OpenClaw），详见 [Skill 安装方式](/community/skill-branch) |
 
@@ -60,7 +61,7 @@ Example searches:
    - Identify dependencies and blockers
 ```
 
-See [reference/spec-parsing.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/spec-to-implementation/reference/spec-parsing.md) for parsing patterns.
+See [reference/spec-parsing.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/spec-to-implementation/reference/spec-parsing.md) for parsing patterns.
 
 ### Step 3: Create implementation plan
 
@@ -113,7 +114,7 @@ For each task in plan:
 4. Add implementation details in content
 ```
 
-See [reference/task-creation.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/spec-to-implementation/reference/task-creation.md) for task patterns.
+See [reference/task-creation.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/spec-to-implementation/reference/task-creation.md) for task patterns.
 
 ### Step 7: Begin implementation
 
@@ -137,7 +138,7 @@ Regular updates:
 4. Link to related work (PRs, designs, etc.)
 ```
 
-See [reference/progress-tracking.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/spec-to-implementation/reference/progress-tracking.md) for tracking patterns.
+See [reference/progress-tracking.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/spec-to-implementation/reference/progress-tracking.md) for tracking patterns.
 
 ## Spec Analysis Patterns
 
@@ -147,13 +148,13 @@ See [reference/progress-tracking.md](https://github.com/necc-hub/new_energy_code
 
 **Acceptance Criteria**: Testable conditions, user validation points, performance benchmarks, completion definitions
 
-See [reference/spec-parsing.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/spec-to-implementation/reference/spec-parsing.md) for detailed parsing techniques.
+See [reference/spec-parsing.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/spec-to-implementation/reference/spec-parsing.md) for detailed parsing techniques.
 
 ## Implementation Plan Structure
 
 **Plan includes**: Overview → Linked Spec → Requirements Summary → Technical Approach → Implementation Phases (Goal, Tasks checklist, Estimated effort) → Dependencies → Risks & Mitigation → Timeline → Success Criteria
 
-See [reference/standard-implementation-plan.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/spec-to-implementation/reference/standard-implementation-plan.md) for full plan template.
+See [reference/standard-implementation-plan.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/spec-to-implementation/reference/standard-implementation-plan.md) for full plan template.
 
 ## Task Breakdown Patterns
 
@@ -169,7 +170,7 @@ See [reference/standard-implementation-plan.md](https://github.com/necc-hub/new_
 
 **Progress Format**: Date heading → Completed → In Progress → Next Steps → Blockers → Notes
 
-See [reference/progress-tracking.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/spec-to-implementation/reference/progress-tracking.md) for detailed patterns.
+See [reference/progress-tracking.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/spec-to-implementation/reference/progress-tracking.md) for detailed patterns.
 
 ## Linking Spec to Implementation
 
@@ -222,6 +223,6 @@ For additional implementation patterns and techniques, see the reference files i
 
 See [examples/](https://github.com/necc-hub/new_energy_coder_club/tree/Skill/skills/spec-to-implementation/examples) for complete workflows:
 
-- [examples/api-feature.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/spec-to-implementation/examples/api-feature.md) - API feature implementation
-- [examples/ui-component.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/spec-to-implementation/examples/ui-component.md) - Frontend component
-- [examples/database-migration.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/spec-to-implementation/examples/database-migration.md) - Schema changes
+- [examples/api-feature.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/spec-to-implementation/examples/api-feature.md) - API feature implementation
+- [examples/ui-component.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/spec-to-implementation/examples/ui-component.md) - Frontend component
+- [examples/database-migration.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/spec-to-implementation/examples/database-migration.md) - Schema changes

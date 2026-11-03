@@ -3,13 +3,14 @@ title: "kimi-cli"
 description: "调用本地 Kimi CLI（kimi-for-coding 模型）执行编程、代码分析、代码生成等任务。当用户明确要求\"用 Kimi\"、\"让 Kimi 处理\"、\"kimi 帮我\"，或任务属于代码编写/调试/重构/技术分析类且适合交给 Kimi 处理时触发。"
 ---
 
+import { insights } from "/snippets/page-insights-data.jsx";
 import { PageInsights } from "/snippets/page-insights.jsx";
 
-<PageInsights />
+<PageInsights slug="skills/kimi-cli" insights={insights} />
 
 | 项目 | 内容 |
 |---|---|
-| 来源 | [skills/kimi-cli/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/kimi-cli/SKILL.md) |
+| 来源 | [skills/kimi-cli/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/kimi-cli/SKILL.md) |
 | 分类 | AI CLI 调用器 |
 | 安装 | 克隆 [Skill 分支](https://github.com/necc-hub/new_energy_coder_club/tree/Skill) 后，将 `skills/kimi-cli/` 目录复制到 `~/.claude/skills/`（Claude Code）、`~/.trae/skills/`（Trae IDE）或 `~/.qclaw/skills/`（QClaw/OpenClaw），详见 [Skill 安装方式](/community/skill-branch) |
 

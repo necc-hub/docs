@@ -3,13 +3,14 @@ title: "news-extractor"
 description: "新闻站点内容提取。支持微信公众号、今日头条、网易新闻、搜狐新闻、腾讯新闻。当用户需要提取新闻内容、抓取公众号文章、爬取新闻、或获取新闻JSON/Markdown时激活。"
 ---
 
+import { insights } from "/snippets/page-insights-data.jsx";
 import { PageInsights } from "/snippets/page-insights.jsx";
 
-<PageInsights />
+<PageInsights slug="skills/news-extractor" insights={insights} />
 
 | 项目 | 内容 |
 |---|---|
-| 来源 | [skills/news-extractor/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/news-extractor/SKILL.md) |
+| 来源 | [skills/news-extractor/SKILL.md](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/news-extractor/SKILL.md) |
 | 分类 | 搜索 & 资讯聚合 |
 | 安装 | 克隆 [Skill 分支](https://github.com/necc-hub/new_energy_coder_club/tree/Skill) 后，将 `skills/news-extractor/` 目录复制到 `~/.claude/skills/`（Claude Code）、`~/.trae/skills/`（Trae IDE）或 `~/.qclaw/skills/`（QClaw/OpenClaw），详见 [Skill 安装方式](/community/skill-branch) |
 
@@ -187,4 +188,4 @@ uv run .claude/skills/news-extractor/scripts/extract_news.py \
 
 ## 参考
 
-- [平台 URL 模式说明](https://github.com/necc-hub/new_energy_coder_club/blob/Skill/skills/news-extractor/references/platform-patterns.md)
+- [平台 URL 模式说明](https://github.com/necc-hub/new_energy_coder_club/blob/SKill/skills/news-extractor/references/platform-patterns.md)

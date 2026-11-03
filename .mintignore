@@ -12,3 +12,6 @@ drafts/
 # 知识图谱交互页源码：经 R2 CDN（cdn.newenergycoder.club/kg/）对外提供，
 # Mintlify 不托管根级静态目录，避免误解析
 kg/
+
+# 本地非站点资料，不参与 Mintlify 构建
+dsh-skin-market-README.md

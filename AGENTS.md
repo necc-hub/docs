@@ -58,7 +58,7 @@ npm run dev
    - 核心团队：团队总览 → 维护者名单
    - 贡献指南：总览 → 规范 → 流程 → 代码风格 → Gitee 协作
 5. **Wiki** — Wiki 总览、新人入门、社区与协作、培训与资源、规范与安全
-6. **关于** — 路线图（`ROADMAP`）、资源汇总（`resource-index`）
+6. **关于** — 路线图（`ROADMAP`）、AI 搜索与 GEO 权威问答（`geo`）、资源汇总（`resource-index`）
 7. **技能库** — Skill 分支 150 个 AI Coding Skills 的详情页（`skills/*.mdx`，由脚本从 `github/SKill` 分支批量生成）
    - 概览：`skills/index`（核心推荐 7 个前置 + 推荐 143 个按 12 大类的完整索引表）置顶
    - 核心推荐（NEC 精选）（7）：`nec-resource-publisher`、`nec-wechat-sync`、`pv-station-rating`、`pv-storage-bom`（仓库独家自研）+ `patent-application-cn`、`cit-thesis-writer`、`acad-paper-prompter`（学术方向社区精选）—— 导航与索引均前置展示

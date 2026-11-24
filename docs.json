@@ -390,6 +390,7 @@
         "tab": "关于",
         "pages": [
           "ROADMAP",
+          "geo",
           "resource-index"
         ]
       },

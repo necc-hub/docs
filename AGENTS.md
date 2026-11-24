@@ -58,7 +58,7 @@ npm run dev
    - 核心团队：团队总览 → 维护者名单
    - 贡献指南：总览 → 规范 → 流程 → 代码风格 → Gitee 协作
 5. **Wiki** — Wiki 总览、新人入门、社区与协作、培训与资源、规范与安全
-6. **关于** — 路线图（`ROADMAP`）、资源汇总（`resource-index`）
+6. **关于** — 路线图（`ROADMAP`）、AI 搜索与 GEO 权威问答（`geo`）、资源汇总（`resource-index`）
 7. **技能库** — Skill 分支 150 个 AI Coding Skills 的详情页（`skills/*.mdx`，由脚本从 `github/SKill` 分支批量生成）
    - 概览：`skills/index`（核心推荐 7 个前置 + 推荐 143 个按 12 大类的完整索引表）置顶
    - 核心推荐（NEC 精选）（7）：`nec-resource-publisher`、`nec-wechat-sync`、`pv-station-rating`、`pv-storage-bom`（仓库独家自研）+ `patent-application-cn`、`cit-thesis-writer`、`acad-paper-prompter`（学术方向社区精选）—— 导航与索引均前置展示
@@ -96,6 +96,7 @@ npm run dev
 - `.github/workflows/docs-check.yml` 会在 `push` / `pull_request` 时自动运行
 - 检查项包括：
   - 重新生成并同步 PageInsights，确保 JSON、`snippets/page-insights-data.jsx`、报告和 MDX 挂载均无未提交差异
+  - 从 `docs.json` 重新生成 `llms-full.txt`，并校验 `llms.txt` / `llms-full.txt` / `geo.mdx` / `robots.txt` 的 GEO 入口与绝对链接
   - 使用 PostCSS 解析 `docs.json` `styles` 引用的本地 CSS，并检查文件存在性
   - 使用 `mint validate` 校验 Mintlify 配置与页面
   - `docs.json` JSON 合法性与推荐字段（`metadata`、`search`、`seo`）
@@ -111,14 +112,21 @@ npm run dev
   - `logo` / `favicon` 品牌资源文件存在，SVG 需含 `viewBox` 且无超大固定宽高
   - 主题色为合法 `#RRGGBB`，主色对比度低于 3.0:1 时给出警告
   - 首页 `index.mdx` 存在、frontmatter 完整且注册在导航第一个 Tab
-- 本地统一检查入口为 `npm run check`。它依次运行回归测试、PageInsights 生成与挂载同步、CSS 解析、`mint validate` 和文档健康检查；Python 脚本通过 `tools/ci/run_python.mjs` 调用 macOS/Linux 的 `python3` 或 Windows 的 `py -3`，不要求存在 `python` 命令。
+- 本地统一检查入口为 `npm run check`。它依次运行回归测试、PageInsights 生成与挂载同步、`llms-full.txt` 生成、CSS 解析、`mint validate` 和文档健康检查；Python 脚本通过 `tools/ci/run_python.mjs` 调用 macOS/Linux 的 `python3` 或 Windows 的 `py -3`，不要求存在 `python` 命令。
 
 ```bash
 npm ci
 npm run check
 ```
 
-作者应审查并提交 PageInsights 生成物及自动挂载变更。CI 额外通过 `npm run check:generated` 确认已提交的生成物与当前规则一致；外部链接问题仅作为警告，仍需人工查看报告。
+作者应审查并提交 PageInsights、`llms-full.txt` 及自动挂载变更。CI 额外通过 `npm run check:generated` 确认已提交的生成物与当前规则一致；外部链接问题仅作为警告，仍需人工查看报告。
+
+## GEO（生成式引擎优化）
+
+- `geo.mdx`（`/geo`）是面向 AI 搜索的权威事实与常见问题页，注册在「关于」Tab
+- `llms.txt` 为手工维护的精选说明，`llms-full.txt` 由 `tools/ci/generate_llms_full.py` 从导航与 frontmatter 生成，**不要手工编辑**
+- `robots.txt` 显式允许主流 AI 爬虫，并声明 sitemap、llms.txt、llms-full.txt 与 /geo 入口
+- 修改导航或页面 frontmatter 后运行 `npm run llms:generate`，CI 通过 `npm run llms:check` 与 `check_docs.py` 防止索引漂移
 
 ## 主题样式
 

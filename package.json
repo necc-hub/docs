@@ -10,10 +10,12 @@
     "check:css": "node tools/ci/check_css.mjs",
     "insights:generate": "node tools/ci/run_python.mjs tools/ci/generate_page_insights.py",
     "insights:sync": "node tools/ci/run_python.mjs tools/ci/inject_page_insights.py",
+    "llms:generate": "node tools/ci/run_python.mjs tools/ci/generate_llms_full.py",
+    "llms:check": "node tools/ci/run_python.mjs tools/ci/generate_llms_full.py --check",
     "test": "node --test tests/tools/ci/page-maintenance.test.mjs && node tools/ci/run_python.mjs -m unittest discover -s tests -t . -v",
     "check:docs": "node tools/ci/run_python.mjs tools/ci/check_docs.py",
-    "check": "npm run test && npm run insights:generate && npm run insights:sync && npm run check:css && npm run validate && npm run check:docs",
-    "check:generated": "node tools/ci/run_python.mjs tools/ci/generate_page_insights.py --check && node tools/ci/run_python.mjs tools/ci/inject_page_insights.py --check"
+    "check": "npm run test && npm run insights:generate && npm run insights:sync && npm run llms:generate && npm run check:css && npm run validate && npm run check:docs",
+    "check:generated": "node tools/ci/run_python.mjs tools/ci/generate_page_insights.py --check && node tools/ci/run_python.mjs tools/ci/inject_page_insights.py --check && npm run llms:check"
   },
   "devDependencies": {
     "mint": "4.2.1184",

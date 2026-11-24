@@ -52,7 +52,9 @@ npm ci
 npm run check
 ```
 
-`npm run check` 会运行回归测试、重新生成并同步 PageInsights、检查 CSS、校验 Mintlify 配置，再执行文档健康检查。无需全局安装 Mintlify，也无需系统提供 `python` 命令；macOS/Linux 使用 `python3`，Windows 使用 Python Launcher（`py -3`）。
+`npm run check` 会运行回归测试、重新生成并同步 PageInsights 和全站 LLM 索引、检查 CSS、校验 Mintlify 配置，再执行文档健康检查。无需全局安装 Mintlify，也无需系统提供 `python` 命令；macOS/Linux 使用 `python3`，Windows 使用 Python Launcher（`py -3`）。
+
+修改导航或页面 frontmatter 后，`npm run llms:generate` 可单独更新 `llms-full.txt`；`npm run llms:check` 可只检查是否同步。
 
 检查项包括 PageInsights 产物与挂载同步、`docs.json` 合法性、CSS 解析、Mintlify 配置、导航页面存在性、MDX frontmatter 完整性和内部链接可解析性等。
 
@@ -66,7 +68,9 @@ npm run check
 ├── docs.json                 # Mintlify 站点配置与导航
 ├── style.css                 # 自定义主题样式
 ├── robots.txt                # 搜索引擎与 AI 爬虫指引
-├── llms.txt                  # LLM 抓取指引
+├── llms.txt                  # 精选 LLM 抓取指引（手工维护）
+├── llms-full.txt             # 全站页面索引（由脚本生成，勿手改）
+├── geo.mdx                   # AI 搜索权威事实与问答页（/geo）
 ├── AGENTS.md                 # 给 AI Agent 的项目说明
 ├── images/                   # 图片资源
 ├── logo/                     # 站点 Logo（明暗主题）

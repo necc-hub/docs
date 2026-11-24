@@ -1,7 +1,38 @@
 User-agent: *
 Allow: /
 
+# AI answer engines and crawlers: explicitly allowed to access public docs.
+# No crawler-specific throttling or private-path overrides are configured.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://docs.newenergycoder.club/sitemap.xml
 
-# AI crawlers
+# AI-readable discovery endpoints (non-standard robots.txt hints).
 LLMs-txt: https://docs.newenergycoder.club/llms.txt
+LLMs-full-txt: https://docs.newenergycoder.club/llms-full.txt
+AI-guide: https://docs.newenergycoder.club/geo

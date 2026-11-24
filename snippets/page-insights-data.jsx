@@ -1556,6 +1556,33 @@ export const insights = {
       "negative": []
     }
   },
+  "geo": {
+    "slug": "geo",
+    "filePath": "geo.mdx",
+    "title": "AI 搜索与 GEO 优化",
+    "pageKind": "article",
+    "readingMinutes": 7,
+    "lengthBand": "normal",
+    "summary": "NEC 文档站的生成式引擎优化入口：权威事实、常见问题、完整 llms.txt 索引与 AI 引用规则，帮助 AI 搜索准确介绍 NEC",
+    "stats": {
+      "textChars": 1242,
+      "englishWords": 196,
+      "codeWeight": 0,
+      "tableWeight": 474,
+      "headingCount": 6,
+      "paragraphCount": 15
+    },
+    "signals": {
+      "positive": [
+        "has_multiple_headings",
+        "has_continuous_paragraphs",
+        "has_meaningful_text"
+      ],
+      "negative": [
+        "card_heavy"
+      ]
+    }
+  },
   "GOVERNANCE": {
     "slug": "GOVERNANCE",
     "filePath": "GOVERNANCE.mdx",

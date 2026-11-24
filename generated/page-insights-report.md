@@ -32,6 +32,8 @@
 - `mechanical/lumenpnp/lumenpnp-v4`
 - `mechanical/training-structure-design-methodology`
 - `mechanical/training-weight-reduction-guide`
+- `skills/TRAE-code-review`
+- `skills/TRAE-debugger`
 - `skills/acad-paper-prompter`
 - `skills/agent-browser`
 - `skills/ai-data-analysis`
@@ -106,8 +108,6 @@
 - `skills/tencent-survey`
 - `skills/test-driven-development`
 - `skills/tme-openapi`
-- `skills/TRAE-code-review`
-- `skills/TRAE-debugger`
 - `skills/wecomcli-setup`
 - `skills/weiyun`
 - `skills/writing-plans`

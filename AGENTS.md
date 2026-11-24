@@ -96,6 +96,7 @@ npm run dev
 - `.github/workflows/docs-check.yml` 会在 `push` / `pull_request` 时自动运行
 - 检查项包括：
   - 重新生成并同步 PageInsights，确保 JSON、`snippets/page-insights-data.jsx`、报告和 MDX 挂载均无未提交差异
+  - 从 `docs.json` 重新生成 `llms-full.txt`，并校验 `llms.txt` / `llms-full.txt` / `geo.mdx` / `robots.txt` 的 GEO 入口与绝对链接
   - 使用 PostCSS 解析 `docs.json` `styles` 引用的本地 CSS，并检查文件存在性
   - 使用 `mint validate` 校验 Mintlify 配置与页面
   - `docs.json` JSON 合法性与推荐字段（`metadata`、`search`、`seo`）
@@ -116,10 +117,18 @@ npm run dev
   npm ci
   npm run insights:generate
   npm run insights:sync
+  npm run llms:generate
   npm run check:css
   npm run validate
   python tools/ci/check_docs.py
   ```
+
+## GEO（生成式引擎优化）
+
+- `geo.mdx`（`/geo`）是面向 AI 搜索的权威事实与常见问题页，注册在「关于」Tab
+- `llms.txt` 为手工维护的精选说明，`llms-full.txt` 由 `tools/ci/generate_llms_full.py` 从导航与 frontmatter 生成，**不要手工编辑**
+- `robots.txt` 显式允许主流 AI 爬虫，并声明 sitemap、llms.txt、llms-full.txt 与 /geo 入口
+- 修改导航或页面 frontmatter 后运行 `npm run llms:generate`，CI 通过 `npm run llms:check` 与 `check_docs.py` 防止索引漂移
 
 ## 主题样式
 

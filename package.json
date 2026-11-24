@@ -9,7 +9,9 @@
     "validate": "mint validate",
     "check:css": "node tools/ci/check_css.mjs",
     "insights:generate": "python tools/ci/generate_page_insights.py",
-    "insights:sync": "python tools/ci/inject_page_insights.py"
+    "insights:sync": "python tools/ci/inject_page_insights.py",
+    "llms:generate": "python3 tools/ci/generate_llms_full.py",
+    "llms:check": "python3 tools/ci/generate_llms_full.py --check"
   },
   "devDependencies": {
     "mint": "4.2.1184",

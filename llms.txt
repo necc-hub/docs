@@ -2,6 +2,8 @@
 
 > 面向机器人竞赛与真实工程项目的开源工程社区。
 > 关键词：NEC、常州工 NEC、新能源机器人、ROBOCON、开源社区、机器人竞赛、开发者社区
+> AI 权威事实与问答：https://docs.newenergycoder.club/geo
+> 完整页面索引：https://docs.newenergycoder.club/llms-full.txt
 
 ## 站点概述
 
@@ -76,4 +78,4 @@ NEC, 常州工 NEC, New Energy Coder, 新能源开发者社区, 新能源机器�
 
 ---
 
-最后更新：2026-11-02
+最后更新：2026-11-25

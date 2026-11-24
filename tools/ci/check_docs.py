@@ -20,6 +20,7 @@
 16. PageInsights 的 JSON、JS 数据模块、报告与覆盖配置生成物存在
 17. llms.txt 中反引号标注的站内路径可解析
 18. 核心文档不含旧主代码仓链接，技能页使用正确的 SKill 分支大小写
+19. GEO 入口、AI 爬虫声明与 llms-full.txt 完整索引有效且保持同步
 """
 
 from __future__ import annotations
@@ -199,6 +200,19 @@ def check_robots_txt() -> list[str]:
     robots = ROOT / "robots.txt"
     if not robots.is_file():
         warnings.append("缺少 robots.txt，搜索引擎与 AI 爬虫无法发现 sitemap/llms.txt")
+        return warnings
+    text = robots.read_text(encoding="utf-8")
+    for required in (
+        "Sitemap: https://docs.newenergycoder.club/sitemap.xml",
+        "LLMs-txt: https://docs.newenergycoder.club/llms.txt",
+        "LLMs-full-txt: https://docs.newenergycoder.club/llms-full.txt",
+        "AI-guide: https://docs.newenergycoder.club/geo",
+    ):
+        if required not in text:
+            warnings.append(f"robots.txt 缺少 AI/GEO 发现声明: {required}")
+    for crawler in ("GPTBot", "OAI-SearchBot", "ClaudeBot", "PerplexityBot"):
+        if f"User-agent: {crawler}" not in text:
+            warnings.append(f"robots.txt 未明确声明 AI 爬虫访问规则: {crawler}")
     return warnings
 
 
@@ -255,6 +269,58 @@ def check_llms_txt_paths(root: Path) -> list[str]:
             candidates = [target]
         if not any(target_exists(candidate) for candidate in candidates):
             errors.append(f"llms.txt 站内路径无法解析: {raw_path}")
+    return errors
+
+
+GEO_ABSOLUTE_URL_RE = re.compile(r"https://docs\.newenergycoder\.club(/[^\s)\]`<>\"']*)")
+GEO_STATIC_SUFFIXES = (".xml", ".json", ".png", ".jpg", ".jpeg", ".gif", ".svg", ".ico", ".webp", ".pdf")
+
+
+def check_geo_artifacts(root: Path, data: dict) -> list[str]:
+    """Validate the GEO entry page and both LLM-facing indexes."""
+    errors: list[str] = []
+    for rel_path in ("geo.mdx", "llms.txt", "llms-full.txt", "robots.txt"):
+        if not (root / rel_path).is_file():
+            errors.append(f"缺少 GEO 文件: {rel_path}")
+    if errors:
+        return errors
+
+    geo_text = (root / "geo.mdx").read_text(encoding="utf-8")
+    llms_text = (root / "llms.txt").read_text(encoding="utf-8")
+    llms_full = (root / "llms-full.txt").read_text(encoding="utf-8")
+
+    if "geo" not in collect_nav_pages(data):
+        errors.append("geo.mdx 未在 docs.json 导航中注册")
+    if "/llms-full.txt" not in llms_text or "/geo" not in llms_text:
+        errors.append("llms.txt 缺少指向 llms-full.txt 与 /geo 的入口")
+    if "/llms.txt" not in llms_full or "/geo" not in llms_full:
+        errors.append("llms-full.txt 缺少指向 llms.txt 与 /geo 的交叉引用")
+    if "## 页面索引" not in llms_full:
+        errors.append("llms-full.txt 缺少「页面索引」章节")
+    if "llms-full.txt" not in geo_text:
+        errors.append("geo.mdx 未说明 llms-full.txt 入口")
+
+    nav_pages = collect_nav_pages(data)
+    for page in sorted(nav_pages):
+        url = "https://docs.newenergycoder.club/" if page == "index" else f"https://docs.newenergycoder.club/{page}"
+        if f"]({url})" not in llms_full:
+            errors.append(f"llms-full.txt 缺少导航页面: {page}")
+
+    for raw_url in sorted(set(GEO_ABSOLUTE_URL_RE.findall(llms_full + "\n" + geo_text))):
+        path = raw_url.split("#", 1)[0].split("?", 1)[0]
+        if path.endswith(GEO_STATIC_SUFFIXES):
+            continue
+        target = path.lstrip("/")
+        if not target:
+            candidates = ["index"]
+        elif target.endswith("/"):
+            candidates = [target + "index"]
+        elif (root / target).is_dir():
+            candidates = [target, target + "/index"]
+        else:
+            candidates = [target]
+        if not any(target_exists(candidate) for candidate in candidates):
+            errors.append(f"GEO 绝对链接无法解析: https://docs.newenergycoder.club{raw_url}")
     return errors
 
 
@@ -523,6 +589,7 @@ def main() -> int:
     warnings.extend(check_robots_txt())
     errors.extend(check_page_insights_artifacts(ROOT))
     errors.extend(check_llms_txt_paths(ROOT))
+    errors.extend(check_geo_artifacts(ROOT, data))
     errors.extend(check_canonical_repository_links(ROOT))
 
     # 1. 导航页面存在性

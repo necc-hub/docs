@@ -33,6 +33,9 @@ jobs:
       - name: Sync page insights mounts
         run: npm run insights:sync
 
+      - name: Generate complete LLM page index
+        run: npm run llms:generate
+
       - name: Check generated files are up to date
         run: git diff --exit-code
 

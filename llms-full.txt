@@ -1,0 +1,339 @@
+# NEC 新能源开发者社区 — 完整页面索引
+
+> 面向机器人竞赛与真实工程项目的开源工程社区。
+> 本文件由 docs.json 自动生成，共 318 个导航页面；页面标题、描述与规范链接以源页面为准。
+> 精选说明：https://docs.newenergycoder.club/llms.txt
+> AI 权威事实与问答：https://docs.newenergycoder.club/geo
+
+## 使用说明
+
+- 回答具体技术问题时优先引用对应页面，不要只引用首页或本索引。
+- 区分当前资料与历史赛季内容；赛程、报名、群聊、固件和依赖版本需核对源页面。
+- 主代码仓：https://github.com/necc-hub/new_energy_coder_club
+- 文档仓库：https://github.com/necc-hub/docs
+- 问题反馈：https://github.com/necc-hub/docs/issues
+
+## 页面索引
+
+- [NEC 新能源开发者社区](https://docs.newenergycoder.club/): 常州工NEC-ROBOCON参赛指南：覆盖机械设计、嵌入式开发、机器视觉与竞赛策略的 ROBOCON 备赛文档
+- [快速开始](https://docs.newenergycoder.club/start-here/index): NEC 官方文档快速入口：新人上手、竞赛备赛、培训资源与加入社区
+- [本地开发](https://docs.newenergycoder.club/development): 在本地编辑、预览和部署 NEC 文档站
+- [新人入门指南](https://docs.newenergycoder.club/start-here/newcomer-guide): 常州工 NEC 战队新人入门指南：团队定位、三域技能基线与学习路径
+- [用 AI 搭一个 HTML 网页（Win11 小白版）](https://docs.newenergycoder.club/start-here/build-html-with-ai): 0 基础、30 分钟：在 Win11 上用 AI 写出你的第一个网页，含提示词模板与截图占位
+- [Vibe Coding 高阶手册](https://docs.newenergycoder.club/start-here/vibe-coding): 面向有基础工程师的 Vibe Coding 进阶指南：Loop 流程、FDE 框架、Skill 体系与 Kimi Code /tower 多 agent 实验
+- [CURC 2027 新人 onboarding](https://docs.newenergycoder.club/start-here/curc2027-onboarding): NEC CURC 2027 ROBOCON 招新与培训指南
+- [2027 暑期集训营](https://docs.newenergycoder.club/start-here/2027-summer-camp): NEC 2027 赛季暑期线下集训安排：时间、地点、日程与联系方式
+- [新人任务与成长指南](https://docs.newenergycoder.club/start-here/first-good-issue): NEC 新人指南：岗位路线、标签体系、如何认领并完成第一个 good first issue
+- [NEC 10 日集训](https://docs.newenergycoder.club/training/index): NEC 新能源开发者社区 10 日新人集训总览：从团队融入、机械基础、制造工艺到电控、视觉与 AI 工具的递进式学习路线。
+- [Day 1：团队入职与工具链](https://docs.newenergycoder.club/training/day01-onboarding): NEC 10 日集训第 1 天：了解团队文化、安全规范、Git 与文档协作流程，完成第一个 good first issue。
+- [Day 2：机械通识](https://docs.newenergycoder.club/training/day02-mechanical-basics): NEC 10 日集训第 2 天：机器人标准件、常用材料、加工工艺与装配工具，建立机构设计共同语言。
+- [Day 3：三维建模](https://docs.newenergycoder.club/training/day03-mechanical-modeling): NEC 10 日集训第 3 天：SolidWorks 与 Rhino 基础建模，完成带孔支架并导出 STL/DWG。
+- [Day 4：制造工艺](https://docs.newenergycoder.club/training/day04-manufacturing): NEC 10 日集训第 4 天：3D 打印、CNC 雕刻机、激光雕刻机的安全操作与刀路/切片流程。
+- [Day 5：底盘制作与布线](https://docs.newenergycoder.club/training/day05-chassis-build): NEC 10 日集训第 5 天：铝型材车架绘制与搭建、动力系统与信号系统布线规范。
+- [📖 工种培训手册](https://docs.newenergycoder.club/handbook/index): 基于飞书群聊历史提炼的 NEC 各工种培训手册（2025-08 ~ 2026-10）
+- [🔧 机构/机械培训手册](https://docs.newenergycoder.club/handbook/handbook-01-mechanical): ROBOCON 机构组：SolidWorks 设计、图纸评审、BOM 采购、加工装配全流程
+- [⚡ 电控培训手册](https://docs.newenergycoder.club/handbook/handbook-02-electrical): 电控组：控制方案、电机驱动匹配、CAN 通信与调试
+- [🔩 硬件培训手册](https://docs.newenergycoder.club/handbook/handbook-03-hardware): 硬件组：电机/电池/传感器选型、选型会机制与采购渠道
+- [👁️ 视觉培训手册](https://docs.newenergycoder.club/handbook/handbook-04-vision): 视觉组：识别方案、数据集收集标注、模型训练与部署
+- [🤖 算法/AI/嵌入式培训手册](https://docs.newenergycoder.club/handbook/handbook-05-ai-embedded): 算法组：嵌入式开发、AI Agent、芯片设计大赛
+- [📣 运营/招商培训手册](https://docs.newenergycoder.club/handbook/handbook-06-operations): 运营组：招商赞助 SOP、合规、ESG、职规赛辅导
+- [🏟️ 场务培训手册](https://docs.newenergycoder.club/handbook/handbook-07-field): 场务组：场地搭建、BOM 追踪、Lab 管理
+- [🖨️ 3D 打印培训手册](https://docs.newenergycoder.club/handbook/handbook-08-3dprint): 3D 打印：协作流程、设备维护与资源
+- [🧭 团队管理与新人培训手册](https://docs.newenergycoder.club/handbook/handbook-09-management): 组织架构、SIG 分组、积分制 DCB、赛季运作全流程
+- [🏆 项目实战案例集](https://docs.newenergycoder.club/handbook/handbook-10-projects): 416MES、EMC-AI、N630 电赛、CUMCM 等项目复盘
+- [机构设计](https://docs.newenergycoder.club/mechanical/introduction): 机械结构与机构设计文档
+- [底盘设计](https://docs.newenergycoder.club/mechanical/chassis): 机器人底盘设计与选型指南，含 OpenTpuOmniWheel 开源全向轮资料
+- [全向轮底盘](https://docs.newenergycoder.club/mechanical/chassis-omniwheel): 全向轮结构原理、运动学模型与设计要点
+- [麦轮底盘](https://docs.newenergycoder.club/mechanical/chassis-mecanum): 麦克纳姆轮结构原理、运动学模型与设计要点
+- [EK 战队机械组十日集训](https://docs.newenergycoder.club/mechanical/ek-team-25-mechanical-training): EK 战队机械组新人十日集训教程：从标准件、材料工艺到 SolidWorks、设计基础与经济性优化，逐天推进。
+- [EK 战队机械：SolidWorks 与 AutoCAD 基础及设置](https://docs.newenergycoder.club/mechanical/ek-mechanical-solidworks): 基于 EK 战队 25 赛季机械组培训 Day 3 内容，系统梳理 SolidWorks 2023 与 AutoCAD 环境配置、草图/特征/装配体命令及工程图导出。
+- [Rhino 犀牛建模速成](https://docs.newenergycoder.club/mechanical/rhino-modeling-tutorial): Rhino 犀牛软件下载、基础准备、二维草图绘制、三维建模命令与学习资源汇总。
+- [主轴雕刻机软件安装指南](https://docs.newenergycoder.club/mechanical/cnc-engraver-installation): NEC A416 实验室主轴雕刻机驱动、控制软件与精雕/NC 转换器安装步骤
+- [主轴雕刻机刀路生成与 NC 转换](https://docs.newenergycoder.club/mechanical/cnc-engraver-toolpath): 使用精雕软件绘制图形、生成刀路并转换为 NC 文件的完整流程
+- [主轴雕刻机软件端操作流程](https://docs.newenergycoder.club/mechanical/cnc-engraver-operation): NEC A416 实验室主轴雕刻机软件端操作备忘与标准流程
+- [主轴雕刻机原始资料下载](https://docs.newenergycoder.club/mechanical/cnc-engraver-resources): NEC A416 实验室主轴雕刻机驱动、控制软件、精雕软件、NC 转换器与演示素材下载索引
+- [Falcon2 40W 激光雕刻机指南](https://docs.newenergycoder.club/mechanical/falcon2-laser-engraver): Creality Falcon2 40W 激光雕刻机使用说明：安全须知、组装、软件操作、固件升级与故障排查
+- [K1 打印机使用说明书](https://docs.newenergycoder.club/mechanical/k1-printer-guide): 创想三维 K1 / K1-Max / K1C 3D 打印机使用指南：耗材选择、切片软件设置、打印流程与故障排查
+- [LumenPnP 是什么？开源贴片机介绍](https://docs.newenergycoder.club/mechanical/lumenpnp-introduction): LumenPnP 开源贴片机入门：设备能力、贴装速度、元器件与电路板尺寸支持、双面贴装注意事项
+- [机械组培训资料下载](https://docs.newenergycoder.club/mechanical/training-resources): NEC 机械组培训资料汇总：结构设计方法论、轻量化设计、螺纹系零件、铝管与气动、激光雕刻机与 RoboMaster 电机手册，文件托管于 R2 CDN
+- [结构设计的思维逻辑（哈工大）](https://docs.newenergycoder.club/mechanical/training-structure-design-methodology): 哈尔滨工业大学竞技机器人队金子旭：需求牵引的目标导向、力传递原理、够用就行、合理并优雅四大核心方法论（原文）
+- [轻量化设计指南（哈工大）](https://docs.newenergycoder.club/mechanical/training-weight-reduction-guide): 哈尔滨工业大学竞技机器人队金子旭：结构减重与零件减重、六类减重孔、五步减重法（原文）
+- [机械组培训：螺纹系零件](https://docs.newenergycoder.club/mechanical/training-threaded-fasteners): 螺栓、螺母、螺钉、铜柱的分类选型与安装规范，含滑牙与锈死急救方案（原文）
+- [机械组培训：铝管 + 气动](https://docs.newenergycoder.club/mechanical/training-aluminum-tube-pneumatics): 方形铝管选型要点与空压机、气瓶、气缸、电磁阀等气动元件规范（原文）
+- [Creality Falcon2 激光雕刻机用户手册](https://docs.newenergycoder.club/mechanical/falcon2-user-manual): 创想三维 Falcon2 激光雕刻机快速使用指南 V3.0（中英双语，原文）
+- [RoboMaster M2006 P36 电机使用说明](https://docs.newenergycoder.club/mechanical/m2006-motor-guide): DJI RoboMaster M2006 P36 直流无刷减速电机官方使用说明 V1.0（原文）
+- [RoboMaster M3508 电机使用说明](https://docs.newenergycoder.club/mechanical/m3508-motor-guide): DJI RoboMaster M3508 P19 直流无刷减速电机官方使用说明（中文原文）
+- [番外篇：如何去提问](https://docs.newenergycoder.club/mechanical/training-how-to-ask): 培训番外篇 1.2：提问前的准备与提问时的信息提交规范，附错误示范与改进示例（原文）
+- [番外篇：如何 Debug](https://docs.newenergycoder.club/mechanical/training-how-to-debug): 培训番外篇 4.7：开发环境问题与数据流问题两大类排障思路与常见实例（原文）
+- [DM-S3519-1EC 减速电机工程图](https://docs.newenergycoder.club/mechanical/dm-s3519-motor): 达妙 DM-S3519-1EC 减速电机安装尺寸工程图（单页图纸，含安装孔位与外形尺寸）
+- [RM / RC 供应商名录](https://docs.newenergycoder.club/mechanical/rm-rc-supplier-directory): RoboMaster / ROBOCON 常用供应商名录：机械加工、电控硬件店铺的加工质量、交货、发票、价格与真实评价
+- [Robocon 开源文档汇总](https://docs.newenergycoder.club/mechanical/robocon-open-source-docs): ROBOCON 各参赛队伍开源资料汇总：主赛、马术、非机械类开源项目的战队、赛季、链接与联系方式
+- [LumenPnP 组装](https://docs.newenergycoder.club/mechanical/lumenpnp/lumenpnp): LumenPnP 组装
+- [LumenPnP V4 校准](https://docs.newenergycoder.club/mechanical/lumenpnp/lumenpnp-v4): LumenPnP V4 校准
+- [常见错误汇总](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-4): 您可能在放置零件时发现不准确或错误。本页面将介绍这些错误以及如何修复它们。您可能会同时遇到几个错误，因此请先选择一个错误来解决，然后再继续。
+- [视觉通道调整](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-5): 寻找归位基准点（顶部摄像头） 识别PCB基准标记（顶部摄像头） 校准吸嘴尖端（底部摄像头） 校准元器件位置（底部摄像头）
+- [飞达使用教程](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-6): 图片展示的是飞达，型号为8mm Feeder，品牌为Opulo。飞达主体为黑色，侧面有黄色文字标识。其上有黄色的夹持装置，装置前端有齿轮状结构，用于夹持元器件。该图片位于“选择你的飞达”部分，作为电动飞达配置教程的示例，用于说明使用编带飞达来贴装FTP板作为验证的一部分，强调了飞达在操作中的重要性。
+- [指南-其它](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-7): 使用 LumenPnP 拾取零件时，务必确认零件已成功拾取。虽然底部摄像头也能进行视觉确认，但使用 LumenPnP 的真空传感器可以更快地检测拾取是否成功，无需先将零件移动到底部摄像头前进行检测。由于底部摄像头也会检查零件（虽然速度稍慢些），但您可以放心地禁用真空零件检测功能，依然可以进行稳定贴片作业。
+- [V4.0版本校准教程（单校准板版本）](https://docs.newenergycoder.club/mechanical/lumenpnp/v4-0): V4.0版本校准教程（单校准板版本）
+- [问题与解决方案](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-9): 配置文件中已经关闭了以下步骤，不需要自己再操作了。
+- [验证校准](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-10): 首先使用 FTP 测试板进行验证
+- [准备工作](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-11): LumenPnP最近进行了更新，由V4.0.1升级到V4.1，因此请根据你机器的版本选择对应文档教程。
+- [开箱](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-12): 1. 打开 LumenPnP 包装盒。
+- [框架组装](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-13): 1. 从第二个托盘中取出左、右 Y 型龙门组件。
+- [电气部分组装](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-14): 图片展示的是LumenPnP v4控制箱，背景为红砖墙。控制箱表面有“Reset Button”（复位按钮）和“Boot…
+- [电动飞达](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-15): LumenPnP 飞达是一款开源 SMT 编带飞达，可以可靠地送入最小 0402 的元件。它专为与 LumenPnP 贴片机配合使用而设计，但也可安装在任何 20mm x 20mm 的 V-slot 铝型材上。
+- [编带散料飞达](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-16): 编带散料飞达也叫做散料飞达，是针对短编带物料的供料器，也适用于少量物料贴装的场景。
+- [视觉散料](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-17): 固定视觉散料托盘，并放置元件 没有散料托盘，可以随便找个容器，但底面必须时白色不反光（普通A4就行）…
+- [常用软件的坐标文件导出和导入](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-18): 常用软件的坐标文件导出和导入
+- [新建封装和底部视觉配置](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-19): 进入封装库，绿色加号，添加封装。输入封装名
+- [Mark点-无Mark点贴装](https://docs.newenergycoder.club/mechanical/lumenpnp/mark-mark): Mark点-无Mark点贴装
+- [真空元件检测（气压传感器）](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-21): 使用 LumenPnP 拾取零件时，务必确认零件已成功拾取。虽然底部摄像头也能进行视觉确认，但使用 LumenPnP 的真空传感器可以更快地检测拾取是否成功，无需先将零件移动到底部摄像头前进行检测。由于底部摄像头也会检查零件（虽然速度稍慢些），但您可以放心地禁用真空零件检测功能，依然可以进行稳定贴片作业。
+- [视觉合成（大封装视觉识别）](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-22): 什么是 Vision Compositing（视觉合成）？
+- [拼板贴片教程](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-23): 这里的拼板指的是自己只有单板pos文件，但是pcb生产时为拼板生产且没有拼板后的pos文件。 本教程只适用于同一种板子且等间距拼板的电路板（阵列或者环形）
+- [自动换吸嘴教程](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-24): 几乎所有可以在 LumenPnP 上运行的作业，只需在第一个吸嘴杆上安装一个 吸嘴头，在第二个吸嘴杆上安装另一个 吸嘴头即可完成。这意味着极少需要更换吸嘴头。
+- [更新飞达固件](https://docs.newenergycoder.club/mechanical/lumenpnp/doc-25): 所有送料器均预装固件。以下说明适用于更新新版固件或将自定义固件安装到送料器。
+- [pos2PnP - POS 文件转换工具。](https://docs.newenergycoder.club/mechanical/lumenpnp/pos2pnp-pos): pos2PnP - POS 文件转换工具。
+- [OpenPnP安装调试](https://docs.newenergycoder.club/mechanical/lumenpnp/openpnp): OpenPnP 是一款开源软件，旨在控制贴片机。它支持多种机器，具有高端商业软件中的许多功能。您可以在此处了解更多信息。
+- [Odin1 更新日志](https://docs.newenergycoder.club/vision/odin1-update): Odin1 ROS Driver 0.9.0 与固件 0.10.0 更新内容汇总
+- [MS200 激光雷达](https://docs.newenergycoder.club/vision/ms200-lidar): 奥比中光奥锐达 MS200 激光雷达入门资料与使用指南
+- [嵌软开发](https://docs.newenergycoder.club/embedded-software/introduction): 嵌入式软件开发技术文档
+- [HXC 开发环境搭建](https://docs.newenergycoder.club/embedded-software/development-setup): 从零开始搭建 HXC ESP A Board 开发环境：PlatformIO、ESP32-S3 烧录、串口通信与硬件接线
+- [控制算法](https://docs.newenergycoder.club/embedded-software/control): 嵌入式控制算法实现
+- [HXC 跨工作区 Vibe Coding 调试](https://docs.newenergycoder.club/embedded-software/vibe-coding-debug): 在多工作区间/环境间流畅切换，调试 HXC ESP A Board 固件与电机控制
+- [HXC 电机控制项目](https://docs.newenergycoder.club/embedded-software/hxc-motor-control): HXC 三套电机控制工程模板：C620 单电机调试、N630/VESC 位控、AM32 DSHOT 驱动与 BoardA 模块库
+- [CubeMars AK70-10 KV100 上位机测试](https://docs.newenergycoder.club/embedded-software/cube-mars-ak70-10-kv100): CubeMars AK70-10 KV100 电机上位机连接、参数配置与测试流程说明。
+- [AtomCode 安装与 HXC/AM32 底盘开发环境配置](https://docs.newenergycoder.club/embedded-software/atomcode-hxc-am32-setup): 通过 AtomCode AI 终端安装、拉取 NEC Skill 分支，并在 CLI 中配置 HXC 开发 AM32 底盘环境。
+- [Claude Code 使用指南](https://docs.newenergycoder.club/ai-tools/claude-code): 在 NEC 文档站点中使用 Claude Code 进行 AI 辅助写作与维护
+- [Cursor 使用指南](https://docs.newenergycoder.club/ai-tools/cursor): 在 NEC 文档站点中使用 Cursor 编辑器进行 AI 辅助写作
+- [Windsurf 使用指南](https://docs.newenergycoder.club/ai-tools/windsurf): 在 NEC 文档站点中使用 Windsurf 编辑器进行 AI 辅助写作
+- [MCP Server 使用指南](https://docs.newenergycoder.club/ai-tools/mcp-server): 在 NEC 文档与工程工作流中接入 Model Context Protocol Server，扩展 AI 助手能力
+- [openClaw 安全安装指南](https://docs.newenergycoder.club/ai-tools/openclaw-setup): NEC openClaw 部署指南：Kimi Claw + 飞书的安全接入方案、开通步骤与权限管理
+- [NEC-Claw 云端对话](https://docs.newenergycoder.club/ai-tools/nec-claw-chat): 在文档站内直接使用的云端 AI 对话接口：由 Kimi API 驱动，支持流式输出，API Key 仅保存在本机浏览器
+- [飞书 CLI 使用教程](https://docs.newenergycoder.club/ai-tools/feishu-cli): 飞书官方 CLI（lark-cli）安装与上手教程：一行命令让 AI Agent 操作飞书消息、文档、表格、日历等核心业务能力
+- [AI 基础技术可研（解决方案）](https://docs.newenergycoder.club/ai-tools/ai-feasibility-study): NEC 版 AI 基础技术可行性研究与工具链解决方案，覆盖飞书、Kimi Code、Trae、AI 模型镜像与 openClaw
+- [狗王5天带你上手 Isaac Gym 与 RL 强化学习](https://docs.newenergycoder.club/ai-tools/isaac-gym-rl-tutorial): 从 3D 模型构建、URDF 导出、ROS 校验、Isaac Gym 训练到 MuJoCo Sim2Sim 迁移的强化学习入门教程，以 Tinymal 四足机器人为例。
+- [项目 README 模板](https://docs.newenergycoder.club/templates/project-template): NEC 项目仓库标准化 README 模板
+- [竞赛赛季仓模板](https://docs.newenergycoder.club/templates/competition-template): NEC 竞赛赛季仓库标准化 README 模板
+- [周报模板](https://docs.newenergycoder.club/templates/weekly-report-template): NEC 社区周报与例会记录模板
+- [飞书解决方案](https://docs.newenergycoder.club/solutions/feishu/index): 字节跳动飞书一站式 AI 工作平台能力介绍：AI 引擎、妙搭零代码平台、数字总部、智能伙伴、制造业案例与数据安全
+- [LiblibAI 2.0](https://docs.newenergycoder.club/solutions/liblibai-2-0): 专业素材 × AI 特效 × 视频创作一站搞定：LiblibAI 2.0 详细使用步骤（外部飞书文档）
+- [竞赛备赛经验](https://docs.newenergycoder.club/competition/introduction): NEC 新能源开发者社区竞赛经验分享与总结
+- [ROBOCON 备赛经验](https://docs.newenergycoder.club/competition/robocon): 全国大学生机器人大赛 ROBOCON 备赛经验分享
+- [26RC 参赛全流程](https://docs.newenergycoder.club/competition/robocon2026-guide): 第二十五届全国大学生机器人大赛 ROBOCON 2026 报名、赛程、赛制与现场事务全流程指引
+- [26RC 新人体验](https://docs.newenergycoder.club/competition/robocon2026-newcomer-guide): NEC 新成员参与 ROBOCON 2026 赛季的体验路径，从入队到国赛现场的完整成长路线。
+- [资料存档](https://docs.newenergycoder.club/competition/curc-resources): 常州工 NEC 全国大学生机器人大赛 ROBOCON/CURC 资源汇总：赛事通知、图册、往届图片直播与赛季资料。
+- [ROBOCON 资料包](https://docs.newenergycoder.club/competition/robocon-materials): NEC 社区 ROBOCON 备赛资料包：OpenPnP 贴片机教程、电机驱动手册、嵌入式电控教程、机械结构设计文档、平面定位资料、演示视频与参赛队马术/四足整机开源方案，文件托管于社区 CDN。
+- [节能减排备赛经验](https://docs.newenergycoder.club/competition/energy-saving): 全国大学生节能减排社会实践与科技竞赛备赛经验
+- [AIC 备赛经验](https://docs.newenergycoder.club/competition/aic): 全国大学生智能汽车竞赛（AIC）备赛经验分享
+- [AIC 算法大赛南京宣讲会](https://docs.newenergycoder.club/competition/aic-algorithm-2026): 2026 年 AIC 算法大赛南京站宣讲会信息，重点解读南京钢铁集团‘板材表面缺陷检测’赛题背景、任务、数据集、评价指标与奖励设置。
+- [CURC26 赛季规划](https://docs.newenergycoder.club/curc26/proposal): 常州工NEC团队面向ROBOCON 2026赛季的技术路线、组织模式与工程实践成果。
+- [机构 SIG (Mechanical & Control SIG)](https://docs.newenergycoder.club/curc26/mechanical-sig/about): NEC CURC26 机构 SIG：机械与电控研发力量
+- [机械组 (Mechanical Group)](https://docs.newenergycoder.club/curc26/mechanical-sig/mechanical): CURC26 机械组：结构设计、运动仿真、加工制造与装配
+- [NEC 电控](https://docs.newenergycoder.club/curc26/mechanical-sig/electrical): CURC26 电控组：嵌入式系统、电路设计、运动控制
+- [机构组能力标签](https://docs.newenergycoder.club/curc26/mechanical-sig/capabilities): NEC CURC26 机构组技术栈与分工表建议：按机构交付与按能力标签双层选项，覆盖电控、嵌入式、驱动总线、制作与现场、通信遥控等维度。
+- [视觉 SIG (Visual SIG)](https://docs.newenergycoder.club/curc26/vision-sig/about): NEC CURC26 视觉 SIG：算法、硬件与测试一体化视觉系统
+- [运营组](https://docs.newenergycoder.club/curc26/operation-sig/about): NEC CURC26 运营组：进度管理、文档协作与运营支持
+- [FinFlow 财务开源](https://docs.newenergycoder.club/curc26/finflow): CURC26 赛季财务开源可视化：资金流入流出、体外专项、27赛季专项勾稽（收付实现制·现金口径，数据截至 2026-07-25）
+- [CURC 2027 赛季总览](https://docs.newenergycoder.club/curc27/index): NEC 常州工学院 2027 赛季 ROBOCON 参赛总览：SIG 架构、赛季安排、命名规范与新人入口。
+- [CURC 2027 新人学习区（Onboarding）](https://docs.newenergycoder.club/curc27/onboarding): 27 赛季新人从 0 到 1 加入团队的学习资源汇总、进度看板与学习记录提交规范。
+- [CURC 2027 机构 SIG（机械 + 电控）](https://docs.newenergycoder.club/curc27/mechanical-sig): 27 赛季机构 SIG：机械组与电控组的新人学习路线、实战示例与每日进度记录。
+- [CURC 2027 视觉 SIG（视觉 + 硬件）](https://docs.newenergycoder.club/curc27/vision-sig): 27 赛季视觉 SIG：视觉组与硬件组的新人学习路线与每日进度记录。
+- [CURC 2027 运营 SIG](https://docs.newenergycoder.club/curc27/operation-sig): 27 赛季运营 SIG：宣传、赞助招商与赛务统筹的工作内容与新人学习路线。
+- [关于 NEC 社区](https://docs.newenergycoder.club/community/about): 了解 NEC 新能源开发者社区的起源、愿景、核心价值与加入方式
+- [开源之夏 2026 · 社区报名流程](https://docs.newenergycoder.club/community/registration-process): 开源之夏 2026 社区（组织）报名完整指引：含经典模式与领航模式双模式报名流程、后台管理系统字段详解、导航路径与常见问题。
+- [加入 NEC & 资料收集](https://docs.newenergycoder.club/community/join-collection): NEC 新人入群与资料收集入口汇总页
+- [NEC+（会员）产品页](https://docs.newenergycoder.club/community/nec-plus): NEC+ 付费会员产品说明：结构化路线、评审服务与模板库
+- [Skill 分支文档](https://docs.newenergycoder.club/community/skill-branch): NEC GitHub 仓库 Skill 分支的入口、目录结构与贡献指南
+- [赞助商与合作伙伴](https://docs.newenergycoder.club/community/sponsors): 感谢支持 NEC 新能源开发者社区成长的企业、组织与合作伙伴。
+- [NEC 2026 开发者社群](https://docs.newenergycoder.club/community/nec2026-community): NEC 2026 开发者社群招募：全平台、全方向欢迎加入
+- [A416 实验室](https://docs.newenergycoder.club/community/a416-lab): NEC 线下实体实验室
+- [NEC 项目生态](https://docs.newenergycoder.club/community/projects): NEC 新能源开发者社区开源项目索引：机器人、AI、嵌入式、科研与竞赛
+- [常驻 Mentor](https://docs.newenergycoder.club/community/mentors): NEC 新能源开发者社区常驻 Mentor 名单
+- [社区讨论](https://docs.newenergycoder.club/community/discord): 加入社区讨论，与其他开发者交流
+- [推荐群聊](https://docs.newenergycoder.club/community/recommended-groups): NEC 推荐的机器人竞赛与硬件技术 QQ 交流群，扫码即可加入
+- [我们的起源：一场与郝磊的约定](https://docs.newenergycoder.club/community/story): 一个关于青春、热血与现实碰撞的真实故事
+- [治理与决策（Governance）](https://docs.newenergycoder.club/GOVERNANCE): NEC 社区治理与决策流程：角色、决策、会议与复盘机制
+- [行为准则（Code of Conduct）](https://docs.newenergycoder.club/CODE_OF_CONDUCT): NEC 社区行为准则：尊重、透明、建设性反馈与冲突处理
+- [求助与支持（Support）](https://docs.newenergycoder.club/SUPPORT): NEC 社区支持渠道与求助方式
+- [安全与漏洞反馈（Security）](https://docs.newenergycoder.club/SECURITY): NEC 社区安全政策与漏洞报告流程
+- [财务整理总览（2026-07-25 v4）](https://docs.newenergycoder.club/community/finance-overview-2026-07-25): 常州工 NEC 社区财务内容整理总览：9 份源文件勾稽、资金流入流出汇总、自由现金池计算、待核对事项与全部明细表（收付实现制，2026-07-25 确认版）
+- [团队与致谢（TEAM）](https://docs.newenergycoder.club/community/team): NEC 核心团队、维护者与致谢名单
+- [维护者与核心成员（Maintainers）](https://docs.newenergycoder.club/community/maintainers): NEC 核心维护者与成员名单
+- [贡献文档](https://docs.newenergycoder.club/contributing): 如何为 NEC 文档站点贡献力量
+- [贡献指南](https://docs.newenergycoder.club/contributing/guidelines): 如何为 NEC 新能源开发者社区做出贡献
+- [工作流程](https://docs.newenergycoder.club/contributing/workflow): NEC 项目的开发工作流程
+- [代码规范](https://docs.newenergycoder.club/contributing/code-style): NEC 项目的代码风格指南
+- [参与 Gitee 协作](https://docs.newenergycoder.club/contributing/gitee-collaboration): NEC 社区 Gitee 协作入门：注册、Star、Fork、提交 PR 的完整流程
+- [NEC 知识库](https://docs.newenergycoder.club/wiki/nec-wiki-home): NEC 知识库总览：团队介绍、新人入门、工具资源、往届经验、安全规范
+- [重要文档索引](https://docs.newenergycoder.club/wiki/important-docs): NEC 社区核心入口文档索引：新人上手、竞赛备赛、培训资源与加入社区
+- [文档知识图谱](https://docs.newenergycoder.club/wiki/knowledge-graph): NEC 文档站全站页面互链的交互式知识图谱：拖拽缩放浏览板块结构，点击节点直达文档页
+- [Start Here（新人入口）](https://docs.newenergycoder.club/wiki/start-here): NEC 新人第一站：根据你的角色，选择最适合的入门路径
+- [Learn · 学习路线](https://docs.newenergycoder.club/wiki/learning-path): 从入门到能带人的结构化成长路径
+- [常见Q&A](https://docs.newenergycoder.club/wiki/faq): NEC开源仓库（New Energy × Robotics）是一个由高校本科生驱动的新能源与机器人开源社区，以下是整理的常见问题解答：
+- [Community（社区）](https://docs.newenergycoder.club/wiki/community): 目前的社区建设进行了9月的研判，目测进度管理角度还可以，后期将会继续推进飞书文档的构建：
+- [Contribute（参与Gitee协作）](https://docs.newenergycoder.club/wiki/gitee-contribution): 1.Gitee搜索，并点击https://gitee.com/官网
+- [NEC+（付费会员 / 月付）](https://docs.newenergycoder.club/wiki/nec-plus-membership): - 你付费买到的是什么（明确价值）
+- [📚 NEC 培训资源中心](https://docs.newenergycoder.club/wiki/training-resources): 会议纪要 | 培训视频 | 群聊入口一站式导航
+- [NEC 技术资源库](https://docs.newenergycoder.club/wiki/tech-resources): NEC 技术资源库与新手学习路径：机械、硬件、软件、视觉、通信等分类资源索引
+- [各团队培训课视频汇总](https://docs.newenergycoder.club/wiki/team-training-videos): B 站各机器人战队培训课视频索引：机械、电控、视觉、ROS 与导航 76 门公开课，含时长、播放量与直达链接
+- [HKU Robocon 软件组新人培训指南](https://docs.newenergycoder.club/wiki/hku-software-trainee): HKU Robocon Team 软件组新人学习路径：C/C++、Linux、Git、ROS 2 与机器人开发入门
+- [NEC 往届经验速查](https://docs.newenergycoder.club/wiki/experience-index): 赛季复盘 · 关键决策 · 踩坑汇总 · 持续积累
+- [NEC 安全与规范索引](https://docs.newenergycoder.club/wiki/safety-and-standards): 实验室安全 · 代码规范 · 文档规范 · 协作流程
+- [Roadmap](https://docs.newenergycoder.club/ROADMAP): NEC 社区路线图与未来规划
+- [AI 搜索与 GEO 优化](https://docs.newenergycoder.club/geo): NEC 文档站的生成式引擎优化入口：权威事实、常见问题、完整 llms.txt 索引与 AI 引用规则，帮助 AI 搜索准确介绍 NEC
+- [资源索引（Resources）](https://docs.newenergycoder.club/resource-index): NEC 社区资源汇总：链接、文档与工具索引
+- [Skills 技能库索引](https://docs.newenergycoder.club/skills/index): NEC Skill 分支 150 个 AI Coding Skills 的完整索引：7 个核心推荐技能（含 4 个仓库独家自研）前置展示，143 个收录自各平台的推荐技能按 12 大分类组织，每个技能均有独立详情页
+- [nec-resource-publisher](https://docs.newenergycoder.club/skills/nec-resource-publisher): 将培训/资料附件（PDF、Excel、工程图、压缩包等）发布到 NEC 文档站（necc-hub/docs，Mintlify）——原文原图展示。PDF 逐块提取原文并原位插入插图，矢量图页与乱码页整页渲染为高清图片，Excel 全量转 Markdown 表格，所有文件与图…
+- [nec-wechat-sync](https://docs.newenergycoder.club/skills/nec-wechat-sync): | 同步分析 NEC 战队微信群聊并生成结构化报告，供飞书 openClaw 机器人读取。 使用场景： 1. 导出指定微信群聊天记录（markdown/json）和成员列表 2. 分析群聊内容，输出时间线、组织架构、关键里程碑、活跃度等维度 3. 生成固定格式的记录文档（.md），放置于 open…
+- [pv-station-rating](https://docs.newenergycoder.club/skills/pv-station-rating): 工商业光伏电站项目分层分级评分。基于六维度（企业性质/省份/自发自用比例/材料齐全性/财务状况/行业稳定性）做 A/B/C/D 评级与十分制加权评分，输出综合等级与基准 IRR。当用户需要评估、评分、分级、分层、风控判定光伏电站项目，或处理\"工商业光伏分层分级_两步走\"模板/类似投资评审表时使用。…
+- [pv-storage-bom](https://docs.newenergycoder.club/skills/pv-storage-bom): Generate photovoltaic and energy storage system standard product BOM (Bill of Materials) lists in Excel format. Use when the user needs to create, or…
+- [patent-application-cn](https://docs.newenergycoder.club/skills/patent-application-cn): Drafts Chinese patent application materials and package skeletons. Invoke when user asks for 技术交底书、专利申请材料、附图清单或申请打包整理。
+- [cit-thesis-writer](https://docs.newenergycoder.club/skills/cit-thesis-writer): 在常州工学院（CIT）毕业设计 LaTeX 模板（如 overleaf-cit-template）中撰写、修改、润色毕业论文内容时使用，提供符合 CIT 格式规范的学术写作辅助。
+- [acad-paper-prompter](https://docs.newenergycoder.club/skills/acad-paper-prompter): Academic paper writing assistant providing structured prompts for polishing, translating, discussion writing, response letters, cover letters, litera…
+- [lark-shared](https://docs.newenergycoder.club/skills/lark-shared): 飞书/Lark CLI 共享基础：应用配置初始化、认证登录（auth login）、身份切换（--as user/bot）、权限与 scope 管理、Permission denied 错误处理、安全规则。当用户需要第一次配置(`lark-cli config init`)、使用登录授权(`lar…
+- [lark-contact](https://docs.newenergycoder.club/skills/lark-contact): 飞书 / Lark 通讯录,用于按姓名 / 邮箱把员工解析成 open_id,以及按 open_id 反查员工的姓名 / 部门 / 邮箱 / 联系方式。当用户说出某人姓名而下一步需要发消息 / 加群 / 排日程时,先用本 skill 把姓名换成 ID;当输出里出现 open_id 需要展示成姓名给…
+- [lark-im](https://docs.newenergycoder.club/skills/lark-im): 飞书即时通讯：收发消息和管理群聊。发送和回复消息、搜索聊天记录、管理群聊成员、上传下载图片和文件（支持大文件分片下载）、管理表情回复。当用户需要发消息、查看或搜索聊天记录、下载聊天中的文件、查看群成员、管理标记数据时使用。
+- [lark-calendar](https://docs.newenergycoder.club/skills/lark-calendar): 飞书日历（calendar）：提供日历与日程（会议）的全面管理能力。核心场景包括：查看/搜索日程、创建/更新日程、管理参会人、查询忙闲状态及推荐空闲时段、查询/搜索与预定会议室。注意：涉及【预约日程/会议】或【查询/预定会议室】时，必须先读取 references/lark-calendar-sc…
+- [lark-doc](https://docs.newenergycoder.club/skills/lark-doc): 飞书云文档（v2）：创建和编辑飞书文档。使用本 skill 时，docs +create、docs +fetch、docs +update 必须携带 --api-version v2；默认使用 DocxXML 格式（也支持 Markdown）。创建文档、获取文档内容（支持 simple/with-…
+- [lark-sheets](https://docs.newenergycoder.club/skills/lark-sheets): 飞书电子表格：创建和操作电子表格。支持创建表格、创建/复制/删除/更新工作表、读写单元格、追加行数据、查找内容、导出文件。当用户需要创建电子表格、管理工作表、批量读写数据、在已知表格中查找内容、导出或下载表格时使用。若用户是想按名称或关键词搜索云空间里的表格文件，请改用 lark-doc 的 do…
+- [lark-base](https://docs.newenergycoder.club/skills/lark-base): 当需要用 lark-cli 操作飞书多维表格（Base）时调用：搜索 Base、建表、字段管理、记录读写、记录分享链接、视图配置、历史查询，以及角色/表单/仪表盘管理/工作流；也适用于把旧的 +table / +field / +record 写法改成当前命令写法。涉及字段设计、公式字段、查找引用…
+- [lark-task](https://docs.newenergycoder.club/skills/lark-task): 飞书任务：管理任务、清单和任务智能体。创建待办任务、查看和更新任务状态、拆分子任务、组织任务清单、分配协作成员、上传任务附件、注册或注销任务智能体、更新任务智能体的主页数据、写入智能体任务记录。当用户需要创建待办事项、查看任务列表、跟踪任务进度、管理项目清单或给他人分配任务、为任务上传附件文件、注…
+- [lark-approval](https://docs.newenergycoder.club/skills/lark-approval): 飞书审批 API：审批实例、审批任务管理。
+- [lark-mail](https://docs.newenergycoder.club/skills/lark-mail): 飞书邮箱 — draft, compose, send, reply, forward, read, and search emails; manage drafts, folders, labels, contacts, attachments, and mail rules. Use when…
+- [lark-drive](https://docs.newenergycoder.club/skills/lark-drive): 飞书云空间：管理云空间中的文件和文件夹。上传和下载文件、创建文件夹、复制/移动/删除文件、查看文件元数据、管理文档评论、管理文档权限、订阅用户评论变更事件、修改文件标题（docx、sheet、bitable、file、folder、wiki）；也负责把本地 Word/Markdown/Excel/…
+- [lark-wiki](https://docs.newenergycoder.club/skills/lark-wiki): 飞书知识库：管理知识空间、空间成员和文档节点。创建和查询知识空间、查看和管理空间成员、管理节点层级结构、在知识库中组织文档和快捷方式。当用户需要在知识库中查找或创建文档、浏览知识空间结构、查看或管理空间成员、移动或复制节点时使用。
+- [lark-minutes](https://docs.newenergycoder.club/skills/lark-minutes): 飞书妙记：妙记相关基本功能。1.查询妙记列表（按关键词/所有者/参与者/时间范围）；2.获取妙记基础信息（标题、封面、时长 等）；3.下载妙记音视频文件；4.获取妙记相关 AI 产物（总结、待办、章节）；5.上传音视频生成妙记，也支持将本地音视频文件转成纪要、逐字稿、文字稿、撰写文字等产物。遇到这…
+- [lark-vc](https://docs.newenergycoder.club/skills/lark-vc): 飞书视频会议：查询会议记录、获取会议纪要产物（总结、待办、章节、逐字稿）。1. 查询已经结束的会议数量或详情时使用本技能(如历史日期｜ 昨天 | 上周 | 今天已经开过的会议等场景)，查询未开始的会议日程使用 lark-calendar 技能。2. 支持通过关键词、时间范围、组织者、参与者、会议室…
+- [lark-vc-agent](https://docs.newenergycoder.club/skills/lark-vc-agent): 飞书视频会议：让机器人代当前用户加入/离开正在进行的会议，并读取会议期间的实时事件（参会人加入与离开、发言、聊天、屏幕共享等）。1. 用户提供 9 位会议号、要求代为入会或离会时使用 +meeting-join / +meeting-leave——会真实产生入会/离会记录。2. 会议进行中用户想知…
+- [lark-okr](https://docs.newenergycoder.club/skills/lark-okr): 飞书 OKR：管理目标与关键结果。查看和编辑 OKR 周期、目标（Objective）、关键结果（Key Result）、对齐关系、量化指标和进展记录。当用户需要查看或创建 OKR、管理目标和关键结果、查看对齐关系时使用。
+- [lark-slides](https://docs.newenergycoder.club/skills/lark-slides): 飞书幻灯片：创建和编辑幻灯片，接口通过 XML 协议通信。创建演示文稿、读取幻灯片内容、管理幻灯片页面（创建、删除、读取、局部替换）。当用户需要创建或编辑幻灯片、读取或修改单个页面时使用。
+- [lark-whiteboard](https://docs.newenergycoder.club/skills/lark-whiteboard): > 飞书画板：查询和编辑飞书云文档中的画板。支持导出画板为预览图片、导出原始节点结构、使用 DSL（转成 OpenAPI 格式）、PlantUML/Mermaid 格式更新画板内容。 当用户需要查看画板内容、导出画板图片、编辑画板，或是需要可视化表达架构、流程、组织关系、时间线、因果、对比等结构化…
+- [lark-markdown](https://docs.newenergycoder.club/skills/lark-markdown): 飞书 Markdown：查看、创建、上传和编辑 Markdown 文件。当用户需要创建或编辑 Markdown 文件、读取或修改时使用。
+- [lark-event](https://docs.newenergycoder.club/skills/lark-event): 飞书事件订阅：通过 WebSocket 长连接实时监听飞书事件（消息、通讯录变更、日历变更等），输出 NDJSON 到 stdout，支持 compact Agent 友好格式、正则路由、文件输出。当用户需要实时监听飞书事件、构建事件驱动管道时使用。
+- [lark-attendance](https://docs.newenergycoder.club/skills/lark-attendance): 飞书考勤打卡：查询自己的考勤打卡记录
+- [lark-openapi-explorer](https://docs.newenergycoder.club/skills/lark-openapi-explorer): 飞书/Lark 原生 OpenAPI 探索：从官方文档库中挖掘未经 CLI 封装的原生 OpenAPI 接口。当用户的需求无法被现有 lark-* skill 或 lark-cli 已注册命令满足，需要查找并调用原生飞书 OpenAPI 时使用。
+- [lark-skill-maker](https://docs.newenergycoder.club/skills/lark-skill-maker): 创建 lark-cli 的自定义 Skill。当用户需要把飞书 API 操作封装成可复用的 Skill（包装原子 API 或编排多步流程）时使用。
+- [lark-workflow-meeting-summary](https://docs.newenergycoder.club/skills/lark-workflow-meeting-summary): 会议纪要整理工作流：汇总指定时间范围内的会议纪要并生成结构化报告。当用户需要整理会议纪要、生成会议周报、回顾一段时间内的会议内容时使用。
+- [lark-workflow-standup-report](https://docs.newenergycoder.club/skills/lark-workflow-standup-report): 日程待办摘要：编排 calendar +agenda 和 task +get-my-tasks，生成指定日期的日程与未完成任务摘要。适用于了解今天/明天/本周的安排。
+- [kimi-cli](https://docs.newenergycoder.club/skills/kimi-cli): 调用本地 Kimi CLI（kimi-for-coding 模型）执行编程、代码分析、代码生成等任务。当用户明确要求\"用 Kimi\"、\"让 Kimi 处理\"、\"kimi 帮我\"，或任务属于代码编写/调试/重构/技术分析类且适合交给 Kimi 处理时触发。
+- [claude-cli](https://docs.newenergycoder.club/skills/claude-cli): 调用本地 Claude Code CLI（claude 命令）执行通用 AI 任务、文件操作、代码分析等。当用户明确要求\"用 Claude\"、\"让 Claude 处理\"、\"claude 帮我\"，或需要利用 Claude 的工具调用能力（文件读写、搜索、执行命令）完成复杂自动化任务时触发。
+- [gemini-cli](https://docs.newenergycoder.club/skills/gemini-cli): 调用本地 Gemini CLI（gemini 命令，Google Gemini 模型）执行 AI 任务。当用户明确要求\"用 Gemini\"、\"让 Gemini 处理\"、\"gemini 帮我\"，或需要 Google Gemini 模型能力时触发。
+- [aicodewith](https://docs.newenergycoder.club/skills/aicodewith): 管理 AiCodeWith（api.with7.cn）模型配置。支持同步最新模型列表到 OpenClaw、查询可用模型、切换默认模型。当用户说\"更新 ACW 模型\"、\"同步 AiCodeWith 模型\"、\"查看 with7 模型\"、\"切换默认模型到 xxx\" 时触发。
+- [trae-assistant](https://docs.newenergycoder.club/skills/trae-assistant): trae-assistant 技能的详细介绍
+- [persona-switch](https://docs.newenergycoder.club/skills/persona-switch): | 切换 agent 的人设（soul.md）。支持三套预设人设与原有人设之间自由切换。 触发词：切换人设、persona-switch、赛博朋友、温柔伴侣、创始人龙虾。
+- [react-best-practices](https://docs.newenergycoder.club/skills/react-best-practices): React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring Reac…
+- [react-native-skills](https://docs.newenergycoder.club/skills/react-native-skills): React Native and Expo best practices for building performant mobile apps. Use when building React Native components, optimizing list performance, imp…
+- [shadcn](https://docs.newenergycoder.club/skills/shadcn): Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI. Provides project context, component docs, a…
+- [frontend-design](https://docs.newenergycoder.club/skills/frontend-design): Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages,…
+- [frontend-skill](https://docs.newenergycoder.club/skills/frontend-skill): Use when the task asks for a visually strong landing page, website, app, prototype, demo, or game UI. This skill enforces restrained composition, ima…
+- [web-design-guidelines](https://docs.newenergycoder.club/skills/web-design-guidelines): Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"che…
+- [web-artifacts-builder](https://docs.newenergycoder.club/skills/web-artifacts-builder): Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/u…
+- [webapp-testing](https://docs.newenergycoder.club/skills/webapp-testing): Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, c…
+- [web-design](https://docs.newenergycoder.club/skills/web-design): 网页设计与部署。生成精美的单页 HTML 网页（报告、落地页、数据可视化等），支持一键部署到 Cloudflare Pages。使用 Tailwind CSS + Chart.js + Font Awesome 技术栈。当用户要求制作网页、生成报告页面、创建落地页、数据可视化展示、部署网页到线上时…
+- [canvas-design](https://docs.newenergycoder.club/skills/canvas-design): Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piec…
+- [algorithmic-art](https://docs.newenergycoder.club/skills/algorithmic-art): Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using cod…
+- [brand-guidelines](https://docs.newenergycoder.club/skills/brand-guidelines): Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when…
+- [theme-factory](https://docs.newenergycoder.club/skills/theme-factory): Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes wit…
+- [chart-visualization](https://docs.newenergycoder.club/skills/chart-visualization): 把数据转成合适的图表与可渲染的图表规格。用户要可视化数据、选图、生成图表代码（Mermaid/Vega-Lite/Plotly/ECharts）或解释图表时调用。
+- [clean-code-zh](https://docs.newenergycoder.club/skills/clean-code-zh): 遵循 Robert C. Martin 的《代码整洁之道》原则，进行代码审查、重构和编写。涵盖命名、函数、注释和错误处理的最佳实践。
+- [security-best-practices](https://docs.newenergycoder.club/skills/security-best-practices): Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests secur…
+- [git-commit](https://docs.newenergycoder.club/skills/git-commit): Execute git commit with conventional commit message analysis, intelligent staging, and message generation. Use when user asks to commit changes, crea…
+- [gh-cli](https://docs.newenergycoder.club/skills/gh-cli): GitHub CLI (gh) comprehensive reference for repositories, issues, pull requests, Actions, projects, releases, gists, codespaces, organizations, exten…
+- [github-skill](https://docs.newenergycoder.club/skills/github-skill): 在用户提及 GitHub 仓库、Issue、Pull Request、Actions、代码管理相关内容与操作时使用此技能。触发关键词包括：创建 issue、新建 PR、合并 PR、查看 issue、列出 PR、搜索仓库、创建仓库、fork 仓库、创建 release、上传 release asse…
+- [test-driven-development](https://docs.newenergycoder.club/skills/test-driven-development): Use when implementing any feature or bugfix, before writing implementation code
+- [spec-to-implementation](https://docs.newenergycoder.club/skills/spec-to-implementation): Turns product or tech specs into concrete Notion tasks that Claude code can implement. Breaks down spec pages into detailed implementation plans with…
+- [composition-patterns](https://docs.newenergycoder.club/skills/composition-patterns): React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or des…
+- [hook-analyzer-skill](https://docs.newenergycoder.club/skills/hook-analyzer-skill): 视频前三秒钩子分析技能。从分镜拆解结果中提取前三秒分镜数据，为钩子吸引力评估提供结构化上下文。运行脚本 `python scripts/analyze_hook_segments.py \"<breakdown_json_file>\"` 或通过 stdin 传入 JSON。输出包含前三秒分镜数量、总…
+- [screenshot](https://docs.newenergycoder.club/skills/screenshot): Use when the user explicitly asks for a desktop or system screenshot (full screen, specific app or window, or a pixel region), or when tool-specific…
+- [writing-plans](https://docs.newenergycoder.club/skills/writing-plans): Use when you have a spec or requirements for a multi-step task, before touching code
+- [executing-plans](https://docs.newenergycoder.club/skills/executing-plans): Use when you have a written implementation plan to execute in a separate session with review checkpoints
+- [defuddle](https://docs.newenergycoder.club/skills/defuddle): Extract clean markdown content from web pages using Defuddle CLI, removing clutter and navigation to save tokens. Use instead of WebFetch when the us…
+- [planning-with-files](https://docs.newenergycoder.club/skills/planning-with-files): Implements Manus-style file-based planning for complex tasks. Creates task_plan.md, findings.md, and progress.md. Use when starting complex multi-ste…
+- [harness](https://docs.newenergycoder.club/skills/harness): This skill should be used for multi-session autonomous agent work requiring progress checkpointing, failure recovery, and task dependency management.…
+- [agentic-loop](https://docs.newenergycoder.club/skills/agentic-loop): 管理 Claude Code Agentic Loop 防护。控制每次对话的工具调用上限（默认25次）与连续重复命令检测（默认5次）。用户说\"loop上限\"\"循环次数\"\"agentic loop\"\"防止循环\"\"重复调用\"时使用。
+- [agent-browser](https://docs.newenergycoder.club/skills/agent-browser): Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons,…
+- [baidu-search](https://docs.newenergycoder.club/skills/baidu-search): 百度 AI 搜索。支持网页搜索、百度百科、秒懂百科、AI 智能生成四种模式。自动包含当前日期上下文。当用户要求搜索信息、查询百科、获取最新资讯、搜索新闻、查找资料时使用。
+- [online-search](https://docs.newenergycoder.club/skills/online-search): | 元宝搜索标准版工具。是腾讯元宝的联网搜索服务，提供实时、精准的互联网内容检索能力。 核心特性：覆盖大量中文网站，包括官方媒体、政府网站等高权威性来源，以及腾讯系核心内容资源。多层精调排序策略，提供准确的内容匹配和排序。
+- [multi-search-engine](https://docs.newenergycoder.club/skills/multi-search-engine): 多搜索引擎聚合，集成 17 个引擎（8 个国内 + 9 个国际）。支持高级搜索语法、时间筛选、站内搜索、隐私引擎和 WolframAlpha 知识查询。无需 API 密钥。
+- [news](https://docs.newenergycoder.club/skills/news): 新闻与资讯查询。获取中文新闻和全球 AI 技术资讯，支持按分类查询（时政、财经、科技、社会、国际、体育、娱乐、AI 技术、AI 社区）。当用户询问最新新闻、AI 动态、行业资讯时使用。
+- [news-extractor](https://docs.newenergycoder.club/skills/news-extractor): 新闻站点内容提取。支持微信公众号、今日头条、网易新闻、搜狐新闻、腾讯新闻。当用户需要提取新闻内容、抓取公众号文章、爬取新闻、或获取新闻JSON/Markdown时激活。
+- [news-summary](https://docs.newenergycoder.club/skills/news-summary): This skill should be used when the user asks for news updates, daily briefings, or what's happening in the world. Fetches news from trusted internati…
+- [neodata-financial-search](https://docs.newenergycoder.club/skills/neodata-financial-search): 自然语言通用金融数据搜索服务。用自然语言查询股票、基金、指数、板块、宏观经济、外汇、大宗商品等全品类金融数据，涵盖行情报价、财务报表（财报）、资金流向、研报评级、事件公告等。
+- [tech-news-digest](https://docs.newenergycoder.club/skills/tech-news-digest): 科技新闻多源聚合摘要。从100+信息源自动采集并评分科技新闻。Keywords: 科技新闻, tech news, RSS, industry trends.
+- [docx](https://docs.newenergycoder.club/skills/docx): Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of \\\"Word doc…
+- [pdf](https://docs.newenergycoder.club/skills/pdf): Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging…
+- [pptx](https://docs.newenergycoder.club/skills/pptx): Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or present…
+- [xlsx](https://docs.newenergycoder.club/skills/xlsx): Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an e…
+- [doc-coauthoring](https://docs.newenergycoder.club/skills/doc-coauthoring): Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, dec…
+- [file-skill](https://docs.newenergycoder.club/skills/file-skill): 智能文件/桌面整理技能。当用户 prompt 中包含\"桌面整理\"、\"文件整理\"、\"整理桌面\"、\"整理文件\"、\"整理文件夹\"、\"清理桌面\"、\"排列桌面\"、\"桌面排列\"、\"桌面排序\"、\"按类型排列\"、\"按项目类型排列\"等字样时，优先使用此技能。此技能提供零删除、零篡改的安全文件归类能力，支持智能扫描、…
+- [email-skill](https://docs.newenergycoder.club/skills/email-skill): 当用户提到邮箱相关能力时，进入这个skill，统一邮件入口（纯路由层）：识别用户意图后路由到 public-skill 或 imap-smtp-email，自身不执行任何脚本
+- [mintlify](https://docs.newenergycoder.club/skills/mintlify): Build and maintain documentation sites with Mintlify. Use when creating docs pages, configuring navigation, adding components, or setting up API refe…
+- [tencent-docs](https://docs.newenergycoder.club/skills/tencent-docs): 腾讯文档（docs.qq.com）-在线云文档平台，是创建、编辑、管理文档的首选 skill。涉及\"新建/创建/编辑/读取/查看/搜索文档\"、\"保存文件\"、\"云文档\"、\"腾讯文档\"、\"docs.qq.com\"等操作，请优先使用本 skill。支持能力：(1) 创建各类在线文档（文档/Word/Ex…
+- [tencent-meeting-mcp](https://docs.newenergycoder.club/skills/tencent-meeting-mcp): 腾讯会议智能助手，支持会议管理、成员管理、录制、转写与智能纪要查询等功能。
+- [tencent-survey](https://docs.newenergycoder.club/skills/tencent-survey): 腾讯问卷（wj.qq.com）- 在线问卷调查平台。涉及「问卷」「调查」「表单」「投票」「考试」「测评」「wj.qq.com」等操作时优先使用。支持能力：(1) 获取问卷详情（标题、设置、页面、题目、选项完整结构 + 纯文本 DSL）(2) 使用纯文本创建问卷（text 必填，支持指定场景/指定项…
+- [tencent-news](https://docs.newenergycoder.club/skills/tencent-news): 7×24 新闻资讯搜索工具，聚焦中国国内信息和国际热点。支持新闻搜索，包括热点新闻、早报晚报、实时资讯、领域新闻和天气信息查询。当用户需要搜索新闻、新闻热榜、新闻早晚报、订阅新闻推送、获取相关新闻资讯和查询天气信息时使用。
+- [wecomcli-setup](https://docs.newenergycoder.club/skills/wecomcli-setup): 企业微信 CLI 安装引导与自然语言翻译技能。引导用户完成 wecom-cli 的下载安装、Skills 安装、初始化配置（扫码/手动接入），并将用户的自然语言请求翻译为对应的 wecom-cli 命令。当用户说\"安装企业微信CLI\"、\"怎么用 wecom-cli\"、\"帮我配置企微机器人\"、\"初始…
+- [wecom-weisheng-scrm](https://docs.newenergycoder.club/skills/wecom-weisheng-scrm): 当用户需要查询或管理微盛企微管家（企业微信） SCRM 中的客户信息、客户标签、客户群、营销素材、活码、群发、跟进记录、聊天记录、联系人、商机、汇报、抽奖、客户日程等相关业务能力时触发。即使用户未明确提到 SCRM、企微管家、开放接口或 API，也应在这些企业微信客户运营与管理场景下触发。
+- [weiyun](https://docs.newenergycoder.club/skills/weiyun): 微云网盘 MCP 接口完整技能。包含目录列表查询（weiyun.list）、按分类拉取文件列表（weiyun.list_by_category）、批量下载（weiyun.download）、批量删除（weiyun.delete）、文件上传（weiyun.upload）、生成分享外链（weiyun.…
+- [youdaonote](https://docs.newenergycoder.club/skills/youdaonote): 有道云笔记全能工具：笔记管理（创建、搜索、浏览、读取）、待办管理（创建、完成、分组）、网页剪藏（服务端抓取）。当用户需要操作有道云笔记时使用此 Skill。
+- [notion](https://docs.newenergycoder.club/skills/notion): 在用户提及 Notion 笔记、知识库、工作区相关内容与操作时使用此技能。触发关键词包括：创建页面、新建页面、查询页面、搜索笔记、读取页面、获取页面、更新页面、编辑页面、删除内容、归档页面、移动页面、数据库、数据源、查询数据库、创建数据库、Block、子页面、评论、标签分类、属性、筛选、排序、分页…
+- [ima](https://docs.newenergycoder.club/skills/ima): | 统一的 IMA OpenAPI 技能，支持笔记管理和知识库操作。 当用户提到知识库、资料库、笔记、备忘录、记事，或者想要上传文件、添加网页到知识库、 搜索知识库内容、搜索/浏览/创建/编辑笔记时，使用此 skill。 即使用户没有明确说\"知识库\"或\"笔记\"，只要意图涉及文件上传到知识库、网页收…
+- [kdocs](https://docs.newenergycoder.club/skills/kdocs): 操作金山文档（WPS 云文档 / Kdocs / 365.kdocs.cn / www.kdocs.cn）云文档的官方 Skill。核心能力覆盖云端新建、读取、编辑、搜索、分享、整理在线文档（智能文档、Word、Excel、PDF、PPT、演示文稿、智能表格、多维表格）及个人知识库。当用户的任务涉…
+- [imap-smtp-email](https://docs.newenergycoder.club/skills/imap-smtp-email): 通过 IMAP/SMTP 连接个人邮箱，支持完整邮件收发、抄送、附件、HTML、收件箱检索与附件下载；是当前邮件体系中唯一的个人邮箱主通道。
+- [tme-openapi](https://docs.newenergycoder.club/skills/tme-openapi): 腾讯音乐开放平台（TME OpenAPI）算子平台通用客户端。提供对 `/musician/agent/operator/*` 一系列「算子」API 的发现、查询与调用能力，是所有需要调用 TME OpenAPI 算子的业务 Skill 的**基础依赖**。本 Skill 仅封装**通用的 API…
+- [flyai](https://docs.newenergycoder.club/skills/flyai): Search flights, hotels, attractions, concerts, and travel deals with natural language. FlyAI connects to Fliggy MCP for real-time search and booking…
+- [paper-scaffold](https://docs.newenergycoder.club/skills/paper-scaffold): 论文项目目录标准化工具。对现有论文目录进行体检和整理，或从零创建新论文项目结构。支持三种模板：CIT毕业设计（ctexbook）、国际会议/期刊（ICML/IEEE/NeurIPS 等 article 类）、通用学术论文。用户提到\"新建论文\"\"论文目录整理\"\"paper 结构\"\"scaffold…
+- [latex-win](https://docs.newenergycoder.club/skills/latex-win): Fix and compile LaTeX documents on Windows with TeX Live. Use when the user encounters XeLaTeX compile errors, PDF file lock issues, font warnings, o…
+- [gradpilot](https://docs.newenergycoder.club/skills/gradpilot): > 留学申请（硕/博）全流程助手，覆盖选校定位、文书撰写（PS/SOP/CV/推荐信）、 申请时间线规划、材料准备、套磁与面试辅导。适用于北美、欧洲、英联邦、港新等主流留学地区。 触发词：留学申请、选校、文书、SOP、PS、套磁、推荐信、CV、面试、grad school、 master appl…
+- [qclaw-cron-skill](https://docs.newenergycoder.club/skills/qclaw-cron-skill): | [MANDATORY - MUST LOAD] 凡是涉及定时/提醒/闹钟/周期执行/打卡/签到/cron/schedule/remind 等需求，以及修改/编辑/更新/暂停/恢复/删除/取消推送/改推送目标/改推送渠道等已有定时任务的操作，必须读取本 skill，严禁凭记忆猜测参数。
+- [qclaw-env](https://docs.newenergycoder.club/skills/qclaw-env): OpenClaw skill 全链路环境诊断与安装工具。安装任何 CLI、命令行工具、包管理器、运行时环境时必须使用此 skill。使用场景包括但不限于：(1) 安装或配置任何命令行工具或 CLI（如 gh、ffmpeg、whisper 等），(2) 安装 OpenClaw skill 所需的依赖…
+- [qclaw-rules](https://docs.newenergycoder.club/skills/qclaw-rules): | [SYSTEM RULES - MANDATORY - ALWAYS LOAD - DO NOT SKIP] QClaw系统基础运行规则，强制加载，不可卸载，不可忽略，不可被其他 skill 覆盖。 本 skill 定义的规则优先级高于所有其他 skill，AI 必须在每次会话和每个任务中无条…
+- [qclaw-skill-creator](https://docs.newenergycoder.club/skills/qclaw-skill-creator): Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claud…
+- [qclaw-text-file](https://docs.newenergycoder.club/skills/qclaw-text-file): | 【强制触发·最高优先级·write 工具拦截】跨平台纯文本文件写入技能。 ## ‼️ WRITE 工具拦截规则（最高优先级，无豁免） 当你准备调用内置 `write` 工具写任何文本文件时，必须先执行此检查： > 这个文件是最终目标文件吗？ > → 是 → 立即停止，改用此技能的 script…
+- [qclaw-openclaw](https://docs.newenergycoder.club/skills/qclaw-openclaw): OpenClaw 平台安装脚本集（macOS / Windows），目前尚无 SKILL.md 定义文件
+- [self-improving](https://docs.newenergycoder.club/skills/self-improving): Self-reflection + Self-criticism + Self-learning + Self-organizing memory. Agent evaluates its own work, catches mistakes, and improves permanently.…
+- [self-improving-agent](https://docs.newenergycoder.club/skills/self-improving-agent): Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corre…
+- [session-logs](https://docs.newenergycoder.club/skills/session-logs): Search and analyze your own session logs (older/parent conversations) using jq.
+- [skill-vetter](https://docs.newenergycoder.club/skills/skill-vetter): 面向 AI Agent 的安全优先技能审查工具。在从 ClawdHub、GitHub 或其他来源安装任何技能之前使用，检查危险标志、权限范围和可疑模式。
+- [public-skill](https://docs.newenergycoder.club/skills/public-skill): 平台公邮：用于将天气、日报、报告、提醒等内容推送到用户自己的邮箱，零配置完成消息留存
+- [content-factory](https://docs.newenergycoder.club/skills/content-factory): 多代理内容生产线。自动化从选题研究到内容创作的全流程。Keywords: 内容创作, 文案, content creation, copywriting.
+- [cloud-upload-backup](https://docs.newenergycoder.club/skills/cloud-upload-backup): Cloud file upload and backup tool. Upload local files to Tencent SMH cloud storage, viewable in QClaw Mini Program.
+- [mcporter](https://docs.newenergycoder.club/skills/mcporter): Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, and CLI/t…
+- [mcp-builder](https://docs.newenergycoder.club/skills/mcp-builder): Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools.…
+- [productivity-automation-kit](https://docs.newenergycoder.club/skills/productivity-automation-kit): 效率自动化工具箱 — 自动化工作流模板 + 日程管理助手 + 任务提醒工具 + 数据整理自动化。整合热门Skill功能，帮助用户识别自动化机会、设计工作流、管理日程、追踪任务、整理数据。触发词：效率自动化、工作流模板、日程管理、任务提醒、数据整理自动化、每天提醒、每周计划、自动化流程、省时工具。
+- [plan-my-day](https://docs.newenergycoder.club/skills/plan-my-day): Generate an energy-optimized, time-blocked daily plan
+- [study-habits](https://docs.newenergycoder.club/skills/study-habits): Build effective study habits with spaced repetition, active recall, and session tracking
+- [brainstorming](https://docs.newenergycoder.club/skills/brainstorming): You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user inten…
+- [consulting-analysis](https://docs.newenergycoder.club/skills/consulting-analysis): 用咨询方法做问题拆解与建议输出。用户要求做业务分析、方案对比、决策建议、复盘诊断、写咨询式报告时调用。
+- [report-generator-skill](https://docs.newenergycoder.club/skills/report-generator-skill): 视频分析报告生成技能。整合分镜拆解数据和钩子分析结果，生成 Markdown 格式的专业视频分析报告。运行脚本 `python scripts/generate_report.py <breakdown_json> [hook_analysis_json]`，输出完整的 Markdown 报告，包…
+- [ai-dev-dashboard](https://docs.newenergycoder.club/skills/ai-dev-dashboard): Prints the PowerShell AI Dev Dashboard (AI CLIs status, recently called Skills with counts, recent Claude tasks, recent local projects). Use when the…
+- [ai-data-analysis](https://docs.newenergycoder.club/skills/ai-data-analysis): 腾讯音乐人智能数据分析助手。当用户提到\"分析数据\"、\"看看播放趋势\"、\"歌曲表现\"、\"听众画像\"、\"数据洞察\"、\"粉丝构成\"、\"我的数据怎么样\"、\"分析这首歌\"、\"最近播放量\"、\"用户画像\"、\"收益分析\"、\"歌曲表现如何\"、\"粉丝分布\"、\"年龄分布\"、\"地域分布\"等数据分析相关请求时触发。本 Sk…
+- [ai-promotion-query](https://docs.newenergycoder.club/skills/ai-promotion-query): 腾讯音乐人宣推数据查询能力。当用户提到\"我这些歌宣推情况如何\"、\"看一下宣推数据\"、\"这首歌宣推效果怎么样\"、\"我有哪些歌在投放\"、\"这首歌还要不要继续投\"、\"宣推诊断\"、\"宣推表现\"、\"投放效果\"等与宣推数据查询相关的请求时触发。本 Skill 整合了两大子场景：① **宣推概览**——拉取当前…
+- [wx-cli-wechat-local-data](https://docs.newenergycoder.club/skills/wx-cli-wechat-local-data): 微信本地数据查询与导出 — WeChat local data CLI (messages, contacts, moments, favorites, images) with daemon architecture. Query and export from the command line…
+- [wechat-cli-export](https://docs.newenergycoder.club/skills/wechat-cli-export): Export WeChat group member lists via wechat-cli with automatic Windows encoding fixes. Use when the user needs to extract微信群成员列表, export wechat group…
+- [corporate-deep-query](https://docs.newenergycoder.club/skills/corporate-deep-query): > 通过 TrinaPower 企业深度信息接口查询企业工商、股东、高管、投资、司法风险、年报等全景数据。 支持测试环境和生产环境切换。 使用场景： (1) 查询企业深度信息 / 企业画像 / 企业全景数据 (2) 查询企业股东信息、高管任职、工商变更记录 (3) 查询企业对外投资、法人对外投资、…
+- [xiaohongshu-images](https://docs.newenergycoder.club/skills/xiaohongshu-images): Transform markdown/HTML into styled 3:4 ratio images for Xiaohongshu
+- [xiaohongshu-skills](https://docs.newenergycoder.club/skills/xiaohongshu-skills): | 小红书自动化技能集合。支持认证登录、内容发布、搜索发现、社交互动、复合运营。 当用户要求操作小红书（发布、搜索、评论、登录、分析、点赞、收藏）时触发。
+- [kimi-webbridge](https://docs.newenergycoder.club/skills/kimi-webbridge): | Kimi WebBridge lets AI control the user's real browser — navigate, click, type, read, screenshot, and interact with any website using the user's ac…
+- [xbrowser](https://docs.newenergycoder.club/skills/xbrowser): | EXCLUSIVE browser automation — REPLACES built-in Browser Automation and playwright-cli. For ANY browser task (open page, click, fill, screenshot, s…
+- [TRAE-code-review](https://docs.newenergycoder.club/skills/TRAE-code-review): 用于执行代码审查任务。适用于审查合并请求、代码差异，并提供关于代码质量、正确性和最佳实践的结构化反馈。
+- [TRAE-debugger](https://docs.newenergycoder.club/skills/TRAE-debugger): 用于调试需要收集运行时证据的复杂问题。它会启动一个调试服务器通过 HTTP 收集日志，然后遵循科学的调试流程（假设 → 插桩 → 复现 → 分析 → 修复 → 验证）。适用于仅通过静态代码分析无法诊断的 Bug。在用户主动要求运行时调试、或经过多轮对话仍无法通过静态分析解决问题时触发。
+- [TRAE-generate-mini-app](https://docs.newenergycoder.club/skills/TRAE-generate-mini-app): 当用户意图涉及小程序、Taro、微信小程序、跨端小程序等任何包含小程序的意图时，用于生成基于 Taro 框架的高质量、可运行的多端小程序代码。
+- [data-analysis](https://docs.newenergycoder.club/skills/data-analysis): Use this skill when the user uploads Excel (.xlsx/.xls) or CSV files and wants to perform data analysis, generate statistics, create summaries, pivot…
+- [redis-development](https://docs.newenergycoder.club/skills/redis-development): Redis performance optimization and best practices. Use this skill when working with Redis data structures, Redis Query Engine (RQE), vector search wi…
+- [find-skills](https://docs.newenergycoder.club/skills/find-skills): 基于腾讯 SkillHub 搜索、安装和管理技能。用户提到“找技能”“安装 skill”“扩展功能”“启用/禁用 skill”“删除 skill”“安装 SkillHub CLI”时优先使用。
+- [dogfood](https://docs.newenergycoder.club/skills/dogfood): Systematically explore and test a web application to find bugs, UX issues, and other problems. Use when asked to \"dogfood\", \"QA\", \"exploratory test\",…
+- [aippt](https://docs.newenergycoder.club/skills/aippt): 当用户明确要求使用 AI 智能设计生成 PPT 演示文稿时使用本技能（智绘高迪/AIPPT）。本技能调用远程 Design Agent API，根据文字描述自动生成专业 PPT 演示文稿，支持指定模板和自定义模型。当用户说'AI生成PPT'、'智绘PPT'、'自动生成演示文稿'、'帮我做个PPT'…
+- [weather-advisor](https://docs.newenergycoder.club/skills/weather-advisor): 天气顾问。智能天气顾问。实时天气查询、未来7天预报、穿衣建议与出行活动推荐 Keywords: 天气查询, weather, 穿衣建议, 出行提醒.
+- [slack-gif-creator](https://docs.newenergycoder.club/skills/slack-gif-creator): Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when user…
+- [fbs_bookwriter](https://docs.newenergycoder.club/skills/fbs_bookwriter): FBS 福帮手长文档写作：书/手册/白皮书/长篇报道全流程；Node 脚本驱动 intake、会话恢复、S/P/C/B 质检与 MD/HTML 交付。用户提及写书、出书、章节、大纲、素材、质检、导出、扩写、退出保存时启用。
+- [wendao-partner-qclaw-skill](https://docs.newenergycoder.club/skills/wendao-partner-qclaw-skill): 当用户发起任意旅行相关问询时，包含但不限于：预订酒店、机票查询、火车票查询、景点推荐、寻找当地特色玩乐、目的地查询、行程规划、美食住宿攻略、签证、查询旅游攻略、获取旅行建议等场景，自动触发此技能。当用户需要操作携程、Ctrip、携程问道时使用此skill。
+- [chuangye](https://docs.newenergycoder.club/skills/chuangye): | 服务于创业者，管理者和职业经理人，解答创业/商业/管理问题，引发用户从自身处境思考。 《创业可以学》问答技能。当用户询问创业、商业、经营、管理等相关问题时触发。 基于林正刚《创业可以学》全书内容，提供基于书中框架的回答，并主动追问引导深入思考。 适用场景：(1) 用户询问创业相关问题 (2)…
+- [bdpan-storage](https://docs.newenergycoder.club/skills/bdpan-storage): 百度网盘文件管理 Skill。支持上传、下载、转存、分享、列表查询、搜索、移动、复制、重命名、创建文件夹。当用户提及\"百度网盘\"/\"bdpan\"/\"网盘\"并涉及文件操作（上传/下载/转存/分享/查看/搜索/移动/复制/重命名/新建文件夹/登录/注销）时触发。用户说\"上传到网盘\"、\"从百度网盘下载\"…
+- [kc-gui](https://docs.newenergycoder.club/skills/kc-gui): Use the bundled kc.exe Windows agent to perform GUI-based desktop automation tasks that cannot be handled through CLI or scripting alone. Use this sk…
+- [resume-builder](https://docs.newenergycoder.club/skills/resume-builder): Generate professional resumes that conform to the Reactive Resume schema. Use when the user wants to create, build, or generate a resume through conv…
+- [resume-optimizer](https://docs.newenergycoder.club/skills/resume-optimizer): Professional resume builder with PDF export, ATS optimization, and analysis capabilities. Use when users need to (1) Create new resumes from scratch,…
+
+---
+
+Source of truth: docs.json navigation and page frontmatter.

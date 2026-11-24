@@ -2,9 +2,19 @@
 
 ## 运行方式
 
+日常提交使用统一入口（含测试、生成物同步、CSS、Mintlify 和文档健康检查）：
+
 ```bash
-python tools/ci/check_docs.py
+npm run check
 ```
+
+只需重跑文档健康检查时：
+
+```bash
+npm run check:docs
+```
+
+CI 单独通过 `npm run check:generated` 检查生成物是否有未提交差异。
 
 ## 检查项
 

@@ -12,7 +12,7 @@ description: 维护 NEC 新能源开发者社区 Mintlify 文档站点。用于�
 - **框架**: Mintlify v3，配置在 `docs.json`
 - **入口**: `index.mdx`
 - **自动部署**: 推送到 `main` 分支后 Mintlify 自动部署
-- **本地预览**: `mint dev`（默认 `localhost:3000`）
+- **本地预览**：`npm ci && npm run dev`（默认 `localhost:3000`），无需全局安装 CLI
 
 ## 核心规范
 
@@ -33,22 +33,17 @@ description: 维护 NEC 新能源开发者社区 Mintlify 文档站点。用于�
 ### 导航规则
 
 - 所有新页面必须在 `docs.json` 的 `navigation.tabs[].groups[].pages` 中注册
-- 当前 6 个顶部 Tab：
-  1. **首页**: `index`
-  2. **文档**: 快速开始、新手上路、重要文档、项目模块、技术专题、模板与规范、Wiki 知识库
-  3. **竞赛**: 竞赛概览、CURC 2026
-  4. **AI 工具**: Claude Code、Cursor、Windsurf、MCP Server、AI 可行性研究
-  5. **社区**: 关于我们、社区治理、贡献指南
-  6. **关于**: README、路线图、资源汇总
+- 当前 7 个顶部 Tab：首页、文档、竞赛、社区、Wiki、关于、技能库
+- 各 Tab 的分组与学习路径顺序以 `AGENTS.md` 的「导航结构」和 `docs.json` 为准
 - 修改导航结构后同步更新 `AGENTS.md` 的「导航结构」说明
 
 ## 标准工作流
 
 1. **编辑内容**：新增/修改 `.mdx`、图片、`docs.json`
-2. **本地检查**：`python tools/ci/check_docs.py`
+2. **本地检查**：运行 `npm run check`
 3. **修复问题**：死链、未注册页面、frontmatter 缺失、localhost 链接等
-4. **提交推送**：使用 Conventional Commits，例如 `docs(scope): 描述`
-5. **等待部署**：Mintlify 自动部署，约 1–2 分钟
+4. **提交变更**：将正文、导航与 PageInsights 生成物一起提交，使用 Conventional Commits
+5. **提交 PR**：从最新 `main` 创建功能分支，经审查合并后由 Mintlify 自动部署
 
 ## 常见任务
 
@@ -57,23 +52,23 @@ description: 维护 NEC 新能源开发者社区 Mintlify 文档站点。用于�
 1. 在合适目录创建 `.mdx`，写好 frontmatter
 2. 如需图片，放入 `images/<topic>/` 并以 `/images/<topic>/file.png` 引用
 3. 在 `docs.json` 对应分组注册页面路径（省略 `.mdx` 扩展名）
-4. 运行 CI 检查并修复报错
-5. 提交推送
+4. 运行 `npm run check` 并修复报错
+5. 提交正文、导航和生成物
 
 ### 修复死链
 
-1. 运行 `python tools/ci/check_docs.py`
+1. 运行 `npm run check:docs`，或运行完整 `npm run check`
 2. 内部死链：修正路径或删除链接
 3. 外部死链：确认是否真实失效，可加入 `EXTERNAL_LINK_ALLOWLIST` 中登录墙/证书异常的域名
-4. 重新运行 CI 直到通过
+4. 重新运行检查；外链警告仍需人工查看，不要仅凭退出码判断全部健康
 
 ### 重构导航
 
 1. 修改 `docs.json` 的 `navigation` 字段
 2. 确保所有注册页面存在且非空
 3. 更新 `AGENTS.md` 中的导航结构描述
-4. 运行 CI 检查无未注册页面
-5. 提交推送
+4. 运行 `npm run check` 检查未注册页面
+5. 提交变更
 
 ## CI 检查项
 

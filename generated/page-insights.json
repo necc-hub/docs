@@ -899,6 +899,31 @@
       ]
     }
   },
+  "contributing": {
+    "slug": "contributing",
+    "filePath": "contributing.mdx",
+    "title": "贡献文档",
+    "pageKind": "article",
+    "readingMinutes": 3,
+    "lengthBand": "normal",
+    "summary": "通过 GitHub 网页或本地预览，为 NEC 文档站提交内容修改",
+    "stats": {
+      "textChars": 624,
+      "englishWords": 73,
+      "codeWeight": 22,
+      "tableWeight": 0,
+      "headingCount": 3,
+      "paragraphCount": 16
+    },
+    "signals": {
+      "positive": [
+        "has_multiple_headings",
+        "has_continuous_paragraphs",
+        "has_meaningful_text"
+      ],
+      "negative": []
+    }
+  },
   "contributing/code-style": {
     "slug": "contributing/code-style",
     "filePath": "contributing/code-style.mdx",
@@ -979,41 +1004,16 @@
     "filePath": "contributing/workflow.mdx",
     "title": "工作流程",
     "pageKind": "article",
-    "readingMinutes": 4,
+    "readingMinutes": 5,
     "lengthBand": "normal",
-    "summary": "NEC 项目的开发工作流程",
+    "summary": "从 main 创建分支、修改文档、运行检查并提交 Pull Request 的完整流程",
     "stats": {
-      "textChars": 601,
-      "englishWords": 133,
-      "codeWeight": 151,
-      "tableWeight": 224,
-      "headingCount": 17,
-      "paragraphCount": 42
-    },
-    "signals": {
-      "positive": [
-        "has_multiple_headings",
-        "has_continuous_paragraphs",
-        "has_meaningful_text"
-      ],
-      "negative": []
-    }
-  },
-  "contributing": {
-    "slug": "contributing",
-    "filePath": "contributing.mdx",
-    "title": "贡献文档",
-    "pageKind": "article",
-    "readingMinutes": 2,
-    "lengthBand": "normal",
-    "summary": "如何为 NEC 文档站点贡献力量",
-    "stats": {
-      "textChars": 475,
-      "englishWords": 44,
-      "codeWeight": 11,
-      "tableWeight": 0,
-      "headingCount": 4,
-      "paragraphCount": 11
+      "textChars": 937,
+      "englishWords": 127,
+      "codeWeight": 56,
+      "tableWeight": 155,
+      "headingCount": 9,
+      "paragraphCount": 28
     },
     "signals": {
       "positive": [
@@ -1357,16 +1357,16 @@
     "filePath": "development.mdx",
     "title": "本地开发",
     "pageKind": "article",
-    "readingMinutes": 7,
+    "readingMinutes": 6,
     "lengthBand": "normal",
-    "summary": "在本地编辑、预览和部署 NEC 文档站",
+    "summary": "使用锁定的依赖在本地编辑、预览和校验 NEC 文档站",
     "stats": {
-      "textChars": 1324,
-      "englishWords": 220,
-      "codeWeight": 310,
+      "textChars": 1323,
+      "englishWords": 170,
+      "codeWeight": 93,
       "tableWeight": 0,
-      "headingCount": 14,
-      "paragraphCount": 52
+      "headingCount": 7,
+      "paragraphCount": 33
     },
     "signals": {
       "positive": [
@@ -2239,6 +2239,31 @@
       ]
     }
   },
+  "mechanical/lumenpnp-introduction": {
+    "slug": "mechanical/lumenpnp-introduction",
+    "filePath": "mechanical/lumenpnp-introduction.mdx",
+    "title": "LumenPnP 是什么？开源贴片机介绍",
+    "pageKind": "article",
+    "readingMinutes": 10,
+    "lengthBand": "normal",
+    "summary": "LumenPnP 开源贴片机入门：设备能力、贴装速度、元器件与电路板尺寸支持、双面贴装注意事项",
+    "stats": {
+      "textChars": 2510,
+      "englishWords": 201,
+      "codeWeight": 0,
+      "tableWeight": 0,
+      "headingCount": 11,
+      "paragraphCount": 57
+    },
+    "signals": {
+      "positive": [
+        "has_multiple_headings",
+        "has_continuous_paragraphs",
+        "has_meaningful_text"
+      ],
+      "negative": []
+    }
+  },
   "mechanical/lumenpnp/doc-10": {
     "slug": "mechanical/lumenpnp/doc-10",
     "filePath": "mechanical/lumenpnp/doc-10.mdx",
@@ -2874,31 +2899,6 @@
       "tableWeight": 0,
       "headingCount": 3,
       "paragraphCount": 21
-    },
-    "signals": {
-      "positive": [
-        "has_multiple_headings",
-        "has_continuous_paragraphs",
-        "has_meaningful_text"
-      ],
-      "negative": []
-    }
-  },
-  "mechanical/lumenpnp-introduction": {
-    "slug": "mechanical/lumenpnp-introduction",
-    "filePath": "mechanical/lumenpnp-introduction.mdx",
-    "title": "LumenPnP 是什么？开源贴片机介绍",
-    "pageKind": "article",
-    "readingMinutes": 10,
-    "lengthBand": "normal",
-    "summary": "LumenPnP 开源贴片机入门：设备能力、贴装速度、元器件与电路板尺寸支持、双面贴装注意事项",
-    "stats": {
-      "textChars": 2510,
-      "englishWords": 201,
-      "codeWeight": 0,
-      "tableWeight": 0,
-      "headingCount": 11,
-      "paragraphCount": 57
     },
     "signals": {
       "positive": [

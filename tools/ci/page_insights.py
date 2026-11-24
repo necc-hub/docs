@@ -99,7 +99,13 @@ def iter_mdx_files(docs_root: Path) -> list[Path]:
         if any(part in ignored_roots for part in path.parts):
             continue
         files.append(path)
-    return sorted(files)
+    return sorted(
+        files,
+        key=lambda path: (
+            path.relative_to(docs_root).as_posix().casefold(),
+            path.relative_to(docs_root).as_posix(),
+        ),
+    )
 
 
 def build_record(rel_path: str, text: str) -> dict:

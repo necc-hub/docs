@@ -1,6 +1,6 @@
 ---
 title: "本地开发"
-description: "在本地编辑、预览和部署 NEC 文档站"
+description: "使用锁定的依赖在本地编辑、预览和校验 NEC 文档站"
 ---
 
 import { insights } from "/snippets/page-insights-data.jsx";
@@ -8,204 +8,102 @@ import { PageInsights } from "/snippets/page-insights.jsx";
 
 <PageInsights slug="development" insights={insights} />
 
-本页介绍如何在本地编辑、预览和提交 NEC 文档站的改动。
-
----
+本页是文档站本地环境的详细说明。仓库分工见[贡献指南](/contributing/guidelines)，分支、提交和发布见[工作流程](/contributing/workflow)。
 
 ## 环境准备
 
-确保已安装：
+- **Node.js 20.17–24**：以 `package.json` 的 `engines` 为准。
+- **Python 3.10+**：用于生成 PageInsights 和文档健康检查。
+- **Git**：用于版本管理。
 
-- **Node.js 18+**：用于运行 Mintlify CLI
-- **Python 3.10+**：用于运行文档健康检查脚本
-- **Git**：用于提交和推送
+macOS/Linux 需要 `python3`，Windows 需要 Python Launcher（`py -3`）。npm 脚本会自动选择，不要求存在 `python` 命令。
 
----
+## 安装与预览
 
-## 安装 Mintlify CLI
-
-```bash
-npm install -g mintlify
-```
-
-验证安装：
+所有命令都在本仓根目录（`docs.json` 所在目录）执行：
 
 ```bash
-mint --version
+npm ci
 ```
-
----
-
-## 本地预览
-
-在项目根目录（`docs.json` 所在目录）运行：
 
 ```bash
-mint dev
+npm run dev
 ```
 
-本地服务器默认在 `http://localhost:3000` 启动，保存文件后会自动热更新。
+`npm ci` 按 `package-lock.json` 安装锁定版本的 Mintlify 与 PostCSS，无需全局安装 CLI。本地服务器默认在 `http://localhost:3000`，保存文件后热更新；端口被占用时会尝试后续端口。
 
 <Tip>
-  如果端口 3000 被占用，Mintlify 会自动尝试 3001、3002 等后续端口。
+  本地搜索可能需要 `mint login`。站点结构和页面预览不依赖搜索登录；线上搜索需单独验收。
 </Tip>
-
----
-
-## 环境变量与敏感配置
-
-如果站点未来需要接入地图等第三方服务，请在本地创建 `.env` 文件：
-
-```bash
-cp .env.example .env
-```
-
-然后按实际情况填入真实 Key。参考模板已包含高德地图常用的三类变量：
-
-- `VITE_AMAP_KEY`：JSAPI Key，用于前端地图显示
-- `VITE_AMAP_SECURITY_CODE`：高德安全密钥
-- `VITE_AMAP_WEBSERVICE_KEY`：WebService Key，用于天气/搜索等后端 API
-
-<Warning>
-  `.env` 文件已被 `.gitignore` 忽略，**请勿将真实 API Key 直接写入仓库**。
-  如需在 CI/部署环境使用，请在对应平台的 Secrets 管理器中配置。
-</Warning>
-
----
-
-## 项目结构
-
-当前文档站结构如下：
-
-```
-docs/
-├── index.mdx                 # 站点首页
-├── docs.json                 # Mintlify 站点配置与导航
-├── style.css                 # 自定义主题样式
-├── robots.txt                # 搜索引擎与 AI 爬虫指引
-├── llms.txt                  # LLM 索引文件
-├── AGENTS.md                 # 给 AI Agent 的项目说明
-├── images/                   # 图片资源
-│   ├── NEC-home.gif
-│   ├── qq-group-qrcode.jpg
-│   ├── feishu-curc-collection.png
-│   └── ...
-├── start-here/               # 新手上路（含 learn/ 下的角色与标签说明）
-├── modules/                  # 项目模块总览
-├── mechanical/               # 机械设计专题
-├── vision/                   # 机器视觉专题
-├── embedded-software/        # 嵌入式软件专题
-├── learn/                    # 学习资源（导航中并入「新手上路」）
-├── templates/                # 文档模板
-├── wiki/                     # Wiki 知识库
-├── ai-tools/                 # AI 工具指南（独立顶部 Tab）
-├── competition/              # 竞赛概览
-├── curc26/                   # CURC 2026 赛季文档
-├── community/                # 社区介绍与治理
-├── contributing/             # 贡献指南
-└── tools/ci/                 # CI 检查脚本
-    └── check_docs.py
-```
-
----
 
 ## 创建新页面
 
-1. 在合适目录创建 `.mdx` 文件
-2. 添加 YAML frontmatter：
+1. 在合适的主题目录创建 `.mdx` 文件。
+2. 添加非空 frontmatter：
 
 ```yaml
 ---
 title: "页面标题"
-description: "页面描述"
+description: "说明读者能从本页学到什么"
 ---
 ```
 
-3. 在 `docs.json` 的 `navigation` 中注册页面
-4. 运行 `python tools/ci/check_docs.py` 确认无错误
+3. 在 `docs.json` 的对应导航分组注册页面路径，省略 `.mdx` 扩展名。
+4. 修改导航结构时，同步更新 `AGENTS.md`。
+5. 运行 `npm run check`，并浏览新页面及上一页/下一页导航。
 
 <Warning>
-  空菜单不要上线：新增导航项前，请确认目标页面已有实质内容，并且 frontmatter 完整。
+  空菜单不要上线：注册导航前，请确认页面有实质内容；大二进制按仓库约定托管 CDN，不直接提交到 Git。
 </Warning>
-
----
 
 ## 图片与静态资源
 
-- 图片统一放入 `images/` 目录
-- 引用时使用以 `/images/` 开头的绝对路径：
+图片统一放入 `images/`，以 `/images/` 开头引用：
 
 ```mdx
 <img src="/images/NEC-home.gif" alt="示例图片" width="400" />
 ```
 
-- 二维码、截图等建议压缩后再提交，避免仓库体积膨胀
-
----
+优先使用 WebP 等合适格式并压缩图片。原始 PDF、安装包、CAD、视频等遵循仓库分工，链接主代码仓或 CDN。
 
 ## 常用组件
 
-### 卡片
-
-```mdx
-<Card title="标题" icon="icon-name">
-  内容描述
-</Card>
-```
-
-### 卡片组
-
 ```mdx
 <CardGroup cols={2}>
-  <Card title="卡片1">内容1</Card>
-  <Card title="卡片2">内容2</Card>
+  <Card title="卡片1" icon="rocket" href="/start-here/index">说明1</Card>
+  <Card title="卡片2" icon="book" href="/training/index">说明2</Card>
 </CardGroup>
 ```
 
-### 步骤
-
 ```mdx
 <Steps>
-  <Step title="步骤1">说明1</Step>
-  <Step title="步骤2">说明2</Step>
+  <Step title="步骤1">完成准备。</Step>
+  <Step title="步骤2">验证结果。</Step>
 </Steps>
 ```
 
-更多组件请参考 [Mintlify 组件文档](https://mintlify.com/docs/content/components/accordions)。
-
----
+更多组件见 [Mintlify 组件文档](https://mintlify.com/docs/content/components/accordions)。
 
 ## 提交前检查
 
-在提交 PR 或推送前，请先运行 CI 健康检查脚本：
-
 ```bash
-python tools/ci/check_docs.py
+npm run check
 ```
 
-脚本会自动检查：
+一次执行以下步骤：
 
-- `docs.json` JSON 合法性与推荐字段
-- 导航页面文件存在性
-- `.mdx` 文件 frontmatter 完整
-- 内部链接可解析
-- 无 `localhost` 链接
-- 外部链接抽样可达性
+1. 回归测试 `npm test`。
+2. `npm run insights:generate` 与 `npm run insights:sync`：更新阅读信息并自动维护正文页挂载。
+3. `npm run check:css`：解析自定义 CSS。
+4. `npm run validate`：校验 Mintlify 配置和页面。
+5. `npm run check:docs`：检查导航、frontmatter、内部链接等。
 
----
+请检查生成器写入的变更，并与正文一起提交。若只想重新生成 PageInsights，可分别运行上述两个 `insights:*` 命令。
+
+<Note>
+  外链问题是警告而非统一失败：网络超时和 403/429 可能是环境限制，404 需人工确认。通过健康检查不等于所有外链和浏览器交互均已验证。
+</Note>
 
 ## 部署
 
-推送到 `https://github.com/necc-hub/docs` 的 `main` 分支后，Mintlify 会自动构建并部署到：
-
-**https://docs.newenergycoder.club/**
-
-无需手动连接 Gitee/GitHub 到 Mintlify，部署由 GitHub Actions 与 Mintlify 集成自动完成。
-
----
-
-## 更多资源
-
-- [Mintlify 文档](https://mintlify.com/docs)
-- [Markdown 语法](https://mintlify.com/docs/text)
-- [NEC 贡献指南](/contributing/guidelines)
+向 `necc-hub/docs` 的 `main` 提交 PR；审查并合并后由 Mintlify 自动部署到 https://docs.newenergycoder.club/。不要直接推送 `main`，也不要将本仓工作分支推送到主代码仓。

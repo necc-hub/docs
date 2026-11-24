@@ -111,15 +111,14 @@ npm run dev
   - `logo` / `favicon` 品牌资源文件存在，SVG 需含 `viewBox` 且无超大固定宽高
   - 主题色为合法 `#RRGGBB`，主色对比度低于 3.0:1 时给出警告
   - 首页 `index.mdx` 存在、frontmatter 完整且注册在导航第一个 Tab
-- 本地可手动执行：
-  ```bash
-  npm ci
-  npm run insights:generate
-  npm run insights:sync
-  npm run check:css
-  npm run validate
-  python tools/ci/check_docs.py
-  ```
+- 本地统一检查入口为 `npm run check`。它依次运行回归测试、PageInsights 生成与挂载同步、CSS 解析、`mint validate` 和文档健康检查；Python 脚本通过 `tools/ci/run_python.mjs` 调用 macOS/Linux 的 `python3` 或 Windows 的 `py -3`，不要求存在 `python` 命令。
+
+```bash
+npm ci
+npm run check
+```
+
+作者应审查并提交 PageInsights 生成物及自动挂载变更。CI 额外通过 `npm run check:generated` 确认已提交的生成物与当前规则一致；外部链接问题仅作为警告，仍需人工查看报告。
 
 ## 主题样式
 

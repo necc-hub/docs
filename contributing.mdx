@@ -1,6 +1,6 @@
 ---
 title: "贡献文档"
-description: "如何为 NEC 文档站点贡献力量"
+description: "通过 GitHub 网页或本地预览，为 NEC 文档站提交内容修改"
 ---
 
 import { insights } from "/snippets/page-insights-data.jsx";
@@ -8,39 +8,44 @@ import { PageInsights } from "/snippets/page-insights.jsx";
 
 <PageInsights slug="contributing" insights={insights} />
 
-感谢你对 NEC 文档站点的关注！本指南帮助你快速开始贡献。
+感谢你改进 NEC 文档。先阅读[贡献指南](/contributing/guidelines)，确认修改属于文档仓；完整分支和发布步骤见[工作流程](/contributing/workflow)。
 
-## 如何贡献
+## 小改动：在 GitHub 网页编辑
 
-### 方式一：直接在 GitHub/Gitee 上编辑
+适合修正错字、命令、失效链接等局部问题：
 
-1. 导航到你想要编辑的页面
-2. 点击 "Edit this file" 按钮（铅笔图标）
-3. 修改内容并提交 Pull Request
+1. 在 [necc-hub/docs](https://github.com/necc-hub/docs) 找到对应 `.mdx` 文件。
+2. 点击铅笔图标 **Edit this file**，Fork 后创建修改。
+3. 向 `main` 提交 Pull Request，说明修改原因和影响页面。
 
-### 方式二：本地开发
+网页编辑不会运行本地检查；新增页面、调整导航或修改组件时，请使用本地流程。
 
-1. Fork 并克隆本仓库
-2. 安装 Mintlify CLI：
-   ```bash
-   npm i -g mint
-   ```
-3. 创建功能分支
-4. 进行修改
-5. 在 docs 目录下运行：
-   ```bash
-   mint dev
-   ```
-6. 在 `http://localhost:3000` 预览更改
-7. 提交更改并发起 Pull Request
+## 本地编辑与预览
 
-更多本地开发细节，请参考 [开发指南](development.mdx)。
+```bash
+git clone https://github.com/necc-hub/docs.git
+cd docs
+npm ci
+npm run dev
+```
+
+环境要求：Node.js 20.17–24、Python 3.10+、Git。无需全局安装 Mintlify；`python3` 或 Windows Python Launcher 由 npm 脚本自动调用。
+
+提交前运行：
+
+```bash
+npm run check
+```
+
+它会同步 PageInsights、运行测试、检查 CSS、Mintlify 配置、frontmatter 和链接。生成器产生的数据和页面挂载更新需要与正文一起提交。
+
+完整环境说明见[本地开发](/development)。
 
 ## 写作规范
 
-- **使用主动语态**："运行命令" 而不是 "命令应该被运行"
-- **直接面向读者**：使用 "你" 而不是 "用户"
-- **保持简洁**：一个句子只表达一个意思
-- **先讲目标**： instructions 从用户想要完成的事情开始
-- **术语一致**：同一概念不要交替使用不同同义词
-- **包含示例**：展示，而不仅仅是讲述
+- **使用主动语态**：写“运行命令”，不要写“命令应该被运行”。
+- **直接面向读者**：使用“你”，不要泛泛使用“用户”。
+- **保持简洁**：一个句子只表达一个意思。
+- **先讲目标**：从读者要完成的任务开始。
+- **术语一致**：同一概念不要交替使用不同名称。
+- **包含可验证示例**：给出命令时，同时说明预期结果与适用范围。

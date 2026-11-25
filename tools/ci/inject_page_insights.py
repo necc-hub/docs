@@ -28,7 +28,7 @@ PAGE_INSIGHTS_MOUNT_RE = re.compile(
 )
 
 
-def sync_page_insights_mounts(docs_root: Path, insights_path: Path) -> None:
+def sync_page_insights_mounts(docs_root: Path, insights_path: Path, check: bool = False) -> list[str]:
     insights = json.loads(insights_path.read_text(encoding="utf-8"))
     article_paths = {
         f"{slug}.mdx"
@@ -36,6 +36,7 @@ def sync_page_insights_mounts(docs_root: Path, insights_path: Path) -> None:
         if entry.get("pageKind") == "article"
     }
 
+    stale: list[str] = []
     for path in docs_root.rglob("*.mdx"):
         rel_path = path.relative_to(docs_root).as_posix()
         text = path.read_text(encoding="utf-8")
@@ -67,12 +68,26 @@ def sync_page_insights_mounts(docs_root: Path, insights_path: Path) -> None:
             updated = PAGE_INSIGHTS_MOUNT_RE.sub("", updated)
 
         if updated != text:
-            path.write_text(updated, encoding="utf-8")
+            stale.append(rel_path)
+            if not check:
+                path.write_text(updated, encoding="utf-8")
+    return stale
 
 
 def main() -> int:
-    sync_page_insights_mounts(ROOT, ROOT / "generated" / "page-insights.json")
-    print("Synchronized page insight mounts")
+    check = "--check" in sys.argv[1:]
+    stale = sync_page_insights_mounts(
+        ROOT,
+        ROOT / "generated" / "page-insights.json",
+        check=check,
+    )
+    if stale and check:
+        print("Run npm run insights:sync to update: " + ", ".join(stale), file=sys.stderr)
+        return 1
+    if check:
+        print("Page insight mounts are up to date")
+    else:
+        print("Synchronized page insight mounts")
     return 0
 
 

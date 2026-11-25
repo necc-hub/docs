@@ -1,129 +1,4 @@
 export const insights = {
-  "CODE_OF_CONDUCT": {
-    "slug": "CODE_OF_CONDUCT",
-    "filePath": "CODE_OF_CONDUCT.mdx",
-    "title": "行为准则（Code of Conduct）",
-    "pageKind": "article",
-    "readingMinutes": 3,
-    "lengthBand": "normal",
-    "summary": "NEC 社区行为准则：尊重、透明、建设性反馈与冲突处理",
-    "stats": {
-      "textChars": 709,
-      "englishWords": 33,
-      "codeWeight": 0,
-      "tableWeight": 0,
-      "headingCount": 4,
-      "paragraphCount": 13
-    },
-    "signals": {
-      "positive": [
-        "has_multiple_headings",
-        "has_continuous_paragraphs",
-        "has_meaningful_text"
-      ],
-      "negative": []
-    }
-  },
-  "GOVERNANCE": {
-    "slug": "GOVERNANCE",
-    "filePath": "GOVERNANCE.mdx",
-    "title": "治理与决策（Governance）",
-    "pageKind": "article",
-    "readingMinutes": 3,
-    "lengthBand": "normal",
-    "summary": "NEC 社区治理与决策流程：角色、决策、会议与复盘机制",
-    "stats": {
-      "textChars": 535,
-      "englishWords": 48,
-      "codeWeight": 0,
-      "tableWeight": 175,
-      "headingCount": 3,
-      "paragraphCount": 11
-    },
-    "signals": {
-      "positive": [
-        "has_multiple_headings",
-        "has_continuous_paragraphs",
-        "has_meaningful_text"
-      ],
-      "negative": []
-    }
-  },
-  "ROADMAP": {
-    "slug": "ROADMAP",
-    "filePath": "ROADMAP.mdx",
-    "title": "Roadmap",
-    "pageKind": "article",
-    "readingMinutes": 3,
-    "lengthBand": "normal",
-    "summary": "NEC 社区路线图与未来规划",
-    "stats": {
-      "textChars": 498,
-      "englishWords": 58,
-      "codeWeight": 0,
-      "tableWeight": 180,
-      "headingCount": 6,
-      "paragraphCount": 14
-    },
-    "signals": {
-      "positive": [
-        "has_multiple_headings",
-        "has_continuous_paragraphs",
-        "has_meaningful_text"
-      ],
-      "negative": []
-    }
-  },
-  "SECURITY": {
-    "slug": "SECURITY",
-    "filePath": "SECURITY.mdx",
-    "title": "安全与漏洞反馈（Security）",
-    "pageKind": "article",
-    "readingMinutes": 3,
-    "lengthBand": "normal",
-    "summary": "NEC 社区安全政策与漏洞报告流程",
-    "stats": {
-      "textChars": 753,
-      "englishWords": 42,
-      "codeWeight": 0,
-      "tableWeight": 0,
-      "headingCount": 4,
-      "paragraphCount": 14
-    },
-    "signals": {
-      "positive": [
-        "has_multiple_headings",
-        "has_continuous_paragraphs",
-        "has_meaningful_text"
-      ],
-      "negative": []
-    }
-  },
-  "SUPPORT": {
-    "slug": "SUPPORT",
-    "filePath": "SUPPORT.mdx",
-    "title": "求助与支持（Support）",
-    "pageKind": "article",
-    "readingMinutes": 3,
-    "lengthBand": "normal",
-    "summary": "NEC 社区支持渠道与求助方式",
-    "stats": {
-      "textChars": 448,
-      "englishWords": 33,
-      "codeWeight": 0,
-      "tableWeight": 104,
-      "headingCount": 4,
-      "paragraphCount": 12
-    },
-    "signals": {
-      "positive": [
-        "has_multiple_headings",
-        "has_continuous_paragraphs",
-        "has_meaningful_text"
-      ],
-      "negative": []
-    }
-  },
   "ai-tools/ai-feasibility-study": {
     "slug": "ai-tools/ai-feasibility-study",
     "filePath": "ai-tools/ai-feasibility-study.mdx",
@@ -340,6 +215,31 @@ export const insights = {
       "tableWeight": 0,
       "headingCount": 4,
       "paragraphCount": 16
+    },
+    "signals": {
+      "positive": [
+        "has_multiple_headings",
+        "has_continuous_paragraphs",
+        "has_meaningful_text"
+      ],
+      "negative": []
+    }
+  },
+  "CODE_OF_CONDUCT": {
+    "slug": "CODE_OF_CONDUCT",
+    "filePath": "CODE_OF_CONDUCT.mdx",
+    "title": "行为准则（Code of Conduct）",
+    "pageKind": "article",
+    "readingMinutes": 3,
+    "lengthBand": "normal",
+    "summary": "NEC 社区行为准则：尊重、透明、建设性反馈与冲突处理",
+    "stats": {
+      "textChars": 709,
+      "englishWords": 33,
+      "codeWeight": 0,
+      "tableWeight": 0,
+      "headingCount": 4,
+      "paragraphCount": 13
     },
     "signals": {
       "positive": [
@@ -999,6 +899,31 @@ export const insights = {
       ]
     }
   },
+  "contributing": {
+    "slug": "contributing",
+    "filePath": "contributing.mdx",
+    "title": "贡献文档",
+    "pageKind": "article",
+    "readingMinutes": 3,
+    "lengthBand": "normal",
+    "summary": "通过 GitHub 网页或本地预览，为 NEC 文档站提交内容修改",
+    "stats": {
+      "textChars": 624,
+      "englishWords": 73,
+      "codeWeight": 22,
+      "tableWeight": 0,
+      "headingCount": 3,
+      "paragraphCount": 16
+    },
+    "signals": {
+      "positive": [
+        "has_multiple_headings",
+        "has_continuous_paragraphs",
+        "has_meaningful_text"
+      ],
+      "negative": []
+    }
+  },
   "contributing/code-style": {
     "slug": "contributing/code-style",
     "filePath": "contributing/code-style.mdx",
@@ -1079,41 +1004,16 @@ export const insights = {
     "filePath": "contributing/workflow.mdx",
     "title": "工作流程",
     "pageKind": "article",
-    "readingMinutes": 4,
+    "readingMinutes": 5,
     "lengthBand": "normal",
-    "summary": "NEC 项目的开发工作流程",
+    "summary": "从 main 创建分支、修改文档、运行检查并提交 Pull Request 的完整流程",
     "stats": {
-      "textChars": 601,
-      "englishWords": 133,
-      "codeWeight": 151,
-      "tableWeight": 224,
-      "headingCount": 17,
-      "paragraphCount": 42
-    },
-    "signals": {
-      "positive": [
-        "has_multiple_headings",
-        "has_continuous_paragraphs",
-        "has_meaningful_text"
-      ],
-      "negative": []
-    }
-  },
-  "contributing": {
-    "slug": "contributing",
-    "filePath": "contributing.mdx",
-    "title": "贡献文档",
-    "pageKind": "article",
-    "readingMinutes": 2,
-    "lengthBand": "normal",
-    "summary": "如何为 NEC 文档站点贡献力量",
-    "stats": {
-      "textChars": 475,
-      "englishWords": 44,
-      "codeWeight": 11,
-      "tableWeight": 0,
-      "headingCount": 4,
-      "paragraphCount": 11
+      "textChars": 937,
+      "englishWords": 127,
+      "codeWeight": 56,
+      "tableWeight": 155,
+      "headingCount": 9,
+      "paragraphCount": 28
     },
     "signals": {
       "positive": [
@@ -1457,16 +1357,16 @@ export const insights = {
     "filePath": "development.mdx",
     "title": "本地开发",
     "pageKind": "article",
-    "readingMinutes": 7,
+    "readingMinutes": 6,
     "lengthBand": "normal",
-    "summary": "在本地编辑、预览和部署 NEC 文档站",
+    "summary": "使用锁定的依赖在本地编辑、预览和校验 NEC 文档站",
     "stats": {
-      "textChars": 1324,
-      "englishWords": 220,
-      "codeWeight": 310,
+      "textChars": 1323,
+      "englishWords": 170,
+      "codeWeight": 93,
       "tableWeight": 0,
-      "headingCount": 14,
-      "paragraphCount": 52
+      "headingCount": 7,
+      "paragraphCount": 33
     },
     "signals": {
       "positive": [
@@ -1681,6 +1581,31 @@ export const insights = {
       "negative": [
         "card_heavy"
       ]
+    }
+  },
+  "GOVERNANCE": {
+    "slug": "GOVERNANCE",
+    "filePath": "GOVERNANCE.mdx",
+    "title": "治理与决策（Governance）",
+    "pageKind": "article",
+    "readingMinutes": 3,
+    "lengthBand": "normal",
+    "summary": "NEC 社区治理与决策流程：角色、决策、会议与复盘机制",
+    "stats": {
+      "textChars": 535,
+      "englishWords": 48,
+      "codeWeight": 0,
+      "tableWeight": 175,
+      "headingCount": 3,
+      "paragraphCount": 11
+    },
+    "signals": {
+      "positive": [
+        "has_multiple_headings",
+        "has_continuous_paragraphs",
+        "has_meaningful_text"
+      ],
+      "negative": []
     }
   },
   "handbook/handbook-01-mechanical": {
@@ -2341,6 +2266,31 @@ export const insights = {
       ]
     }
   },
+  "mechanical/lumenpnp-introduction": {
+    "slug": "mechanical/lumenpnp-introduction",
+    "filePath": "mechanical/lumenpnp-introduction.mdx",
+    "title": "LumenPnP 是什么？开源贴片机介绍",
+    "pageKind": "article",
+    "readingMinutes": 10,
+    "lengthBand": "normal",
+    "summary": "LumenPnP 开源贴片机入门：设备能力、贴装速度、元器件与电路板尺寸支持、双面贴装注意事项",
+    "stats": {
+      "textChars": 2510,
+      "englishWords": 201,
+      "codeWeight": 0,
+      "tableWeight": 0,
+      "headingCount": 11,
+      "paragraphCount": 57
+    },
+    "signals": {
+      "positive": [
+        "has_multiple_headings",
+        "has_continuous_paragraphs",
+        "has_meaningful_text"
+      ],
+      "negative": []
+    }
+  },
   "mechanical/lumenpnp/doc-10": {
     "slug": "mechanical/lumenpnp/doc-10",
     "filePath": "mechanical/lumenpnp/doc-10.mdx",
@@ -2986,31 +2936,6 @@ export const insights = {
       "negative": []
     }
   },
-  "mechanical/lumenpnp-introduction": {
-    "slug": "mechanical/lumenpnp-introduction",
-    "filePath": "mechanical/lumenpnp-introduction.mdx",
-    "title": "LumenPnP 是什么？开源贴片机介绍",
-    "pageKind": "article",
-    "readingMinutes": 10,
-    "lengthBand": "normal",
-    "summary": "LumenPnP 开源贴片机入门：设备能力、贴装速度、元器件与电路板尺寸支持、双面贴装注意事项",
-    "stats": {
-      "textChars": 2510,
-      "englishWords": 201,
-      "codeWeight": 0,
-      "tableWeight": 0,
-      "headingCount": 11,
-      "paragraphCount": 57
-    },
-    "signals": {
-      "positive": [
-        "has_multiple_headings",
-        "has_continuous_paragraphs",
-        "has_meaningful_text"
-      ],
-      "negative": []
-    }
-  },
   "mechanical/m2006-motor-guide": {
     "slug": "mechanical/m2006-motor-guide",
     "filePath": "mechanical/m2006-motor-guide.mdx",
@@ -3330,71 +3255,46 @@ export const insights = {
       "negative": []
     }
   },
-  "skills/TRAE-code-review": {
-    "slug": "skills/TRAE-code-review",
-    "filePath": "skills/TRAE-code-review.mdx",
-    "title": "TRAE-code-review",
+  "ROADMAP": {
+    "slug": "ROADMAP",
+    "filePath": "ROADMAP.mdx",
+    "title": "Roadmap",
     "pageKind": "article",
-    "readingMinutes": 54,
-    "lengthBand": "long",
-    "summary": "用于执行代码审查任务。适用于审查合并请求、代码差异，并提供关于代码质量、正确性和最佳实践的结构化反馈。",
-    "stats": {
-      "textChars": 11973,
-      "englishWords": 1999,
-      "codeWeight": 355,
-      "tableWeight": 445,
-      "headingCount": 5,
-      "paragraphCount": 44
-    },
-    "signals": {
-      "positive": [
-        "has_multiple_headings",
-        "has_continuous_paragraphs",
-        "has_meaningful_text"
-      ],
-      "negative": []
-    }
-  },
-  "skills/TRAE-debugger": {
-    "slug": "skills/TRAE-debugger",
-    "filePath": "skills/TRAE-debugger.mdx",
-    "title": "TRAE-debugger",
-    "pageKind": "article",
-    "readingMinutes": 40,
-    "lengthBand": "long",
-    "summary": "用于调试需要收集运行时证据的复杂问题。它会启动一个调试服务器通过 HTTP 收集日志，然后遵循科学的调试流程（假设 → 插桩 → 复现 → 分析 → 修复 → 验证）。适用于仅通过静态代码分析无法诊断的 Bug。在用户主动要求运行时调试、或经过多轮对话仍无法通过静态分析解决问题时触发。",
-    "stats": {
-      "textChars": 8863,
-      "englishWords": 1390,
-      "codeWeight": 174,
-      "tableWeight": 468,
-      "headingCount": 17,
-      "paragraphCount": 48
-    },
-    "signals": {
-      "positive": [
-        "has_multiple_headings",
-        "has_continuous_paragraphs",
-        "has_meaningful_text"
-      ],
-      "negative": []
-    }
-  },
-  "skills/TRAE-generate-mini-app": {
-    "slug": "skills/TRAE-generate-mini-app",
-    "filePath": "skills/TRAE-generate-mini-app.mdx",
-    "title": "TRAE-generate-mini-app",
-    "pageKind": "article",
-    "readingMinutes": 14,
+    "readingMinutes": 3,
     "lengthBand": "normal",
-    "summary": "当用户意图涉及小程序、Taro、微信小程序、跨端小程序等任何包含小程序的意图时，用于生成基于 Taro 框架的高质量、可运行的多端小程序代码。",
+    "summary": "NEC 社区路线图与未来规划",
     "stats": {
-      "textChars": 3454,
-      "englishWords": 256,
-      "codeWeight": 82,
-      "tableWeight": 229,
-      "headingCount": 15,
-      "paragraphCount": 24
+      "textChars": 498,
+      "englishWords": 58,
+      "codeWeight": 0,
+      "tableWeight": 180,
+      "headingCount": 6,
+      "paragraphCount": 14
+    },
+    "signals": {
+      "positive": [
+        "has_multiple_headings",
+        "has_continuous_paragraphs",
+        "has_meaningful_text"
+      ],
+      "negative": []
+    }
+  },
+  "SECURITY": {
+    "slug": "SECURITY",
+    "filePath": "SECURITY.mdx",
+    "title": "安全与漏洞反馈（Security）",
+    "pageKind": "article",
+    "readingMinutes": 3,
+    "lengthBand": "normal",
+    "summary": "NEC 社区安全政策与漏洞报告流程",
+    "stats": {
+      "textChars": 753,
+      "englishWords": 42,
+      "codeWeight": 0,
+      "tableWeight": 0,
+      "headingCount": 4,
+      "paragraphCount": 14
     },
     "signals": {
       "positive": [
@@ -6676,6 +6576,81 @@ export const insights = {
       "negative": []
     }
   },
+  "skills/TRAE-code-review": {
+    "slug": "skills/TRAE-code-review",
+    "filePath": "skills/TRAE-code-review.mdx",
+    "title": "TRAE-code-review",
+    "pageKind": "article",
+    "readingMinutes": 54,
+    "lengthBand": "long",
+    "summary": "用于执行代码审查任务。适用于审查合并请求、代码差异，并提供关于代码质量、正确性和最佳实践的结构化反馈。",
+    "stats": {
+      "textChars": 11973,
+      "englishWords": 1999,
+      "codeWeight": 355,
+      "tableWeight": 445,
+      "headingCount": 5,
+      "paragraphCount": 44
+    },
+    "signals": {
+      "positive": [
+        "has_multiple_headings",
+        "has_continuous_paragraphs",
+        "has_meaningful_text"
+      ],
+      "negative": []
+    }
+  },
+  "skills/TRAE-debugger": {
+    "slug": "skills/TRAE-debugger",
+    "filePath": "skills/TRAE-debugger.mdx",
+    "title": "TRAE-debugger",
+    "pageKind": "article",
+    "readingMinutes": 40,
+    "lengthBand": "long",
+    "summary": "用于调试需要收集运行时证据的复杂问题。它会启动一个调试服务器通过 HTTP 收集日志，然后遵循科学的调试流程（假设 → 插桩 → 复现 → 分析 → 修复 → 验证）。适用于仅通过静态代码分析无法诊断的 Bug。在用户主动要求运行时调试、或经过多轮对话仍无法通过静态分析解决问题时触发。",
+    "stats": {
+      "textChars": 8863,
+      "englishWords": 1390,
+      "codeWeight": 174,
+      "tableWeight": 468,
+      "headingCount": 17,
+      "paragraphCount": 48
+    },
+    "signals": {
+      "positive": [
+        "has_multiple_headings",
+        "has_continuous_paragraphs",
+        "has_meaningful_text"
+      ],
+      "negative": []
+    }
+  },
+  "skills/TRAE-generate-mini-app": {
+    "slug": "skills/TRAE-generate-mini-app",
+    "filePath": "skills/TRAE-generate-mini-app.mdx",
+    "title": "TRAE-generate-mini-app",
+    "pageKind": "article",
+    "readingMinutes": 14,
+    "lengthBand": "normal",
+    "summary": "当用户意图涉及小程序、Taro、微信小程序、跨端小程序等任何包含小程序的意图时，用于生成基于 Taro 框架的高质量、可运行的多端小程序代码。",
+    "stats": {
+      "textChars": 3454,
+      "englishWords": 256,
+      "codeWeight": 82,
+      "tableWeight": 229,
+      "headingCount": 15,
+      "paragraphCount": 24
+    },
+    "signals": {
+      "positive": [
+        "has_multiple_headings",
+        "has_continuous_paragraphs",
+        "has_meaningful_text"
+      ],
+      "negative": []
+    }
+  },
   "skills/weather-advisor": {
     "slug": "skills/weather-advisor",
     "filePath": "skills/weather-advisor.mdx",
@@ -7344,6 +7319,31 @@ export const insights = {
       "tableWeight": 0,
       "headingCount": 11,
       "paragraphCount": 46
+    },
+    "signals": {
+      "positive": [
+        "has_multiple_headings",
+        "has_continuous_paragraphs",
+        "has_meaningful_text"
+      ],
+      "negative": []
+    }
+  },
+  "SUPPORT": {
+    "slug": "SUPPORT",
+    "filePath": "SUPPORT.mdx",
+    "title": "求助与支持（Support）",
+    "pageKind": "article",
+    "readingMinutes": 3,
+    "lengthBand": "normal",
+    "summary": "NEC 社区支持渠道与求助方式",
+    "stats": {
+      "textChars": 448,
+      "englishWords": 33,
+      "codeWeight": 0,
+      "tableWeight": 104,
+      "headingCount": 4,
+      "paragraphCount": 12
     },
     "signals": {
       "positive": [

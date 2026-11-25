@@ -50,4 +50,4 @@ D:/Project_env/docs/
 
 ### `development.mdx`
 
-- 本地开发指南：Node.js 18+、Python 3、`mint dev`、CI 检查命令
+- 本地开发指南：Node.js 20.17–24、Python 3.10+、`npm ci`、`npm run dev`、`npm run check`

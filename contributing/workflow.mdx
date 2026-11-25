@@ -1,6 +1,6 @@
 ---
 title: "工作流程"
-description: "NEC 项目的开发工作流程"
+description: "从 main 创建分支、修改文档、运行检查并提交 Pull Request 的完整流程"
 ---
 
 import { insights } from "/snippets/page-insights-data.jsx";
@@ -8,150 +8,79 @@ import { PageInsights } from "/snippets/page-insights.jsx";
 
 <PageInsights slug="contributing/workflow" insights={insights} />
 
-## Git 工作流程
+## 文档站分支模型
 
-我们采用 **Git Flow** 工作流程来管理项目开发。
+文档仓只有 `main` 一个长期分支。不要创建 `develop` 或发布分支，也不要将主代码仓的分支模型套用到本仓。
 
-### 分支模型
+| 分支 | 用途 |
+|---|---|
+| `main` | 发布分支；合并后由 Mintlify 自动部署 |
+| `docs/<短描述>` 或 `fix/<短描述>` | 单次文档更新或修复；完成后合并并删除 |
 
-```
-master (主分支，生产环境)
-  │
-  ├── develop (开发分支)
-  │     │
-  │     ├── feature/xxx (功能分支)
-  │     ├── feature/yyy
-  │     │
-  │     ├── release/v1.0 (发布分支)
-  │     │
-  │     └── hotfix/xxx (热修复分支)
-  │
-  └── hotfix/xxx
-```
+修改前，先按[贡献指南](/contributing/guidelines)确认目标仓库：本站只接收整理后的 `.mdx`、导航和站点工具，不接收原始赛事大二进制。
 
-### 分支说明
+## 一次完整的文档更新
 
-| 分支 | 用途 | 命名规范 |
-|------|------|----------|
-| `master` | 生产环境代码，随时可部署 | `master` |
-| `develop` | 开发分支，集成新功能 | `develop` |
-| `feature/*` | 新功能开发 | `feature/short-description` |
-| `release/*` | 版本发布准备 | `release/v1.0.0` |
-| `hotfix/*` | 紧急修复 | `hotfix/bug-description` |
-
-## 开发流程
-
-### 1. 开始新功能
+### 1. 从最新 main 创建分支
 
 ```bash
-# 从 develop 分支创建功能分支
-git checkout develop
-git pull origin develop
-git checkout -b feature/my-new-feature
+git switch main
+git pull --ff-only origin main
+git switch -c docs/update-onboarding
 ```
 
-### 2. 开发过程
+### 2. 安装依赖并预览
 
 ```bash
-# 定期提交更改
-git add .
-git commit -m "feat: 添加某个功能"
-
-# 保持与 develop 同步
-git fetch origin
-git rebase origin/develop
+npm ci
+npm run dev
 ```
 
-### 3. 完成功能
+本地预览默认在 `http://localhost:3000`。详细环境和写作规范见[本地开发](/development)。
+
+### 3. 修改内容
+
+- 修改已有页面时，直接编辑对应 `.mdx`。
+- 新增页面时，补充非空 `title`、`description`，并在 `docs.json` 对应分组注册。
+- 修改导航结构时，同步更新 `AGENTS.md` 的导航说明。
+- 图片放入 `images/`，以 `/images/` 开头引用；大二进制按仓库约定上传 CDN 后链接，不放入 Git。
+
+### 4. 提交前检查
 
 ```bash
-# 推送到远程
-git push origin feature/my-new-feature
-
-# 创建 Pull Request 到 develop 分支
+npm run check
 ```
+
+该命令会运行回归测试、生成并同步 PageInsights、检查 CSS 与 Mintlify 配置，并检查导航、frontmatter 和内部链接。命令产生的 PageInsights 数据及页面挂载变更应与正文一起提交。
+
+外链超时、登录墙、403/429 会作为警告显示；确认真实 404 或内容迁移后应修复链接。不要仅因命令退出码为 0 就忽略这些警告。
+
+### 5. 提交并创建 PR
+
+```bash
+git add -A
+git diff --cached --check
+git commit -m "docs(onboarding): 更新新人学习路径"
+git push -u origin docs/update-onboarding
+```
+
+提交前确认暂存区只包含本次正文、导航和生成物，没有密钥、本地配置或无关文件。
+
+向 `necc-hub/docs` 的 `main` 创建 Pull Request，等待检查通过和审查后合并。未获维护者授权时，不要直接推送 `main`。
 
 ## 提交信息规范
 
-我们使用 [Conventional Commits](https://www.conventionalcommits.org/) 规范。
+使用 [Conventional Commits](https://www.conventionalcommits.org/)：`<type>(<scope>): <subject>`。
 
-### 格式
+| 类型 | 适用场景 | 示例 |
+|---|---|---|
+| `docs` | 内容、导航、写作规范 | `docs(curc27): 更新新人学习路径` |
+| `fix` | 页面渲染或工具行为修复 | `fix(insights): 修复生成物排序` |
+| `ci` | CI 和检查流程 | `ci: 统一文档校验入口` |
+| `test` | 测试补充 | `test: 覆盖贡献流程回归` |
 
-```
-<type>(<scope>): <subject>
+## 审查与发布
 
-<body>
+审查重点：仓库归属是否正确、导航可发现性、命令能否执行、链接和图片是否有效、页面是否适用于当前赛季。
 
-<footer>
-```
-
-### 类型说明
-
-| 类型 | 说明 |
-|------|------|
-| `feat` | 新功能 |
-| `fix` | Bug 修复 |
-| `docs` | 文档更新 |
-| `style` | 代码格式调整（不影响功能）|
-| `refactor` | 代码重构 |
-| `perf` | 性能优化 |
-| `test` | 测试相关 |
-| `chore` | 构建过程或辅助工具的变动 |
-
-### 示例
-
-```bash
-# 新功能
-feat(robot): 添加底盘运动控制算法
-
-# Bug 修复
-fix(vision): 修复图像识别精度问题
-
-# 文档更新
-docs: 更新 API 文档
-
-# 代码重构
-refactor(control): 重构 PID 控制器
-```
-
-## 代码审查流程
-
-### 审查清单
-
-- [ ] 代码符合项目编码规范
-- [ ] 功能正确实现
-- [ ] 有适当的单元测试
-- [ ] 文档已更新
-- [ ] 没有明显的性能问题
-- [ ] 没有安全漏洞
-
-### 审查流程
-
-1. **作者** 创建 Pull Request
-2. **审查者** 进行代码审查
-3. **审查者** 提出修改意见（如有）
-4. **作者** 根据反馈修改
-5. **审查者** 确认修改后批准
-6. **维护者** 合并到目标分支
-
-## 发布流程
-
-### 版本号规范
-
-使用 [语义化版本](https://semver.org/lang/zh-CN/) (SemVer)：
-
-```
-主版本号.次版本号.修订号
-```
-
-- **主版本号**：不兼容的 API 修改
-- **次版本号**：向下兼容的功能性新增
-- **修订号**：向下兼容的问题修正
-
-### 发布步骤
-
-1. 从 `develop` 创建 `release/vX.Y.Z` 分支
-2. 进行版本测试和 Bug 修复
-3. 更新版本号和 CHANGELOG
-4. 合并到 `master` 并打标签
-5. 合并回 `develop`
+合并到 `main` 后，Mintlify 自动部署到 https://docs.newenergycoder.club/。文档站不使用 Git Flow、版本发布分支或 SemVer 发布流程；内容有更正时直接提交新 PR。

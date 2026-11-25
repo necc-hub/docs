@@ -48,14 +48,13 @@ npm run dev
 ## 提交前检查
 
 ```bash
-npm run insights:generate
-npm run insights:sync
-npm run check:css
-npm run validate
-python tools/ci/check_docs.py
+npm ci
+npm run check
 ```
 
-修改导航或页面 frontmatter 后，同时运行 `npm run llms:generate` 更新全站 LLM 索引；`npm run llms:check` 可只检查是否同步。
+`npm run check` 会运行回归测试、重新生成并同步 PageInsights 和全站 LLM 索引、检查 CSS、校验 Mintlify 配置，再执行文档健康检查。无需全局安装 Mintlify，也无需系统提供 `python` 命令；macOS/Linux 使用 `python3`，Windows 使用 Python Launcher（`py -3`）。
+
+修改导航或页面 frontmatter 后，`npm run llms:generate` 可单独更新 `llms-full.txt`；`npm run llms:check` 可只检查是否同步。
 
 检查项包括 PageInsights 产物与挂载同步、`docs.json` 合法性、CSS 解析、Mintlify 配置、导航页面存在性、MDX frontmatter 完整性和内部链接可解析性等。
 
@@ -107,8 +106,8 @@ python tools/ci/check_docs.py
 1. 阅读 [贡献指南](/contributing/guidelines.mdx) 与 [工作流](/contributing/workflow.mdx)。
 2. 创建或修改 `.mdx` 页面，确保包含 `title` 与 `description` 的 YAML frontmatter。
 3. 在 `docs.json` 的 `navigation` 中注册新页面。
-4. 运行 `python tools/ci/check_docs.py` 确认无错误。
-5. 提交 PR 并等待 Review。
+4. 运行 `npm run check` 确认无错误，并提交 PageInsights 的关联生成变更。
+5. 从最新 `main` 创建功能分支，提交 PR 并等待 Review；详细步骤见[工作流程](/contributing/workflow)。
 
 ## 社区
 
